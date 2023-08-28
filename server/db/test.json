@@ -1,0 +1,17 @@
+{
+
+    "id": {
+        "name": "",
+        "location": "",
+        "site_area": "",
+        "built_area": "",
+        "description": "",
+        "category": "'residential' | 'artist_studio' | 'housing' | 'commercial' | 'hospitality' | 'leisure_entertainment' | 'farmhouse' | 'retail' | 'corporate'",
+        "awards_count": "",
+        "photos": {
+            "hero_img": "",
+            "primary_img": "",
+            "secondary_images": []
+        }
+    }
+}
