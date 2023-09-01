@@ -1,0 +1,110 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/sudo";
+@import "../../assets/styles/flex";
+
+
+.btn-close, .btn-open {
+    @include element-position(absolute, 16px, 16px, unset, unset);
+    background: none;
+    border: 0;
+    font-size: $font-size-m;
+    @media screen and (min-width: 769px) {
+        display: none;
+    }
+}
+
+.navbar {
+    @include element-position(fixed, 0, 0, 0, 0);
+    @include flex(column, center, center);
+    gap: $gutter3x;
+    background-color: $white;
+    overflow: hidden;
+    padding: $gutter;
+    box-shadow: $box-shadow-large;
+    transform: translateY(-100%);
+    transition: $transition-in-out;
+    
+    &__left {
+        @include flex(column, center, start);
+        text-align: center;
+        li{
+            height: 100%;
+            &:not(:first-child) {
+                margin: $gutter2x 0 0 0;
+            }
+        }
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__right {
+        @include flex(column, center, center);
+        gap: $gutter2x;
+        .social-icons {
+            a:not(:first-child) {
+                margin-left: $gutter
+            }
+        }
+        .search-bar {
+            @include flex(row, center, center);
+            gap: $gutter;
+            &__text {
+                background-color: $body-bg;
+                margin-right: $gutter;
+                width: 100%;
+                border-radius: $border-radius-normal;
+                border: 1px solid transparent;
+                transition: $transition-in-out;
+
+                &:focus, &:focus-visible {
+                    border: 1px solid $textColor;
+                }
+            }
+            
+            &__btn {
+                color: $white;
+                background-color: $orange;
+                border-radius: $border-radius-normal;
+
+                &:hover {
+                    background: darken($color: $orange, $amount: 2);
+                }
+            }
+        }
+    }
+
+    &.show {
+        transform: translateY(0);
+    }
+
+    @media screen and (min-width: 769px){
+        flex-direction: row;
+        justify-content: space-between;
+        bottom: unset;
+        height: 80px;
+        transform: translateY(0);
+
+        &__left {
+            flex-direction: row;
+            li {
+                display: inline-block;
+                &:not(:first-child) {
+                    margin: 0 0 0 $gutter2x;
+                }
+            }
+            img {
+                border-right: 1px solid $textColor; 
+                padding-right: $gutter;
+            }
+        }
+        &__right {
+            flex-direction: row;
+            
+            .search-bar {
+                flex-direction: row;
+            }
+        }
+    }
+}
