@@ -40,14 +40,14 @@ a {
 }
 
 ::placeholder {
-  color: $textColorVariant;
+  color: $strokeVariant;
 }
 
 a, button {
   font-size: $font-size-default;
   transition: $transition-in-out;
   &.active, &:hover {
-    color: $blue;
+    color: $orange;
     transition: $transition-in-out;
   }
 }
@@ -55,9 +55,13 @@ a, button {
 
 input {
   font-size: $font-size-default;
-  padding: $gutter;
+  padding: $gutter1_2 $gutter;
   background: transparent;
-  border-radius: $border-radius-normal;
-  border: 1px solid $stroke;
   outline: 0;
+  border: 0;
+
+  &[type=submit] {
+    cursor: pointer;
+    transition: $transition-in-out;
+  }
 }
