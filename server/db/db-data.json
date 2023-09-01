@@ -7,7 +7,7 @@
         "built_area": "",
         "description": "",
         "category": "'residential' | 'artist_studio' | 'housing' | 'commercial' | 'hospitality' | 'leisure_entertainment' | 'farmhouse' | 'retail' | 'corporate'",
-        "awards_count": "",
+        "awards": [],
         "photos": {
             "hero_img": "",
             "primary_img": "",
