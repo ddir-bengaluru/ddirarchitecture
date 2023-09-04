@@ -1,0 +1,57 @@
+.description {
+    max-width: 1013px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #auro {
+    margin-top: -10px;
+  }
+
+
+  #project-title-right{
+    margin-top: 33px;
+  }
+
+
+  // Chevron
+  /* Add this CSS to create chevron icons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+.carousel-button i {
+  /* Add styles for the chevron icons */
+  font-size: 24px;
+}
+
+.carousel-button i.fa-chevron-left:before {
+  content: "\f104"; /* Unicode for left chevron */
+}
+
+.carousel-button i.fa-chevron-right:before {
+  content: "\f105"; /* Unicode for right chevron */
+}
