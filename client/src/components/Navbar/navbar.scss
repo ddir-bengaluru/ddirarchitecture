@@ -8,9 +8,14 @@
     background: none;
     border: 0;
     font-size: $font-size-m;
+    z-index: 4;
     @media screen and (min-width: 769px) {
         display: none;
     }
+}
+
+.btn-open {
+    color: $white
 }
 
 .navbar {
@@ -23,6 +28,7 @@
     box-shadow: $box-shadow-large;
     transform: translateY(-100%);
     transition: $transition-in-out;
+    z-index: 5;
     
     &__left {
         @include flex(column, center, start);
@@ -37,6 +43,9 @@
             height: 100%;
             object-fit: contain;
         }
+        h1 span{
+            color: $orange
+        }
     }
 
     &__right {
@@ -49,10 +58,9 @@
         }
         .search-bar {
             @include flex(row, center, center);
-            gap: $gutter;
+            gap: $gutter1_2;
             &__text {
                 background-color: $body-bg;
-                margin-right: $gutter;
                 width: 100%;
                 border-radius: $border-radius-normal;
                 border: 1px solid transparent;

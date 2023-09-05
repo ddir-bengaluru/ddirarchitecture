@@ -1,0 +1,27 @@
+@import "../../assets/styles/flex";
+
+.card {
+    @include flex(column, start, center);
+    gap: $gutter;
+    background-color: $white;
+    border-radius: $border-radius-medium;
+    box-shadow: $box-shadow-large;
+    padding: $gutter;
+    max-width: 500px;
+
+    &__img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: $border-radius-normal;
+        transition: $transition-in-out;
+    }
+
+    &__title {
+        font-size: $font-size-l;
+    }
+
+    &__desc {
+        text-align: justify;
+    }
+}

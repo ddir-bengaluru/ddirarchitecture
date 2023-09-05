@@ -1,0 +1,36 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/sudo";
+
+.scroll-to-top {
+    @include element-position(fixed, unset, 16px, 32px, unset);
+    z-index: 5;
+    pointer-events: all;
+    border-radius: $border-radius-rounded;
+    background-color: $white;
+    color: $orange;
+    opacity: 0;
+    height: 35px;
+    width: 35px;
+
+    &:hover {
+        background-color: lighten($color: $orange, $amount: 20);
+        color: $white;
+    }
+
+    svg {
+        height: 100%;
+        width: 100%;
+    }
+
+    &.show {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .scroll-to-top {
+        right: 32px;
+        height: 50px;
+        width: 50px;
+    }
+}
