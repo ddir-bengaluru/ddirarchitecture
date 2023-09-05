@@ -28,7 +28,7 @@
     box-shadow: $box-shadow-large;
     transform: translateY(-100%);
     transition: $transition-in-out;
-    z-index: 2;
+    z-index: 5;
     
     &__left {
         @include flex(column, center, start);
