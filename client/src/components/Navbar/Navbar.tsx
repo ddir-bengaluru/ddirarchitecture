@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './navbar.scss';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 
@@ -21,7 +21,8 @@ export default function Navbar() {
       <nav className={visibility ? 'navbar show' : 'navbar'}>
         <button className='btn-close' onClick={toggleNav}><FontAwesomeIcon icon={faClose} /></button>
         <ul className='navbar__left'>
-          <img src="https://studiolotus.in/assets/default/img/build/brand/StudioLotus-Logo.svg" alt="DDIR" className='logo' />
+          <a href='/'><h1>DDIR <span>Architecture</span></h1></a>
+          {/* <img src="https://studiolotus.in/assets/default/img/build/brand/StudioLotus-Logo.svg" alt="DDIR" className='logo' /> */}
           <li><a href="/">Home</a></li>
           <li><a href="">Categories</a></li>
           <li><a href="">Awards</a></li>
