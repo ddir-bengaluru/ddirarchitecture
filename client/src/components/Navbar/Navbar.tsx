@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './navbar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
+import { useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   const [visibility, setVisibility] = useState(false);
+  const [isLanding, setLandingStatus] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    setLandingStatus(location.pathname == '/' ? true : false);
+  });
 
   function onSearch() {
 
@@ -16,7 +23,7 @@ export default function Navbar() {
 
   return (
     <div className='nav'>
-      <button className='btn-open' onClick={toggleNav}><FontAwesomeIcon icon={faBars} /></button>
+      <button className={ isLanding ? "btn-open text-white" : "btn-open" } onClick={toggleNav}><FontAwesomeIcon icon={faBars} /></button>
       <nav className={visibility ? 'navbar show' : 'navbar'}>
         <button className='btn-close' onClick={toggleNav}><FontAwesomeIcon icon={faClose} /></button>
         <ul className='navbar__left'>

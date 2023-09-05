@@ -9,6 +9,15 @@ router.get("/", async (req, res) => {
   res.send(results).status(200);
 });
 
+router.get("/:name", async (req, res) => {
+  let collection = await db.collection("projects");
+  let query = {name: req.params.name};
+  let result = await collection.findOne(query);
+
+  if (!result) res.send("Not found").status(404);
+  else res.send(result).status(200);
+});
+
 router.post("/", async (req, res) => {
   let newDocument = {
     name: req.body.name,

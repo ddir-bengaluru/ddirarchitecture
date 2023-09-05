@@ -1,0 +1,16 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/sudo";
+
+.projects {
+
+    &__hero {
+        height: 500px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    @media screen and (min-width: 679px){
+        
+    }
+}
