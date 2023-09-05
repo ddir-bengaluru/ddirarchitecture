@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './navbar.scss';
-import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 
