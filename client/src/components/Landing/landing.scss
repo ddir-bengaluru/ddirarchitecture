@@ -1,0 +1,89 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/sudo";
+@import "../../assets/styles/flex";
+
+.landing {
+
+    .hero {
+        @include flex(column, center, center);
+        position: relative;
+        gap: $gutter;
+        color: $white;
+        height: 100vh;
+        background-image: url("../../assets/images/hero.jpeg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-blend-mode: saturation;
+        animation: fade-in 1000ms;
+
+        &:before {
+            @include sudo-fill(absolute, 0, 0, 0, 0);
+            background: rgba($color: $black, $alpha: 0.5);
+            z-index: 1;
+        }
+
+        &__title,
+        &__slang {
+            z-index: 2;
+        }
+
+        &__title {
+            font-size: $font-size-l;
+        }
+
+        &__slang {
+            font-size: $font-size-base;
+        }
+    }
+
+    .text-box {
+        text-align: justify;
+        padding: $gutter;
+        font-size: $font-size-xs;
+        
+        .highlight {
+            color: $orange;
+            font-weight: $font-weight700;
+            font-size: $font-size-s m;
+        }
+    }
+
+    .showcase {
+        @include flex(column, center, center);
+        padding: $gutter2x $gutter;
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: $gutter2x;
+            margin-top: $gutter;
+        }
+    }
+
+
+    @media screen and (min-width: 769px){
+        .hero {
+            height: calc(100vh - 80px);
+
+            &__title {
+                font-size: $font-size-xxl;
+            }
+
+            &__desc {
+                font-size: $font-size-m;
+            }
+        }
+        .text-box {
+            margin: $gutter $gutter2x;
+            font-size: $font-size-s;
+            text-align: center;
+            .highlight {
+                font-size: $font-size-s;
+            }
+        }
+        .showcase .cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

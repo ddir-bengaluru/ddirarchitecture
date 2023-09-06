@@ -1,19 +1,9 @@
 import React from 'react'
-import AddDetail from './components/addDetails/addDetail';
-import ViewData from './components/ViewData/viewData';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-// import "./style.scss";
-import Description from './components/Description';
+import Router from './routes/Router';
+import "./style.scss";
 
 export default function App() {
   return (
-    <>
-      {/* <AddDetail />
-      <ViewData /> */}
-      <Navbar />
-      <Hero/>
-      <Description />
-    </>
+    <Router />
   );
 }
