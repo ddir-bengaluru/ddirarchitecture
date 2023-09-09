@@ -14,7 +14,16 @@ router.get("/:name", async (req, res) => {
   let query = {name: req.params.name};
   let result = await collection.findOne(query);
 
-  if (!result) res.send("Not found").status(404);
+  if (!result) res.send([]).status(404);
+  else res.send(result).status(200);
+});
+
+router.get("/category/:name", async (req, res) => {
+  let collection = await db.collection("projects");
+  let query = {category: req.params.name};
+  let result = await collection.find(query).toArray();
+
+  if(!result) res.send("No Data").status(404);
   else res.send(result).status(200);
 });
 
