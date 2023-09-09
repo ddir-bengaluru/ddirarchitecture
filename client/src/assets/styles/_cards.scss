@@ -6,7 +6,7 @@
     background-color: $white;
     border-radius: $border-radius-medium;
     box-shadow: $box-shadow-large;
-    padding: $gutter;
+    padding: $gutter1_2;
     max-width: 500px;
 
     &__img {
@@ -24,4 +24,77 @@
     &__desc {
         text-align: justify;
     }
+
+      .card__title {
+        position: absolute;
+        color: #FFF;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0; /* Initially hide the text */
+        transition: opacity 0.3s ease; /* Add a smooth transition effect */
+        font-size: $font-size-base;
+        font-weight: 750;
+        font-style: normal;
+        text-transform: uppercase;
+        font-stretch: normal;
+        letter-spacing: 2.5px;
+        text-align: center;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .card__subtitle {
+        position: absolute;
+        color: #FFF;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0; /* Initially hide the text */
+        transition: opacity 0.3s ease; /* Add a smooth transition effect */
+        font-size: $font-size-xxs;
+        font-weight: 500;
+        font-style: normal;
+        text-transform: uppercase;
+        font-stretch: normal;
+        letter-spacing: 2.5px;
+        text-align: center;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      
+      
+      .card__overlay:hover .card__img {
+        transform: scale(1.1); /* Enlarge the image on hover */
+        // filter: grayscale(95%);
+         filter: brightness(40%);
+
+      }
+      
+      .card__overlay:hover .card__title {
+        opacity: 1; /* Show the text on hover */
+      }
+      
+      .card__overlay:hover .card__subtitle {
+        opacity: 1; /* Show the text on hover */
+      }
+
+      
+
+      .card__overlay {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .card__img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease; /* Add a smooth transition effect */
+      }
+      // .card .card__img hover{
+      //   background-color: #000;
+      // }
 }

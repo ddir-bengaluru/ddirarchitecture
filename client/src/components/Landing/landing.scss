@@ -16,6 +16,7 @@
         background-size: cover;
         background-blend-mode: saturation;
         animation: fade-in 1000ms;
+        z-index: auto;
 
         &:before {
             @include sudo-fill(absolute, 0, 0, 0, 0);
@@ -83,7 +84,10 @@
             }
         }
         .showcase .cards {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
+
+
+        
     }
 }

@@ -23,15 +23,22 @@ export default function Navbar() {
 
   return (
     <div className='nav'>
-      <button className={ isLanding ? "btn-open text-white" : "btn-open" } onClick={toggleNav}><FontAwesomeIcon icon={faBars} /></button>
+      <button className={isLanding ? "btn-open text-white" : "btn-open"} onClick={toggleNav}><FontAwesomeIcon icon={faBars} /></button>
       <nav className={visibility ? 'navbar show' : 'navbar'}>
         <button className='btn-close' onClick={toggleNav}><FontAwesomeIcon icon={faClose} /></button>
         <ul className='navbar__left'>
           <a href='/'><h1>DDIR <span>Architecture</span></h1></a>
           {/* <img src="https://studiolotus.in/assets/default/img/build/brand/StudioLotus-Logo.svg" alt="DDIR" className='logo' /> */}
-          <li><a href="/">Home</a></li>
-          <li><a href="">Categories</a></li>
-          <li><a href="">Awards</a></li>
+
+          <li className="dropdown"><a href="/">Architecture &#9662;</a>
+            <div className="dropdown-content">
+              <a href="#">Red</a>
+              <a href="#">Blue</a>
+              <a href="#">Green</a>
+            </div>
+          </li>
+          {/* <li><a href="">Categories</a></li> */}
+          <li><a href="">News & Awards</a></li>
           <li><a href="">Contact</a></li>
           <li><a href="">About Us</a></li>
         </ul>
@@ -41,6 +48,8 @@ export default function Navbar() {
             <a href="">b</a>
             <a href="">c</a>
           </div>
+
+
           <form className="search-bar" onSubmit={onSearch}>
             <input className='search-bar__text' type="text" id="name" placeholder='Enter Project Name' />
             <input className='search-bar__btn' type='submit' value="Search" />
