@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './navbar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faChevronDown, faClose } from '@fortawesome/free-solid-svg-icons';
 import { useLocation } from 'react-router-dom';
 
 export default function Navbar() {
@@ -29,9 +29,15 @@ export default function Navbar() {
         <ul className='navbar__left'>
           <a href='/'><h1>DDIR <span>Architecture</span></h1></a>
           {/* <img src="https://studiolotus.in/assets/default/img/build/brand/StudioLotus-Logo.svg" alt="DDIR" className='logo' /> */}
-          <li><a href="/">Home</a></li>
-          <li><a href="">Categories</a></li>
-          <li><a href="">Awards</a></li>
+          <li className='dropdown'>
+            <a href="javascript:void(0)">Architecture <FontAwesomeIcon className='icon' icon={faChevronDown} /></a>
+            <div className="dropdown__content">
+              <a href="#">Red</a>
+              <a href="#">Blue</a>
+              <a href="#">Green</a>
+            </div>
+          </li>
+          <li><a href="">News & Awards</a></li>
           <li><a href="">Contact</a></li>
           <li><a href="">About Us</a></li>
         </ul>
@@ -41,10 +47,10 @@ export default function Navbar() {
             <a href="">b</a>
             <a href="">c</a>
           </div>
-          <form className="search-bar" onSubmit={onSearch}>
+          {/* <form className="search-bar" onSubmit={onSearch}>
             <input className='search-bar__text' type="text" id="name" placeholder='Enter Project Name' />
             <input className='search-bar__btn' type='submit' value="Search" />
-          </form>
+          </form> */}
         </div>
       </nav>
     </div>

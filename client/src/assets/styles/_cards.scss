@@ -1,27 +1,51 @@
-@import "../../assets/styles/flex";
-
 .card {
-    @include flex(column, start, center);
-    gap: $gutter;
-    background-color: $white;
-    border-radius: $border-radius-medium;
-    box-shadow: $box-shadow-large;
-    padding: $gutter;
-    max-width: 500px;
+  @include flex(column, start, center);
+  cursor: pointer;
+  gap: $gutter1_2;
+  background-color: $white;
+  border-radius: $border-radius-medium;
+  box-shadow: $box-shadow-large;
+  padding: $gutter1_2;
+  max-width: 500px;
 
-    &__img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        border-radius: $border-radius-normal;
-        transition: $transition-in-out;
-    }
+  &__overlay{
+    position: relative;
+    overflow: hidden;
+    border-radius: $border-radius-normal;
+    &:hover {
+      .card__img {
+        transform: scale(1.1);
+        filter: brightness(40%);
+      }
 
-    &__title {
-        font-size: $font-size-l;
+      .card__title, .card__subtitle {
+        opacity: 1;
+      }
     }
+  }
 
-    &__desc {
-        text-align: justify;
-    }
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: $transition-in-out;
+  }
+
+  &__title, &__subtitle {
+    @include element-position(absolute, 45%, unset, unset, 50%);
+    @include line-clamp(1);
+    transform: translate(-50%, -50%);
+    color: $white;
+    opacity: 0;
+    font-size: $font-size-base;
+    font-weight: $font-weight700;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  &__subtitle {
+    top: 55%;
+    font-size: $font-size-xxs;
+    font-weight: $font-weight500;
+  }
 }
