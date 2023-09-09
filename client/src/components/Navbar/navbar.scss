@@ -20,10 +20,11 @@
 
 .navbar {
     @include element-position(fixed, 0, 0, 0, 0);
-    @include flex(column, center, center);
+    @include flex(column, center, flex-start);
     gap: $gutter3x;
     background-color: $white;
     padding: $gutter;
+    padding-top: 80px;
     box-shadow: $box-shadow-large;
     transform: translateY(-100%);
     transition: $transition-in-out;
@@ -57,6 +58,7 @@
                 @include flex(column, center, center);
                 box-shadow: none;
                 margin-top: $gutter1_2;
+                padding-left: $gutter4x;
                 width: 100%;
                 max-height: 0;
                 overflow: hidden;
@@ -87,9 +89,8 @@
         @include flex(column, center, center);
         gap: $gutter2x;
         .social-icons {
-            a:not(:first-child) {
-                margin-left: $gutter
-            }
+            @include flex(row, center, space-evenly);
+            gap: $gutter
         }
         .search-bar {
             @include flex(row, center, center);
@@ -123,6 +124,7 @@
     }
 
     @media screen and (min-width: 769px){
+        padding-top: $gutter;
         flex-direction: row;
         justify-content: space-between;
         bottom: unset;
@@ -142,11 +144,13 @@
                 padding-right: $gutter;
             }
             .dropdown {
+                cursor: pointer;
                 &__content {
                     display: none;
                     position: absolute;
+                    padding-left: 0;
                     top: 18px;
-                    overflow: visible;
+                    overflow: auto;
                     margin-top: 0;
                     background-color: $white;
                     min-width: 160px;
@@ -164,8 +168,8 @@
 
                 &:hover {
                     .dropdown__content {
-                        display: flex;
-                        max-height: fit-content;
+                        display: block;
+                        max-height: 30vh;
                     }
                 }
             }
@@ -176,6 +180,23 @@
             .search-bar {
                 flex-direction: row;
             }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .dropdown__content {
+            transition: $transition-in-out;
+            a {
+                position: relative;
+                &:before {
+                    @include sudo-fill(absolute, -16px, unset, unset, -16px);
+                    border-left: 1px solid $stroke;
+                    height: 100%;
+                    width: 16px;
+                    border-bottom: 1px solid $stroke;
+                }
+            }
+            
         }
     }
 

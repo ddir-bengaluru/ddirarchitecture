@@ -18,7 +18,7 @@
         filter: brightness(40%);
       }
 
-      .card__title, .card__subtitle {
+      .card__title, .card__subtitle, .card__redirect {
         opacity: 1;
       }
     }
@@ -31,7 +31,7 @@
     transition: $transition-in-out;
   }
 
-  &__title, &__subtitle {
+  &__title{
     @include element-position(absolute, 45%, unset, unset, 50%);
     @include line-clamp(1);
     transform: translate(-50%, -50%);
@@ -40,12 +40,23 @@
     font-size: $font-size-base;
     font-weight: $font-weight700;
     text-transform: uppercase;
-    white-space: nowrap;
   }
 
   &__subtitle {
-    top: 55%;
+    @include line-clamp(3);
+    @include element-position(absolute, 52%, 32px, unset, 32px);
+    opacity: 0;
+    color: $white;
     font-size: $font-size-xxs;
     font-weight: $font-weight500;
+  }
+
+  &__redirect {
+    @include element-position(absolute, unset, 32px, 16px, unset);
+    opacity: 0;
+    color: $white;
+    font-size: $font-size-xxs;
+    transition: $transition-in-out;
+    transition-delay: 300ms;
   }
 }
