@@ -23,7 +23,7 @@
     @include flex(column, center, center);
     gap: $gutter3x;
     background-color: $white;
-    overflow: hidden;
+    overflow: visible;
     padding: $gutter;
     box-shadow: $box-shadow-large;
     transform: translateY(-100%);
@@ -126,7 +126,7 @@
             background-color: #fff; 
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
-            z-index: 7; 
+            z-index: 1; 
           }
           
           .dropdown-content a {
@@ -134,6 +134,7 @@
             padding: 12px 16px;
             text-decoration: none;
             display: block;
+            float: none;
           }
           
           .dropdown-content a:hover {

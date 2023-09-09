@@ -16,7 +16,7 @@
         background-size: cover;
         background-blend-mode: saturation;
         animation: fade-in 1000ms;
-        z-index: auto;
+        z-index: 1;
 
         &:before {
             @include sudo-fill(absolute, 0, 0, 0, 0);
