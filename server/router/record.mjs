@@ -14,7 +14,7 @@ router.get("/:name", async (req, res) => {
   let query = {name: req.params.name};
   let result = await collection.findOne(query);
 
-  if (!result) res.send([]).status(404);
+  if (!result) res.sendStatus(404);
   else res.send(result).status(200);
 });
 
