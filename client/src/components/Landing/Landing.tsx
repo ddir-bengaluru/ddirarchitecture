@@ -1,10 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import "./landing.scss";
 import hero from './../../assets/images/hero.jpeg';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
+import { Link } from 'react-router-dom';
+import { strTransform } from '../../Utils/Utils';
 
 export default function Landing() {
-  var scrollLocation = window.pageYOffset;
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    fetch('http://localhost:9200/record')
+    .then((res) => res.json())
+    .then((res) => {
+      setProjects(res);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  }, []);
+  function MapProjectCards(props:any) {
+    return props.map((data: any, index: number) => {
+      return (
+        <Link to={'/' + data.name} className="card" key={index}>
+          <div className='card__overlay'> 
+            <img className='card__img' src={data.photos.hero_img} alt="" />
+            <div className='card__title'>{strTransform(data.name)}</div>
+            <div className='card__subtitle'>{data.description}</div>
+            <div className='card__redirect'>Click to See Full View</div>
+          </div>
+        </Link>
+      )
+    })
+  }
   return (
     <div className='landing'>
       <ScrollToTop />
@@ -15,50 +41,7 @@ export default function Landing() {
       <div className="showcase">
         <h2>Our Award Winning Projects</h2>
         <div className="cards">
-          <div className="card">
-            <div className='card__overlay'>
-              <img className='card__img' src={hero} alt="" />
-              <div className='card__title'>
-              INGE‘S RESIDENCE
-              </div>
-              <div className='card__subtitle'>
-              AUROVILLE
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <div className='card__overlay'>
-              <img className='card__img' src={hero} alt="" />
-              <div className='card__title'>
-                Card Text
-              </div>
-              <div className='card__subtitle'>
-                Card Text
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <div className='card__overlay'>
-              <img className='card__img' src={hero} alt="" />
-              <div className='card__title'>
-                Card Text
-              </div>
-              <div className='card__subtitle'>
-                Card Text
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <div className='card__overlay'>
-              <img className='card__img' src={hero} alt="" />
-              <div className='card__title'>
-                Card Text
-              </div>
-              <div className='card__subtitle'>
-                Card Text
-              </div>
-            </div>
-          </div>
+          {MapProjectCards(projects)}
         </div>
       </div>
     </div>

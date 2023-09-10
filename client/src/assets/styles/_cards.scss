@@ -1,100 +1,62 @@
-@import "../../assets/styles/flex";
-
 .card {
-    @include flex(column, start, center);
-    gap: $gutter;
-    background-color: $white;
-    border-radius: $border-radius-medium;
-    box-shadow: $box-shadow-large;
-    padding: $gutter1_2;
-    max-width: 500px;
+  @include flex(column, start, center);
+  cursor: pointer;
+  gap: $gutter1_2;
+  background-color: $white;
+  border-radius: $border-radius-medium;
+  box-shadow: $box-shadow-large;
+  padding: $gutter1_2;
+  max-width: 500px;
 
-    &__img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        border-radius: $border-radius-normal;
-        transition: $transition-in-out;
-    }
-
-    &__title {
-        font-size: $font-size-l;
-    }
-
-    &__desc {
-        text-align: justify;
-    }
-
-      .card__title {
-        position: absolute;
-        color: #FFF;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0; /* Initially hide the text */
-        transition: opacity 0.3s ease; /* Add a smooth transition effect */
-        font-size: $font-size-base;
-        font-weight: 750;
-        font-style: normal;
-        text-transform: uppercase;
-        font-stretch: normal;
-        letter-spacing: 2.5px;
-        text-align: center;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-      }
-
-      .card__subtitle {
-        position: absolute;
-        color: #FFF;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0; /* Initially hide the text */
-        transition: opacity 0.3s ease; /* Add a smooth transition effect */
-        font-size: $font-size-xxs;
-        font-weight: 500;
-        font-style: normal;
-        text-transform: uppercase;
-        font-stretch: normal;
-        letter-spacing: 2.5px;
-        text-align: center;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-      }
-
-      
-      
-      .card__overlay:hover .card__img {
-        transform: scale(1.1); /* Enlarge the image on hover */
-        // filter: grayscale(95%);
-         filter: brightness(40%);
-
-      }
-      
-      .card__overlay:hover .card__title {
-        opacity: 1; /* Show the text on hover */
-      }
-      
-      .card__overlay:hover .card__subtitle {
-        opacity: 1; /* Show the text on hover */
-      }
-
-      
-
-      .card__overlay {
-        position: relative;
-        overflow: hidden;
-      }
-      
+  &__overlay{
+    position: relative;
+    overflow: hidden;
+    border-radius: $border-radius-normal;
+    &:hover {
       .card__img {
-        width: 100%;
-        height: auto;
-        transition: transform 0.3s ease; /* Add a smooth transition effect */
+        transform: scale(1.1);
+        filter: brightness(40%);
       }
-      // .card .card__img hover{
-      //   background-color: #000;
-      // }
+
+      .card__title, .card__subtitle, .card__redirect {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: $transition-in-out;
+  }
+
+  &__title{
+    @include element-position(absolute, 45%, unset, unset, 50%);
+    @include line-clamp(1);
+    transform: translate(-50%, -50%);
+    color: $white;
+    opacity: 0;
+    font-size: $font-size-base;
+    font-weight: $font-weight700;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    @include line-clamp(3);
+    @include element-position(absolute, 52%, 32px, unset, 32px);
+    opacity: 0;
+    color: $white;
+    font-size: $font-size-xxs;
+    font-weight: $font-weight500;
+  }
+
+  &__redirect {
+    @include element-position(absolute, unset, 32px, 16px, unset);
+    opacity: 0;
+    color: $white;
+    font-size: $font-size-xxs;
+    transition: $transition-in-out;
+    transition-delay: 300ms;
+  }
 }

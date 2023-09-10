@@ -20,11 +20,11 @@
 
 .navbar {
     @include element-position(fixed, 0, 0, 0, 0);
-    @include flex(column, center, center);
+    @include flex(column, center, flex-start);
     gap: $gutter3x;
     background-color: $white;
-    overflow: visible;
     padding: $gutter;
+    padding-top: 80px;
     box-shadow: $box-shadow-large;
     transform: translateY(-100%);
     transition: $transition-in-out;
@@ -46,15 +46,51 @@
         h1 span{
             color: $orange
         }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;    
+            .icon {
+                font-size: $font-size-xxs;
+                transition: $transition-in-out;
+            }
+            &__content {
+                @include flex(column, center, center);
+                box-shadow: none;
+                margin-top: $gutter1_2;
+                padding-left: $gutter4x;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                pointer-events: none;
+                transition: $transition-in-out;
+
+                a {
+                    text-align: start;
+                    padding: $gutter1_2;
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            &:hover {
+                .dropdown__content {
+                    max-height: 100%;
+                    pointer-events: all;
+                }
+                .icon {
+                    transform: rotate(180deg);
+                }
+            }
+        }
     }
 
     &__right {
         @include flex(column, center, center);
         gap: $gutter2x;
         .social-icons {
-            a:not(:first-child) {
-                margin-left: $gutter
-            }
+            @include flex(row, center, space-evenly);
+            gap: $gutter
         }
         .search-bar {
             @include flex(row, center, center);
@@ -88,6 +124,7 @@
     }
 
     @media screen and (min-width: 769px){
+        padding-top: $gutter;
         flex-direction: row;
         justify-content: space-between;
         bottom: unset;
@@ -106,6 +143,36 @@
                 border-right: 1px solid $textColor; 
                 padding-right: $gutter;
             }
+            .dropdown {
+                cursor: pointer;
+                &__content {
+                    display: none;
+                    position: absolute;
+                    padding-left: 0;
+                    top: 18px;
+                    overflow: auto;
+                    margin-top: 0;
+                    background-color: $white;
+                    min-width: 160px;
+                    box-shadow: $box-shadow-large;
+                    z-index: 1;
+        
+                    a {
+                        padding: $gutter12 $gutter;
+                        &:hover {
+                            background-color: $body-bg;
+                        }
+                    }
+                    
+                }
+
+                &:hover {
+                    .dropdown__content {
+                        display: block;
+                        max-height: 30vh;
+                    }
+                }
+            }
         }
         &__right {
             flex-direction: row;
@@ -114,37 +181,23 @@
                 flex-direction: row;
             }
         }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-          }
-          
-          .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #fff; 
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
-            z-index: 1; 
-          }
-          
-          .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            float: none;
-          }
-          
-          .dropdown-content a:hover {
-            background-color: #f2f2f2; 
-          }
-          
-          .dropdown:hover .dropdown-content {
-            display: block;
-          }
-        
-          
     }
+
+    @media screen and (max-width: 768px) {
+        .dropdown__content {
+            transition: $transition-in-out;
+            a {
+                position: relative;
+                &:before {
+                    @include sudo-fill(absolute, -16px, unset, unset, -16px);
+                    border-left: 1px solid $stroke;
+                    height: 100%;
+                    width: 16px;
+                    border-bottom: 1px solid $stroke;
+                }
+            }
+            
+        }
+    }
+
 }
