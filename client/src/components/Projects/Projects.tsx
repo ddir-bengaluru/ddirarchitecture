@@ -13,26 +13,19 @@ export default function Projects() {
     async function getProjectData() {
       const response = await fetch("http://localhost:9200/record/" + project_name);
       if (!response.ok) {
-        console.error(response);
-      }
-      if(response.status == 404) {
         navigate('/404-not-found');
         return
       }
       const data = await response.json();
-      if(!data.length) {
-        navigate('/404-not-found');
-        return
-      }
       setLoadingStatus(false);
       setProjectData(data);
     }
     getProjectData();
   }, []);
   function Carousel() {
-    return projectData.photos.secondary_images.map((img: any) => {
+    return projectData.photos.secondary_images.map((img: any, index:number) => {
       return (
-        <img key={img._id} src={img} />
+        <img key={index} src={img} />
       )
     })
   }
