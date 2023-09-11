@@ -9,6 +9,8 @@ export default function Projects() {
   const navigate = useNavigate();
   const [projectData, setProjectData] = useState(ProjectState);
   const [loader, setLoadingStatus] = useState(true);
+  const scrollY = window.scrollY;
+
   useEffect(() => {
     async function getProjectData() {
       const response = await fetch("http://localhost:9200/record/" + project_name);
@@ -18,6 +20,7 @@ export default function Projects() {
       }
       const data = await response.json();
       setLoadingStatus(false);
+      window.scrollTo(0,scrollY);
       setProjectData(data);
     }
     getProjectData();
@@ -33,18 +36,19 @@ export default function Projects() {
     <div className='projects'>
       {loader ?
         <>
-          <h1>LOADING</h1>
+          
+          <h1 className='loading'>LOADING</h1>
         </>
         :
         <>
           <div className="projects__hero" style={{ backgroundImage: "url(" + projectData.photos.hero_img + ")" }}></div>
           <div className="projects__title">
             <h1 className={projectData.awards ? 'has-award' : ''}>{strTransform(projectData.name)}</h1>
-            <h4>{strTransform(projectData.location)}</h4>
+            <h3>{strTransform(projectData.location)}</h3>
             <ul>
               <li>Category: {projectData.category}</li>
-              <li>Site Area: {projectData.site_area}</li>
-              <li>Build Area: {projectData.built_area}</li>
+              <li>Site Area: {projectData.site_area} sqm</li>
+              <li>Build Area: {projectData.built_area} sqm</li>
             </ul>
           </div>
           <div className="projects__content">

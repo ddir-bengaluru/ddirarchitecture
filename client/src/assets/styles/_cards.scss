@@ -37,7 +37,7 @@
     transform: translate(-50%, -50%);
     color: $white;
     opacity: 0;
-    font-size: $font-size-base;
+    font-size: $font-size-s;
     font-weight: $font-weight700;
     text-transform: uppercase;
   }
@@ -47,8 +47,9 @@
     @include element-position(absolute, 52%, 32px, unset, 32px);
     opacity: 0;
     color: $white;
-    font-size: $font-size-xxs;
+    font-size: $font-size-default;
     font-weight: $font-weight500;
+    text-align: center;
   }
 
   &__redirect {

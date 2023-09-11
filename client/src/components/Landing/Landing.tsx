@@ -24,8 +24,8 @@ export default function Landing() {
           <div className='card__overlay'> 
             <img className='card__img' src={data.photos.hero_img} alt="" />
             <div className='card__title'>{strTransform(data.name)}</div>
-            <div className='card__subtitle'>{data.description}</div>
-            <div className='card__redirect'>Click to See Full View</div>
+            <div className='card__subtitle'>{data.location}</div>
+            <div className='card__redirect'>Click to view details</div>
           </div>
         </Link>
       )

@@ -36,7 +36,7 @@
             }
         }
 
-        h4 {
+        h3 {
             grid-area: location;
             color: $orange;
             animation: fade-in 700ms ease-in-out;
@@ -76,6 +76,12 @@
     }
 
 
+    .loading{
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+     }
     @media screen and (min-width: 679px){
         &__title {
             display: grid;
@@ -91,5 +97,7 @@
                 margin: $gutter 0;
             }
         }
+
+        
     }
 }

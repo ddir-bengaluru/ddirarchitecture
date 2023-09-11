@@ -27,7 +27,7 @@ export default function Navbar() {
 
   return (
     <div className='nav'>
-      <button className={isLanding ? "btn-open text-white" : "btn-open"} onClick={toggleNav}><FontAwesomeIcon icon={faBars} /></button>
+      <button className={isLanding ? "btn-open text-black" : "btn-open"} onClick={toggleNav}><FontAwesomeIcon icon={faBars} /></button>
       <nav className={visibility ? 'navbar show' : 'navbar'}>
         <button className='btn-close' onClick={toggleNav}><FontAwesomeIcon icon={faClose} /></button>
         <ul className='navbar__left'>
@@ -47,19 +47,19 @@ export default function Navbar() {
               <a href="/categories/corporate">Corporate</a>
             </div>
           </li>
+          <li><a href="">Art</a></li>
           <li><a href="">News & Awards</a></li>
-          <li><a href="">Contact</a></li>
           <li><a href="">About Us</a></li>
         </ul>
         <div className="navbar__right">
           <div className="social-icons">
-            <a href="#">
+            <a href="https://www.facebook.com/profile.php?id=100057256877863">
               <UseAnimation animation={facebook} strokeColor='#c86508' autoPlay={true} loop={true} />
             </a>
-            <a href="">
+            {/* <a href="">
               <UseAnimation animation={mail} strokeColor='#c86508' />
-            </a>
-            <a href="">
+            </a> */}
+            <a href="https://www.linkedin.com/company/ddir-architecture-studio/about/">
               <UseAnimation animation={linkedin} strokeColor='#c86508' />
             </a>
           </div>
