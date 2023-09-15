@@ -1,0 +1,40 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/sudo";
+
+.categories {
+    margin-top: 80px;
+    padding: $gutter2x;
+    
+    .card--horizontal {
+        display: grid;
+        color: $textColor;
+        align-items: center;
+        grid-template-columns: 1fr;
+        margin-top: $gutter2x;
+        gap: $gutter;
+        padding: $gutter;
+        max-width: 100%;
+        transition: $transition-in-out;
+
+        img {
+            width: 100%;
+            height: auto;
+            grid-row: 2 span;
+            object-fit: cover;
+            border-radius: $border-radius-normal;
+        }
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    @media screen and (min-width: 679px) {
+        margin-top: 0;
+        .card--horizontal {
+            grid-template-columns: 1fr 7fr;
+            grid-template-rows: repeat(2, 1fr);
+            gap: 0 $gutter;
+        }
+    }
+}

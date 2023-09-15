@@ -20,6 +20,20 @@
         h1 {
             grid-area: title;
             animation: fade-in 700ms ease-in-out;
+
+            &.has-award {
+                position: relative;
+                padding-left: $gutter3x;
+
+                &::before {
+                    @include sudo-fill(absolute, 50%, 0, 0, 0);
+                    transform: translateY(-50%);
+                    height: 36px;
+                    width: 36px;
+                    background: url('https://png.pngtree.com/png-vector/20230225/ourmid/pngtree-gold-blue-best-award-badge-with-stars-and-rice-symbol-png-image_6587280.png') center center no-repeat;
+                    background-size: contain;
+                }
+            }
         }
 
         h4 {
@@ -29,84 +43,52 @@
 
         }
 
-        .awards {
-            text-align: center;
-            animation: fade-in 700ms ease-in-out;
-            &__icon {
-                color: $orange;
-            }
-            li {
-                padding-left: $gutter;
-                margin-top: $gutter1_2;
-            }
-        }
-
         ul {
-            grid-area: awards;
+            grid-area: details;
+            li {
+                line-height: 1.5;
+            }
         }
     }
 
-
-    &__details {
-        padding: $gutter $gutter2x;
-
-        p {
-            margin: 0 $gutter
-        }
-
-        .content {
-            @include flex(column, start, center);
-            gap: $gutter;
-            margin: $gutter 0;
-
-            img {
-                width: 100%;
-                border-radius: $border-radius-small;
-            }
+    &__content {
+        padding: $gutter;
+        h2 {
+            margin-top: $gutter2x;
+            margin-bottom: $gutter;
         }
     }
 
     &__carousel {
-        padding: $gutter $gutter2x;
+        line-height: 0;
+        -webkit-column-count: 3;
+        -webkit-column-gap:   $gutter1_4;
+        -moz-column-count:    3;
+        -moz-column-gap:      $gutter1_4;
+        column-count:         3;
+        column-gap:           $gutter1_4;  
 
-        h2 {
-            margin-bottom: $gutter;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: $gutter;
-            overflow-y: hidden;
-            overflow-x: auto;
-
-
-            img {
-                height: 350px;
-            }
+        img {
+            width: 100%;
+            height: auto;
+            margin: $gutter1_4 0;
         }
     }
+
 
     @media screen and (min-width: 679px){
         &__title {
             display: grid;
-            grid-template-areas: "title awards" "location awards";
+            grid-template-areas: "title details" "location details";
             gap: $gutter1_2;
-            justify-content: space-around;
-
-            .awards {
-                text-align: start;
-            }
+            padding: $gutter2x;
+            justify-content: space-between;
         }
-        &__details {
-            .content {
-                flex-direction: row;
-                justify-content: start;
-                align-items: center;
-                img {
-                    width: auto;
-                    height: 500px;
-                }
+
+        &__content {
+            padding: $gutter2x;
+            p {
+                margin: $gutter 0;
             }
         }
     }
