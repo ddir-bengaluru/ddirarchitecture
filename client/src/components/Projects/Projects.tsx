@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./projects.scss";
 import { useNavigate, useParams } from 'react-router-dom';
 import { ProjectState } from '../../assets/app-state/project-state';
-import { strTransform } from '../../Utils/Utils';
+import { endpoint, strTransform } from '../../Utils/Utils';
 
 export default function Projects() {
   const { project_name } = useParams();
@@ -11,7 +11,7 @@ export default function Projects() {
   const [loader, setLoadingStatus] = useState(true);
   useEffect(() => {
     async function getProjectData() {
-      const response = await fetch("http://localhost:9200/record/" + project_name);
+      const response = await fetch(endpoint + project_name);
       if (!response.ok) {
         navigate('/404-not-found');
         return
@@ -37,14 +37,14 @@ export default function Projects() {
         </>
         :
         <>
-          <div className="projects__hero" style={{ backgroundImage: "url(" + projectData.photos.hero_img + ")" }}></div>
+          <div className="projects__hero" style={{ backgroundImage: "url(" + projectData.photos.primary_img + ")" }}></div>
           <div className="projects__title">
             <h1 className={projectData.awards ? 'has-award' : ''}>{strTransform(projectData.name)}</h1>
             <h4>{strTransform(projectData.location)}</h4>
             <ul>
               <li>Category: {projectData.category}</li>
-              <li>Site Area: {projectData.site_area}</li>
-              <li>Build Area: {projectData.built_area}</li>
+              {projectData.site_area ? <li>Site Area: {projectData?.site_area} .sqm</li> : <></>}
+              {projectData.built_area ? <li>Build Area: {projectData?.built_area} .sqm</li> : <></>}
             </ul>
           </div>
           <div className="projects__content">

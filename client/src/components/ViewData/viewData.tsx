@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { endpoint } from '../../Utils/Utils';
 
 
 const Data = (props: any) => (
@@ -16,7 +17,7 @@ export default function ViewData() {
 
     useEffect(() => {
         async function getData() {
-            const res = await fetch('http://localhost:9200/record');
+            const res = await fetch(endpoint);
             if(!res.ok) {
                 console.error("error occured")
                 return

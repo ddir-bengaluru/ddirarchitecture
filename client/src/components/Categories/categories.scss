@@ -2,6 +2,7 @@
 @import "../../assets/styles/sudo";
 
 .categories {
+    margin-top: 80px;
     padding: $gutter2x;
     
     .card--horizontal {
@@ -29,6 +30,7 @@
     }
 
     @media screen and (min-width: 679px) {
+        margin-top: 0;
         .card--horizontal {
             grid-template-columns: 1fr 7fr;
             grid-template-rows: repeat(2, 1fr);
