@@ -41,6 +41,23 @@ router.get("/category/:name", async (req, res) => {
   else res.send(results).status(200);
 });
 
+router.get("/search/:name", async (req, res) =>{
+  const projectRef = collection(db, "projects");
+  const querySnapshot = await getDocs(projectRef);
+  let results = [];
+  querySnapshot.forEach(doc => {
+    let nameKey = doc.data().name.toLowerCase();
+    let clientNameKey = doc.data().client_name.toLowerCase();
+    let searchQuery = req.params.name.toLowerCase();
+    if(nameKey.includes(searchQuery) || clientNameKey.includes(searchQuery)) {
+      results.push(doc.data());
+    }
+  })
+
+  if (!results.length) res.send([]).status(404);
+  else res.send(results).status(404);
+})
+
 export default router;
 
 

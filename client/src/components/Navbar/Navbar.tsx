@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './navbar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faChevronDown, faClose } from '@fortawesome/free-solid-svg-icons';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import UseAnimation from "react-useanimations";
 import facebook from "react-useanimations/lib/facebook";
 import mail from "react-useanimations/lib/mail";
@@ -12,13 +12,17 @@ export default function Navbar() {
   const [visibility, setVisibility] = useState(false);
   const [isLanding, setLandingStatus] = useState(true);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setLandingStatus(location.pathname == '/' ? true : false);
   });
 
-  function onSearch() {
-
+  function onSearch(e: any) {
+    setVisibility(false);
+    e.preventDefault();
+    const searchParam = e.target.elements[0].value;
+    navigate(`/search/${searchParam}`);
   }
 
   function toggleNav() {
@@ -63,10 +67,10 @@ export default function Navbar() {
               <UseAnimation animation={linkedin} strokeColor='#c86508' />
             </a>
           </div>
-          {/* <form className="search-bar" onSubmit={onSearch}>
+          <form className="search-bar" onSubmit={onSearch}>
             <input className='search-bar__text' type="text" id="name" placeholder='Enter Project Name' />
             <input className='search-bar__btn' type='submit' value="Search" />
-          </form> */}
+          </form>
         </div>
       </nav>
     </div>
