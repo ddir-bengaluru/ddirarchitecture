@@ -2,6 +2,7 @@
 @import "../../assets/styles/sudo";
 
 .categories {
+    margin-top: 80px;
     padding: $gutter2x;
     
     .card--horizontal {
@@ -14,23 +15,27 @@
         padding: $gutter;
         max-width: 100%;
         transition: $transition-in-out;
+        box-shadow: none;
 
         img {
             width: 100%;
-            height: auto;
+            height: 100%;
             grid-row: 2 span;
             object-fit: cover;
             border-radius: $border-radius-normal;
+            background-color: $body-bg;
         }
 
         &:hover {
-            box-shadow: none;
+            box-shadow: $box-shadow-large;
         }
     }
 
-    @media screen and (min-width: 679px) {
+    @media screen and (min-width: 769px) {
+        margin-top: 0;
         .card--horizontal {
-            grid-template-columns: 1fr 7fr;
+            height: 200px;
+            grid-template-columns: 350px 1fr;
             grid-template-rows: repeat(2, 1fr);
             gap: 0 $gutter;
         }

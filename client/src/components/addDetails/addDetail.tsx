@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { endpoint } from '../../Utils/Utils';
 
 export default function AddDetail() {
 
@@ -27,7 +28,7 @@ export default function AddDetail() {
         e.preventDefault();
         const formData = { ...form};
 
-        await fetch("http://localhost:9200/record", {
+        await fetch(endpoint + "record", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

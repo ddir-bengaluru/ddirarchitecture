@@ -3,12 +3,12 @@ import "./landing.scss";
 import hero from './../../assets/images/hero.jpeg';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import { Link } from 'react-router-dom';
-import { strTransform } from '../../Utils/Utils';
+import { endpoint, strTransform } from '../../Utils/Utils';
 
 export default function Landing() {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:9200/record')
+    fetch(endpoint)
     .then((res) => res.json())
     .then((res) => {
       setProjects(res);
@@ -24,8 +24,8 @@ export default function Landing() {
           <div className='card__overlay'> 
             <img className='card__img' src={data.photos.hero_img} alt="" />
             <div className='card__title'>{strTransform(data.name)}</div>
-            <div className='card__subtitle'>{data.location}</div>
-            <div className='card__redirect'>Click to view details</div>
+            <div className='card__subtitle'>{data.description}</div>
+            <div className='card__redirect'>Click to See Full View</div>
           </div>
         </Link>
       )

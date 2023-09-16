@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './navbar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faChevronDown, faClose } from '@fortawesome/free-solid-svg-icons';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import UseAnimation from "react-useanimations";
 import facebook from "react-useanimations/lib/facebook";
 import mail from "react-useanimations/lib/mail";
@@ -12,13 +12,17 @@ export default function Navbar() {
   const [visibility, setVisibility] = useState(false);
   const [isLanding, setLandingStatus] = useState(true);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setLandingStatus(location.pathname == '/' ? true : false);
   });
 
-  function onSearch() {
-
+  function onSearch(e: any) {
+    setVisibility(false);
+    e.preventDefault();
+    const searchParam = e.target.elements[0].value;
+    navigate(`/search/${searchParam}`);
   }
 
   function toggleNav() {
@@ -47,19 +51,19 @@ export default function Navbar() {
               <a href="/categories/corporate">Corporate</a>
             </div>
           </li>
-          <li><a href="">Art</a></li>
           <li><a href="">News & Awards</a></li>
+          <li><a href="">Contact</a></li>
           <li><a href="">About Us</a></li>
         </ul>
         <div className="navbar__right">
           <div className="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=100057256877863">
+            <a href="#">
               <UseAnimation animation={facebook} strokeColor='#c86508' autoPlay={true} loop={true} />
             </a>
-            {/* <a href="">
+            <a href="">
               <UseAnimation animation={mail} strokeColor='#c86508' />
-            </a> */}
-            <a href="https://www.linkedin.com/company/ddir-architecture-studio/about/">
+            </a>
+            <a href="">
               <UseAnimation animation={linkedin} strokeColor='#c86508' />
             </a>
           </div>
