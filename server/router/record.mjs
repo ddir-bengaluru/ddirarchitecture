@@ -56,7 +56,20 @@ router.get("/search/:name", async (req, res) =>{
 
   if (!results.length) res.send([]).status(404);
   else res.send(results).status(404);
-})
+});
+
+router.get("/art/:name", async(req, res) => {
+  const projectRef = collection(db, "art");
+  let q = query(projectRef, where("name","==",req.params.name));
+  const querySnapshot = await getDocs(q);
+  let results = [];
+  querySnapshot.forEach(doc => {
+    results.push(doc.data());
+  })
+
+  if(!results.length) res.send([]).status(404);
+  else res.send(results).status(200);
+});
 
 export default router;
 

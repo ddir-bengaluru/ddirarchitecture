@@ -5,6 +5,7 @@ import Landing from '../components/Landing/Landing'
 import Projects from '../components/Projects/Projects'
 import Categories from '../components/Categories/Categories'
 import NotFound from '../components/NotFound/NotFound'
+import Art from '../components/Art/Art'
 
 export default function Router() {
   return (
@@ -16,8 +17,9 @@ export default function Router() {
           <Route path='/:project_name' element={<Projects />} />
           <Route path='/categories/:category_name' element={<Categories />} />
           <Route path='/search/:search_key' element={<Categories />} />
-          <Route path='/404-not-found' element={<NotFound />} />
-          <Route path='*' element={<NotFound />} />
+          <Route path='/art/:art_name' element={<Art />} />
+          <Route path='/404-not-found' element={<NotFound statuscode={404} />} />
+          <Route path='*' element={<NotFound statuscode={404} />} />
       </Routes>
     </div>
     </>
