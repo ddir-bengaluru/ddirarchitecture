@@ -63,7 +63,6 @@ export default function Navbar() {
             </div>
           </li>
           <li><a href="">News & Awards</a></li>
-          <li><a href="">Contact</a></li>
           <li><a href="">About Us</a></li>
         </ul>
         <div className="navbar__right">
