@@ -3,7 +3,6 @@ import cors from "cors";
 import "./loadEnvironment.mjs";
 import records from "./router/record.mjs";
 
-
 const PORT = 9200;
 const app = express();
 
