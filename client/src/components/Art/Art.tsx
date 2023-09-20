@@ -19,7 +19,7 @@ export default function Art() {
                 return
             }
             const data = await response.json();
-            if (!data || !data.photos.length) {
+            if (!data || !data?.photos?.length) {
                 setEmpty(true);
             }
             setLoading(false);
