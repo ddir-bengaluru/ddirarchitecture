@@ -3,7 +3,6 @@
 @import "../../assets/styles/flex";
 
 .landing {
-
     .hero {
         @include flex(column, center, center);
         position: relative;
@@ -19,12 +18,14 @@
 
         &:before {
             @include sudo-fill(absolute, 0, 0, 0, 0);
-            background: rgba($color: $black, $alpha: 0.5);
+            background: rgba($color: $blueSubtle, $alpha: 0.25);
+            filter: brightness(0.5);
             z-index: 1;
         }
 
         &__title,
         &__slang {
+            text-align: center;
             z-index: 2;
         }
 
@@ -41,7 +42,7 @@
         text-align: justify;
         padding: $gutter;
         font-size: $font-size-xs;
-        
+
         .highlight {
             color: $orange;
             font-weight: $font-weight700;
@@ -61,8 +62,7 @@
         }
     }
 
-
-    @media screen and (min-width: 769px){
+    @media screen and (min-width: 769px) {
         .hero {
             height: calc(100vh - 80px);
 

@@ -17,13 +17,17 @@ export default function Projects() {
         return
       }
       const data = await response.json();
+      if (!data.name) {
+        navigate('/404-not-found');
+        return
+      }
       setLoadingStatus(false);
       setProjectData(data);
     }
     getProjectData();
   }, []);
   function Carousel() {
-    return projectData.photos.secondary_images.map((img: any, index:number) => {
+    return projectData?.photos?.secondary_images.map((img: any, index: number) => {
       return (
         <img key={index} src={img} />
       )
@@ -37,22 +41,22 @@ export default function Projects() {
         </>
         :
         <>
-          <div className="projects__hero" style={{ backgroundImage: "url(" + projectData.photos.primary_img + ")" }}></div>
+          <div className="projects__hero" style={{ backgroundImage: "url(" + projectData?.photos?.primary_img + ")" }}></div>
           <div className="projects__title">
-            <h1 className={projectData.awards ? 'has-award' : ''}>{strTransform(projectData.name)}</h1>
-            <h4>{strTransform(projectData.location)}</h4>
+            <h1 className={projectData?.awards ? 'has-award' : ''}>{strTransform(projectData?.name)}</h1>
+            <h4>{strTransform(projectData?.location)}</h4>
             <ul>
-              <li>Category: {projectData.category}</li>
-              {projectData.site_area ? <li>Site Area: {projectData?.site_area} .sqm</li> : <></>}
-              {projectData.built_area ? <li>Build Area: {projectData?.built_area} .sqm</li> : <></>}
+              <li>Category: {projectData?.category}</li>
+              {projectData?.site_area ? <li>Site Area: {projectData?.site_area} .sqm</li> : <></>}
+              {projectData?.built_area ? <li>Build Area: {projectData?.built_area} .sqm</li> : <></>}
             </ul>
           </div>
           <div className="projects__content">
             <hr />
-            <p>{projectData.description}</p>
+            <p>{projectData?.description}</p>
             <h2>Image Gallery</h2>
             <div className="projects__carousel">
-                {Carousel()}
+              {Carousel()}
             </div>
           </div>
         </>}
