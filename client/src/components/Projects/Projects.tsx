@@ -17,7 +17,7 @@ export default function Projects() {
         return
       }
       const data = await response.json();
-      if(!data.name) {
+      if (!data.name) {
         navigate('/404-not-found');
         return
       }
@@ -27,7 +27,7 @@ export default function Projects() {
     getProjectData();
   }, []);
   function Carousel() {
-    return projectData?.photos?.secondary_images.map((img: any, index:number) => {
+    return projectData?.photos?.secondary_images.map((img: any, index: number) => {
       return (
         <img key={index} src={img} />
       )
@@ -56,7 +56,7 @@ export default function Projects() {
             <p>{projectData?.description}</p>
             <h2>Image Gallery</h2>
             <div className="projects__carousel">
-                {Carousel()}
+              {Carousel()}
             </div>
           </div>
         </>}

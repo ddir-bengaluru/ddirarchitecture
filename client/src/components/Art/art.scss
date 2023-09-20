@@ -1,6 +1,5 @@
 @import "../../assets/styles/variables";
 
-
 .art {
     margin-top: $gutter3x;
     h1 {
@@ -16,11 +15,11 @@
         padding: $gutter;
         line-height: 0;
         -webkit-column-count: 1;
-        -webkit-column-gap:   $gutter;
-        -moz-column-count:    1;
-        -moz-column-gap:      $gutter;
-        column-count:         1;
-        column-gap:           $gutter;  
+        -webkit-column-gap: $gutter;
+        -moz-column-count: 1;
+        -moz-column-gap: $gutter;
+        column-count: 1;
+        column-gap: $gutter;
 
         img {
             width: 100%;
@@ -29,13 +28,13 @@
         }
     }
 
-    @media screen and (min-width: 769px){
+    @media screen and (min-width: 769px) {
         margin-top: 0;
         &__wrapper {
             padding: $gutter2x;
             -webkit-column-count: 2;
-            -moz-column-count:    2;
-            column-count:         2;
+            -moz-column-count: 2;
+            column-count: 2;
         }
     }
 }

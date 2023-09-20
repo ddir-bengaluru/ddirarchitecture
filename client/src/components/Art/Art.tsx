@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { endpoint, strTransform } from '../../Utils/Utils';
 import NotFound from '../NotFound/NotFound';
 import { ArtState } from '../../assets/app-state/art-state';
@@ -9,17 +9,17 @@ export default function Art() {
     const [artData, setArtData] = useState(ArtState);
     const [isLoading, setLoading] = useState(true);
     const [isEmpty, setEmpty] = useState(false);
-    const {art_name} = useParams();
+    const { art_name } = useParams();
     const navigate = useNavigate();
     useEffect(() => {
         async function getArtData() {
             const response = await fetch(endpoint + 'art/' + art_name);
-            if(!response.ok) {
+            if (!response.ok) {
                 navigate('404-not-found');
                 return
             }
             const data = await response.json();
-            if(!data.photos.length) {
+            if (!data.photos.length) {
                 setEmpty(true);
             }
             setLoading(false);
@@ -34,17 +34,17 @@ export default function Art() {
     }
     return (
         <div className="art">
-            {isLoading ? 
-            <h1>Loading...</h1>:
-            <>
-            <h1>Art Gallery of <span className='text-orange'>{strTransform(art_name!)}</span></h1>
-            {isEmpty ? 
-            <NotFound statuscode={500} />:
-            <div className="art__wrapper">
-                {MapArtData()}
-            </div>
-            }
-            </>
+            {isLoading ?
+                <h1>Loading...</h1> :
+                <>
+                    <h1>Art Gallery of <span className='text-orange'>{strTransform(art_name!)}</span></h1>
+                    {isEmpty ?
+                        <NotFound statuscode={500} /> :
+                        <div className="art__wrapper">
+                            {MapArtData()}
+                        </div>
+                    }
+                </>
             }
         </div>
     )
