@@ -1,51 +1,50 @@
 import React, { useEffect, useState } from 'react'
-import "./art.scss";
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { endpoint, strTransform } from '../../Utils/Utils';
-import { useNavigate, useParams } from 'react-router-dom';
 import NotFound from '../NotFound/NotFound';
+import { ArtState } from '../../assets/app-state/art-state';
+import "./art.scss";
 
 export default function Art() {
-    const [artData, setArtData] = useState([]);
-    const [isLoading, setLoadingStatus] = useState(true);
-    const [isEmpty, setEmptyStatus] = useState(true);
+    const [artData, setArtData] = useState(ArtState);
+    const [isLoading, setLoading] = useState(true);
+    const [isEmpty, setEmpty] = useState(false);
+    const {art_name} = useParams();
     const navigate = useNavigate();
-    const { art_name } = useParams();
     useEffect(() => {
         async function getArtData() {
             const response = await fetch(endpoint + 'art/' + art_name);
-            if (!response.ok) {
-                navigate('/404-not-found');
+            if(!response.ok) {
+                navigate('404-not-found');
                 return
             }
             const data = await response.json();
-            setArtData(data);
-            if (artData.length) {
-                setEmptyStatus(false);
+            if(!data.photos.length) {
+                setEmpty(true);
             }
-            setLoadingStatus(false);
+            setLoading(false);
+            setArtData(data);
         }
-
         getArtData();
     }, []);
-
     function MapArtData() {
-        return artData.map((item: string) => {
-            return <img src={item} alt={item?.slice(0, 10)} />
+        return artData.photos.map((item: any, index: number) => {
+            return <img key={index} src={item} alt={art_name} />
         })
     }
-
     return (
-        <div className='art'>
-            {isLoading ?
-                <h1>Loading</h1> :
-                <>
-                    <h1>Art Gallery of {strTransform(art_name!)}</h1>
-                    {isEmpty ?
-                        <NotFound statuscode={500} /> :
-                        <div className='art__wrapper'>
-                            {MapArtData()}
-                        </div>}
-                </>
+        <div className="art">
+            {isLoading ? 
+            <h1>Loading...</h1>:
+            <>
+            <h1>Art Gallery of <span className='text-orange'>{strTransform(art_name!)}</span></h1>
+            {isEmpty ? 
+            <NotFound statuscode={500} />:
+            <div className="art__wrapper">
+                {MapArtData()}
+            </div>
+            }
+            </>
             }
         </div>
     )
