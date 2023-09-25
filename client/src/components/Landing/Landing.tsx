@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./landing.scss";
-import hero from './../../assets/images/hero.jpeg';
+import imagePlaceholder from './../../assets/images/img-placeholder.png';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import { Link } from 'react-router-dom';
 import { endpoint, strTransform } from '../../Utils/Utils';
@@ -22,7 +22,7 @@ export default function Landing() {
       return (
         <Link to={'/' + data?.name} className="card" key={index}>
           <div className='card__overlay'>
-            <img className='card__img' src={data?.photos?.hero_img} alt="" />
+            <img className='card__img' src={data?.photos?.hero_img ? data?.photos?.hero_img : imagePlaceholder} alt="" />
             <div className='card__title'>{strTransform(data?.name)}</div>
             <div className='card__subtitle'>{data?.description}</div>
             <div className='card__redirect'>Click to See Full View</div>
