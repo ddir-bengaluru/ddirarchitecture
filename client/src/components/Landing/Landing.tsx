@@ -20,11 +20,11 @@ export default function Landing() {
   function MapProjectCards(props: any) {
     return props.map((data: any, index: number) => {
       return (
-        <Link to={'/' + data.name} className="card" key={index}>
+        <Link to={'/' + data?.name} className="card" key={index}>
           <div className='card__overlay'>
-            <img className='card__img' src={data.photos.hero_img} alt="" />
-            <div className='card__title'>{strTransform(data.name)}</div>
-            <div className='card__subtitle'>{data.description}</div>
+            <img className='card__img' src={data?.photos?.hero_img} alt="" />
+            <div className='card__title'>{strTransform(data?.name)}</div>
+            <div className='card__subtitle'>{data?.description}</div>
             <div className='card__redirect'>Click to See Full View</div>
           </div>
         </Link>

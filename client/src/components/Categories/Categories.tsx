@@ -3,6 +3,7 @@ import "./categories.scss";
 import { Link, useParams } from 'react-router-dom';
 import { endpoint, strTransform } from '../../Utils/Utils';
 import NotFound from '../NotFound/NotFound';
+import imagePlaceholder from '../../assets/images/img-placeholder.png';
 
 export default function Categories() {
     const { category_name } = useParams();
@@ -45,10 +46,17 @@ export default function Categories() {
         if(projects) {
             return projects.map((data:any, index: number) => {
                 return (
-                    <Link className="card card--horizontal" to={'/' + data.name} key={index}>
-                        <img src={data.photos.hero_img} alt={data.name} />
-                        <h2>{strTransform(data.name)}</h2>
-                        <p>{data.description}</p>
+                    data?.location ? 
+                    <Link className="card card--horizontal" to={'/' + data?.name} key={index}>
+                        <img src={data?.photos?.hero_img ? data?.photos?.hero_img : imagePlaceholder} alt={data?.name} />
+                        <h2>{strTransform(data?.name)}</h2>
+                        <p>{data?.description}</p>
+                    </Link>
+                    :
+                    <Link className="card card--horizontal" to={'/art/' + data?.name} key={index}>
+                        <img src={data?.photos[0] ? data?.photos[0] : imagePlaceholder} alt={data?.name} />
+                        <h2>{strTransform(data?.name)}</h2>
+                        <p>{data?.description}</p>
                     </Link>
                 );
             })
