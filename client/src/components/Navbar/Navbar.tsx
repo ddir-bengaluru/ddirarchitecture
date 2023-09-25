@@ -5,7 +5,6 @@ import { faBars, faChevronDown, faClose } from '@fortawesome/free-solid-svg-icon
 import { useLocation, useNavigate } from 'react-router-dom';
 import UseAnimation from "react-useanimations";
 import facebook from "react-useanimations/lib/facebook";
-import mail from "react-useanimations/lib/mail";
 import linkedin from "react-useanimations/lib/linkedin";
 
 export default function Navbar() {
@@ -36,7 +35,6 @@ export default function Navbar() {
         <button className='btn-close' onClick={toggleNav}><FontAwesomeIcon icon={faClose} /></button>
         <ul className='navbar__left'>
           <a href='/'><h1>DDIR <span>Architecture</span></h1></a>
-          {/* <img src="https://studiolotus.in/assets/default/img/build/brand/StudioLotus-Logo.svg" alt="DDIR" className='logo' /> */}
           <li className='dropdown'>
             <div>Architecture <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
             <div className="dropdown__content">
@@ -57,23 +55,20 @@ export default function Navbar() {
               <a href="/art/atelier">Atelier</a>
               <a href="/art/banglore">Banglore</a>
               <a href="/art/galerie-203">Galerie 203</a>
-              <a href="/art/golden-crab">Golden Crab</a>
+              <a href="/art/goldeb-crab">Golden Crab</a>
               <a href="/art/paris">Paris</a>
               <a href="/art/vendu">Vendu</a>
             </div>
           </li>
           <li><a href="">News & Awards</a></li>
-          <li><a href="">About Us</a></li>
+          <li><a href="/about-us">About Us</a></li>
         </ul>
         <div className="navbar__right">
           <div className="social-icons">
-            <a href="#">
+            <a href="https://www.facebook.com/profile.php?id=100057256877863">
               <UseAnimation animation={facebook} strokeColor='#c86508' autoPlay={true} loop={true} />
             </a>
-            <a href="">
-              <UseAnimation animation={mail} strokeColor='#c86508' />
-            </a>
-            <a href="">
+            <a href="https://www.linkedin.com/company/ddir-architecture-studio/about/">
               <UseAnimation animation={linkedin} strokeColor='#c86508' />
             </a>
           </div>

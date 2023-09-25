@@ -99,12 +99,7 @@
                 background-color: $body-bg;
                 width: 100%;
                 border-radius: $border-radius-normal;
-                border: 1px solid transparent;
                 transition: $transition-in-out;
-
-                &:focus, &:focus-visible {
-                    border: 1px solid $textColor;
-                }
             }
             
             &__btn {
