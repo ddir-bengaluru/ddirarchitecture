@@ -6,7 +6,7 @@
   border-radius: $border-radius-medium;
   box-shadow: $box-shadow-large;
   padding: $gutter1_2;
-  max-width: 500px;
+  max-width: 550px;
 
   &__overlay{
     position: relative;
@@ -35,22 +35,23 @@
 
   &__title{
     @include element-position(absolute, 45%, unset, unset, 50%);
-    @include line-clamp(1);
+    @include line-clamp(2);
     transform: translate(-50%, -50%);
     color: $white;
     opacity: 0;
-    font-size: $font-size-base;
+    font-size: $font-size-s;
     font-weight: $font-weight700;
     text-transform: uppercase;
   }
 
   &__subtitle {
-    @include line-clamp(3);
+    @include line-clamp(1);
     @include element-position(absolute, 52%, 32px, unset, 32px);
     opacity: 0;
     color: $white;
-    font-size: $font-size-xxs;
+    font-size: $font-size-xs;
     font-weight: $font-weight500;
+    text-align: center
   }
 
   &__redirect {

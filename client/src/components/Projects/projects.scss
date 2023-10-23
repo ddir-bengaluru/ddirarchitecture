@@ -30,7 +30,8 @@
                     transform: translateY(-50%);
                     height: 36px;
                     width: 36px;
-                    background: url('https://png.pngtree.com/png-vector/20230225/ourmid/pngtree-gold-blue-best-award-badge-with-stars-and-rice-symbol-png-image_6587280.png') center center no-repeat;
+                    background: url("https://png.pngtree.com/png-vector/20230225/ourmid/pngtree-gold-blue-best-award-badge-with-stars-and-rice-symbol-png-image_6587280.png")
+                        center center no-repeat;
                     background-size: contain;
                 }
             }
@@ -40,7 +41,6 @@
             grid-area: location;
             color: $orange;
             animation: fade-in 700ms ease-in-out;
-
         }
 
         ul {
@@ -62,11 +62,11 @@
     &__carousel {
         line-height: 0;
         -webkit-column-count: 3;
-        -webkit-column-gap:   $gutter1_4;
-        -moz-column-count:    3;
-        -moz-column-gap:      $gutter1_4;
-        column-count:         3;
-        column-gap:           $gutter1_4;  
+        -webkit-column-gap: $gutter1_4;
+        -moz-column-count: 3;
+        -moz-column-gap: $gutter1_4;
+        column-count: 2;
+        column-gap: $gutter1_4;
 
         img {
             width: 100%;
@@ -75,8 +75,7 @@
         }
     }
 
-
-    @media screen and (min-width: 679px){
+    @media screen and (min-width: 679px) {
         &__title {
             display: grid;
             grid-template-areas: "title details" "location details";

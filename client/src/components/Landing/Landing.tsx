@@ -9,22 +9,22 @@ export default function Landing() {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
     fetch(endpoint)
-    .then((res) => res.json())
-    .then((res) => {
-      setProjects(res);
-    })
-    .catch((err) => {
-      console.log(err);
-    })
+      .then((res) => res.json())
+      .then((res) => {
+        setProjects(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
   }, []);
-  function MapProjectCards(props:any) {
+  function MapProjectCards(props: any) {
     return props.map((data: any, index: number) => {
       return (
         <Link to={'/' + data.name} className="card" key={index}>
-          <div className='card__overlay'> 
+          <div className='card__overlay'>
             <img className='card__img' src={data.photos.hero_img} alt="" />
             <div className='card__title'>{strTransform(data.name)}</div>
-            <div className='card__subtitle'>{data.description}</div>
+            <div className='card__subtitle'>{data.location}</div>
             <div className='card__redirect'>Click to See Full View</div>
           </div>
         </Link>

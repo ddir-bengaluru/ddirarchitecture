@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./categories.scss";
 import { Link, useParams } from 'react-router-dom';
 import { endpoint, strTransform } from '../../Utils/Utils';
-import nullState from "../../assets/images/null-state.png";
+import NotFound from '../NotFound/NotFound';
 
 export default function Categories() {
     const { category_name } = useParams();
@@ -60,7 +60,7 @@ export default function Categories() {
             {
                 !nullData ?
                 MapCategoryWiseData() :
-                <img src={nullState} alt="Not Found" width={350} />
+                <NotFound statuscode={500}/>
             }
         </div>
     )
