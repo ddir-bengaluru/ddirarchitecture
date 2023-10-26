@@ -7,6 +7,19 @@ const router = express.Router();
 router.get("/", async (req, res) => {
   let collection = await db.collection("projects");
   let results = await collection.find({}).toArray();
+  res.status(200).send(results);
+});
+
+router.get("/allClients", async (req, res) => {
+  let collection = await db.collection("projects");
+  let clients = new Set();
+  let results = await collection.find({}).project({_id: 0, client_name: 1}).toArray();
+  results.forEach(client => {
+    if(client?.client_name) {
+      clients.add(client?.client_name);
+    }
+  });
+  results = [...clients]
   res.send(results).status(200);
 });
 
@@ -47,7 +60,7 @@ router.get("/search/:name", async (req, res) =>{
 
   if (!results.length) res.send([]).status(404);
   else res.send(results).status(200)
-})
+});
 
 // Add To MongoDocument 
 // router.post("/", async (req, res) => {
