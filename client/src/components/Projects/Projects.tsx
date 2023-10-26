@@ -3,6 +3,7 @@ import "./projects.scss";
 import { useNavigate, useParams } from 'react-router-dom';
 import { ProjectState } from '../../assets/app-state/project-state';
 import { endpoint, strTransform } from '../../Utils/Utils';
+import ImageCache from '../Caching/ImageCache';
 
 export default function Projects() {
   const { project_name } = useParams();
@@ -29,7 +30,8 @@ export default function Projects() {
   function Carousel() {
     return projectData?.photos?.secondary_images.map((img: any, index: number) => {
       return (
-        <img key={index} src={img} />
+        // <img key={index} src={img} />
+        <ImageCache key={index} imageUrl={img} altText={'image'+index} />
       )
     })
   }
