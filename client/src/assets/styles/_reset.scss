@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -20,7 +22,14 @@ body {
   line-height: normal;
 }
 
-h1,h2,h3,h4,h5,h6,p,label {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
   margin: 0;
 }
 
@@ -43,25 +52,45 @@ a {
   color: $strokeVariant;
 }
 
-a, button {
+a,
+button {
   font-size: $font-size-default;
   transition: $transition-in-out;
-  &.active, &:hover {
+  &.active,
+  &:hover {
     color: $orange;
     transition: $transition-in-out;
   }
 }
-
 
 input {
   font-size: $font-size-default;
   padding: $gutter1_2 $gutter;
   background: transparent;
   outline: 0;
-  border: 0;
+  border: 1px solid transparent;
+  transition: $transition-in-out;
 
-  &[type=submit] {
+  &[type="submit"] {
     cursor: pointer;
     transition: $transition-in-out;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border: 1px solid $textColor;
+  }
+}
+
+
+textarea {
+  font-family: $font-family;
+  outline: 0;
+  border: 1px solid transparent;
+  transition: $transition-in-out;
+
+  &:focus,
+  &:focus-visible {
+    border: 1px solid $textColor;
   }
 }
