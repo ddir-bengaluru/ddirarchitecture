@@ -6,6 +6,7 @@ export const ProjectState = {
     "built_area": "",
     "description": "",
     "category": '',
+    "client_name": '',
     "awards": [],
     "photos": {
         "hero_img": "",
