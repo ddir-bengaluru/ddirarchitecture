@@ -9,6 +9,10 @@
         margin: 0 $gutter4x;
         background-color: $white;
         border-radius: $border-radius-normal;
+
+        @media screen and (max-width: 767px) {
+            margin: 0 0rem;
+        }
     }
     &__center {
         text-align: center;
@@ -22,6 +26,12 @@
         background: url('../../assets/images/hero.jpeg') center center no-repeat;
         height: 50vh;
 
+        @media screen and (max-width: 767px) {
+            padding: $gutter1_4;
+            height: 57vh;
+            
+        }
+
         &:before {
             @include sudo-fill(absolute, 0, 0, 0, 0);
             background: rgba($color: $black, $alpha: 0.85);
@@ -33,15 +43,21 @@
             text-align: center;
             z-index: 2;
             padding: $gutter1_2 $gutter4x;
+
+            @media screen and (max-width: 767px) {
+                text-align: center;
+                z-index: 3;
+                padding: 0px $gutter;
+              }
         }
 
         &__title {
             font-size: $font-size-xxl;
         }
 
-        &__slang {
-            font-size: $font-size-base;
-        }
+        // &__slang {
+        //     font-size: $font-size-base;
+        // }
     }
 
     &__content {
@@ -71,6 +87,10 @@
                 width: 90%;
                 height: auto;
                 min-height: 500px;
+
+                @media screen and (max-width: 767px) {
+                    min-height: 400px;
+                }
             }
 
             p {
