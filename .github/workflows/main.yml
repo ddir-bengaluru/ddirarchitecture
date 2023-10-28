@@ -17,7 +17,7 @@ jobs:
         server: ddirarchitecture.com
         username: ddir.bengaluru@ddirarchitecture.com
         password: ddirProject@123
-        protocol: ftp
+        protocol: ftps
         port: 21
         server-dir: public_html/ddirarchitecture.com/
         timeout: 90000
