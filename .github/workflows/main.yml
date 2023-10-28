@@ -19,4 +19,4 @@ jobs:
         password: ddirProject@123
         protocol: ftp
         port: 21
-        server-dir: /home/ddirffhg/
+        server-dir: public_html/ddirarchitecture.com
