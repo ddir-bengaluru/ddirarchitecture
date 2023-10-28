@@ -5,4 +5,4 @@ export function strTransform(str: string) {
 }
 
 // export const endpoint = 'http://localhost:9200/record/allProjects';
-export const endpoint = 'https://ddir-backend.onrender.com';
+export const endpoint = 'https://ddir-backend.onrender.com/record';
