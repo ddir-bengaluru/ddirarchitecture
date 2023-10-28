@@ -25,6 +25,7 @@ export default function Projects() {
       setLoadingStatus(false);
       setProjectData(data);
     }
+    console.log("PROJECT DB HIT");
     getProjectData();
   }, []);
   function Carousel() {

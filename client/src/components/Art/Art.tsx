@@ -5,6 +5,8 @@ import NotFound from '../NotFound/NotFound';
 import { ArtState } from '../../assets/app-state/art-state';
 import "./art.scss";
 
+var i = 0;
+
 export default function Art() {
     const [artData, setArtData] = useState(ArtState);
     const [isLoading, setLoading] = useState(true);
@@ -14,6 +16,7 @@ export default function Art() {
     useEffect(() => {
         async function getArtData() {
             const response = await fetch(endpoint + 'art/' + art_name);
+            console.log("ART DB HIT " + i++);
             if (!response.ok) {
                 navigate('/404-not-found');
                 return

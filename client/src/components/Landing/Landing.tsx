@@ -5,12 +5,15 @@ import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import { Link } from 'react-router-dom';
 import { endpoint, strTransform } from '../../Utils/Utils';
 
+var i =0;
+
 export default function Landing() {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
     fetch(endpoint)
       .then((res) => res.json())
       .then((res) => {
+        console.log("LANDING DB HIT" + ++i);
         setProjects(res);
       })
       .catch((err) => {
