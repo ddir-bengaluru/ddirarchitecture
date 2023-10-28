@@ -4,6 +4,10 @@ import db from "../db/connection.mjs";
 const router = express.Router();
 
 router.get("/", async (req, res) => {
+  res.status(200).send("DDIR BACKEND");
+});
+
+router.get("/allProjects", async (req, res) => {
   let collection = await db.collection("projects");
   let results = await collection.find({}).toArray();
   res.status(200).send(results);
