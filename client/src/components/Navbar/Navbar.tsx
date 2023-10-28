@@ -39,11 +39,10 @@ export default function Navbar() {
             <div>Architecture <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
             <div className="dropdown__content">
               <a href="/categories/residential">Residential</a>
-              <a href="/categories/artist">Artist Studio</a>
               <a href="/categories/housing">Housing</a>
               <a href="/categories/commercial">Commercial</a>
               <a href="/categories/hospitality">Hospitality</a>
-              <a href="/categories/lesuire">Lesuire & Entertainment</a>
+              <a href="/categories/leisure">Leisure & Entertainment</a>
               <a href="/categories/farmhouse">Farmhouse</a>
               <a href="/categories/retail">Retail</a>
               <a href="/categories/corporate">Corporate</a>
