@@ -6,6 +6,7 @@
         "site_area": "",
         "built_area": "",
         "description": "",
+        "client_name": "",
         "category": "'residential' | 'artist_studio' | 'housing' | 'commercial' | 'hospitality' | 'leisure_entertainment' | 'farmhouse' | 'retail' | 'corporate'",
         "awards": [],
         "photos": {
