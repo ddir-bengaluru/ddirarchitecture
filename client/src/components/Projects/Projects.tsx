@@ -47,10 +47,11 @@ export default function Projects() {
           <div className="projects__title">
             <h1 className={projectData?.awards ? 'has-award' : ''}>{strTransform(projectData?.name)}</h1>
             <h3>{strTransform(projectData?.location)}</h3>
+            <h3>{strTransform(projectData?.client_name)}</h3>
             <ul>
               <li>Category: {projectData?.category}</li>
-              {projectData?.site_area ? <li>Site Area: {projectData?.site_area} sqm</li> : <></>}
-              {projectData?.built_area ? <li>Build Area: {projectData?.built_area} sqm</li> : <></>}
+              {projectData?.site_area ? <li>Site Area: {projectData?.site_area}sqm</li> : <></>}
+              {projectData?.built_area ? <li>Build Area: {projectData?.built_area}sqm</li> : <></>}
             </ul>
           </div>
           <div className="projects__content">

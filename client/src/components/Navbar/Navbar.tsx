@@ -43,7 +43,7 @@ export default function Navbar() {
               <a href="/categories/housing">Housing</a>
               <a href="/categories/commercial">Commercial</a>
               <a href="/categories/hospitality">Hospitality</a>
-              <a href="/categories/leisure">Leisure</a>
+              <a href="/categories/lesuire">Lesuire & Entertainment</a>
               <a href="/categories/farmhouse">Farmhouse</a>
               <a href="/categories/retail">Retail</a>
               <a href="/categories/corporate">Corporate</a>
@@ -73,7 +73,7 @@ export default function Navbar() {
             </a>
           </div>
           <form className="search-bar" onSubmit={onSearch}>
-            <input className='search-bar__text' type="text" id="name" placeholder='Enter Project Name' />
+            <input className='search-bar__text' type="text" id="name" placeholder='Enter Project Name'  required/>
             <input className='search-bar__btn' type='submit' value="Search" />
           </form>
         </div>

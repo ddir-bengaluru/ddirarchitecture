@@ -47,13 +47,12 @@ router.get("/art/:name", async (req, res) => {
   let results = await art.findOne(query);
 
   if(!results) {
-    res.send([]).status(404);
+    res.status(404).send([]);
   }
   else {
-    res.send(results).status(200);
+    res.status(200).send(results);
   }
 });
-
 
 router.get("/search/:name", async (req, res) =>{
   const results = [];
