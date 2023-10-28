@@ -17,3 +17,4 @@ jobs:
         server: ddirarchitecture.com
         username: ddir.bengaluru@ddirarchitecture.com
         password: ddirProject@123
+        port: 21
