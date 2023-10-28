@@ -17,6 +17,6 @@ jobs:
         server: ddirarchitecture.com
         username: ddir.bengaluru@ddirarchitecture.com
         password: ddirProject@123
-        protocol: ftps
-        port: 20
+        protocol: ftp
+        port: 21
         server-dir: /home/ddirffhg/
