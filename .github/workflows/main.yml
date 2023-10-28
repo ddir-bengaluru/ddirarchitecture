@@ -17,5 +17,5 @@ jobs:
         FTP_SERVER: ddirarchitecture.com
         FTP_USERNAME: ddir.bengaluru@ddirarchitecture.com
         FTP_PASSWORD: ddirProject@123
-        METHOD: ftp
+        METHOD: ftps
         PORT: 21
