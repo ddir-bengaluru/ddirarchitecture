@@ -43,7 +43,7 @@ export default function Navbar() {
               <a href="/categories/housing">Housing</a>
               <a href="/categories/commercial">Commercial</a>
               <a href="/categories/hospitality">Hospitality</a>
-              <a href="/categories/lesuire_entertainment">Lesuire Entertainment</a>
+              <a href="/categories/leisure">Leisure</a>
               <a href="/categories/farmhouse">Farmhouse</a>
               <a href="/categories/retail">Retail</a>
               <a href="/categories/corporate">Corporate</a>
