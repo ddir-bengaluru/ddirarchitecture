@@ -20,4 +20,4 @@ jobs:
         protocol: ftp
         port: 21
         server-dir: public_html/ddirarchitecture.com/
-        timeout: 60000
+        timeout: 90000
