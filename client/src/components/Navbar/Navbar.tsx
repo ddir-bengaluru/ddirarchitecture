@@ -10,11 +10,13 @@ import linkedin from "react-useanimations/lib/linkedin";
 export default function Navbar() {
   const [visibility, setVisibility] = useState(false);
   const [isLanding, setLandingStatus] = useState(true);
+  const [isAboutPage, setAboutPageStatus] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
     setLandingStatus(location.pathname == '/' ? true : false);
+    setAboutPageStatus(location.pathname == '/about-us' ? true : false);
   });
 
   function onSearch(e: any) {
@@ -30,7 +32,7 @@ export default function Navbar() {
 
   return (
     <div className='nav'>
-      <button className={ isLanding ? "btn-open text-white" : "btn-open" } onClick={toggleNav}><FontAwesomeIcon icon={faBars} /></button>
+      <button className={ (isLanding || isAboutPage) ? "btn-open text-white" : "btn-open" } onClick={toggleNav}><FontAwesomeIcon icon={faBars} /></button>
       <nav className={visibility ? 'navbar show' : 'navbar'}>
         <button className='btn-close' onClick={toggleNav}><FontAwesomeIcon icon={faClose} /></button>
         <ul className='navbar__left'>

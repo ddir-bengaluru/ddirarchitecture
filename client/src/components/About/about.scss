@@ -6,7 +6,6 @@
     animation: fade-in 1000ms;
     &__wrapper {
         padding: $gutter;
-        margin: 0 $gutter4x;
         background-color: $white;
         border-radius: $border-radius-normal;
     }
@@ -61,14 +60,30 @@
         gap: $gutter;
         padding-bottom: $gutter2x;
 
-        span svg {
-            margin-right: $gutter1_2;
+        span {
+            text-align: center;
+            svg {
+                margin-right: $gutter1_2;
+            }
         }
 
         iframe {
-            width: 90%;
+            width: 100%;
             height: auto;
-            min-height: 500px;
+            min-height: 400px;
+        }
+    }
+
+    @media screen and (min-width: 769px){
+        &__wrapper {
+            margin: 0 $gutter4x;
+        }
+
+        &__address {
+            iframe {
+                width: 90%;
+            }
+
         }
     }
 }
