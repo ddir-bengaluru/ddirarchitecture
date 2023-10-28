@@ -10,7 +10,7 @@ var i =0;
 export default function Landing() {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    fetch(endpoint)
+    fetch(endpoint + '/allProjects')
       .then((res) => res.json())
       .then((res) => {
         console.log("LANDING DB HIT" + ++i);
