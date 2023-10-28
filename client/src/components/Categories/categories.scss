@@ -1,0 +1,43 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/sudo";
+
+.categories {
+    margin-top: 80px;
+    padding: $gutter2x;
+    
+    .card--horizontal {
+        display: grid;
+        color: $textColor;
+        align-items: center;
+        grid-template-columns: 1fr;
+        margin-top: $gutter2x;
+        gap: $gutter;
+        padding: $gutter;
+        max-width: 100%;
+        transition: $transition-in-out;
+        box-shadow: none;
+
+        img {
+            width: 100%;
+            height: 100%;
+            grid-row: 2 span;
+            object-fit: cover;
+            border-radius: $border-radius-normal;
+            background-color: $body-bg;
+        }
+
+        &:hover {
+            box-shadow: $box-shadow-large;
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+        margin-top: 0;
+        .card--horizontal {
+            height: 200px;
+            grid-template-columns: 350px 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            gap: 0 $gutter;
+        }
+    }
+}

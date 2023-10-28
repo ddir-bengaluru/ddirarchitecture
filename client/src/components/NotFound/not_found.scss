@@ -1,0 +1,15 @@
+@import "../../assets/styles/variables";
+
+.null-state {
+    background: url('https://www.nicepng.com/png/detail/334-3348426_search-result-icons-error-404-girlfriend-not-found.png') center center no-repeat;
+    height: 93vh;
+}
+
+.empty-state {
+    width: 100%;
+    margin: 0 auto;
+    background: url('../../assets/images/null-state.png') no-repeat center center;
+    background-size: contain;
+    min-height: 350px;
+    margin: $gutter;
+}

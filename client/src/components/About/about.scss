@@ -1,0 +1,89 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/sudo";
+@import "../../assets/styles/flex";
+
+.about {
+    animation: fade-in 1000ms;
+    &__wrapper {
+        padding: $gutter;
+        background-color: $white;
+        border-radius: $border-radius-normal;
+    }
+    &__title {
+        text-align: center;
+        margin: $gutter2x 0;
+    }
+    &__hero {
+        @include flex(column, center, center);
+        position: relative;
+        gap: $gutter;
+        color: $white;
+        background: url('../../assets/images/hero.jpeg') center center no-repeat;
+        height: 50vh;
+
+        &:before {
+            @include sudo-fill(absolute, 0, 0, 0, 0);
+            background: rgba($color: $black, $alpha: 0.85);
+            z-index: 1;
+        }
+
+        &__title,
+        &__slang {
+            text-align: center;
+            z-index: 2;
+        }
+
+        &__title {
+            font-size: $font-size-xxl;
+        }
+
+        &__slang {
+            font-size: $font-size-base;
+            text-align: center;
+            width: 95%;
+        }
+    }
+
+    &__content {
+        padding: $gutter2x 0;
+        &__clients {
+            height: 100px;
+        }
+
+        &__team {
+            height: 100px;
+        }
+    }
+
+    &__address {
+        @include flex(column, center, center);
+        gap: $gutter;
+        padding-bottom: $gutter2x;
+
+        span {
+            text-align: center;
+            svg {
+                margin-right: $gutter1_2;
+            }
+        }
+
+        iframe {
+            width: 100%;
+            height: auto;
+            min-height: 400px;
+        }
+    }
+
+    @media screen and (min-width: 769px){
+        &__wrapper {
+            margin: 0 $gutter4x;
+        }
+
+        &__address {
+            iframe {
+                width: 90%;
+            }
+
+        }
+    }
+}

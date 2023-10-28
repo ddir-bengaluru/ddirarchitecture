@@ -1,0 +1,427 @@
+[
+    {
+        "name": "inges-residence",
+        "location": "Auroville",
+        "built_area": "100",
+        "category": "residential",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/inges-residence--hero.jpg?alt=media&token=6a1b75fa-a58c-4dd4-9e35-30754dd3973d",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/inges-residence--hero.jpg?alt=media&token=6a1b75fa-a58c-4dd4-9e35-30754dd3973d",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/inges-residence--1.jpg?alt=media&token=ad93bacf-1be6-419d-9d66-d06b61172a70",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/inges-residence--2.jpg?alt=media&token=0a024fe1-2ad6-4bf9-9bef-f479fbd24665",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/inges-residence--3.jpg?alt=media&token=a838114f-1251-4fc1-9f42-719213a3d0e1",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/inges-residence--4.jpg?alt=media&token=2677a5b7-cdd1-4e70-bb8f-bfa9fcf24352"
+            ]
+        },
+        "description": "When Inge asked me to design and build a “shelter” for her, somewhere in a forest of mango and other fruit trees, our discussions were only about nature, Buddhism and harmony. The only brief was that the shelter needed to be in close contact with nature, framing and dialoging with it.",
+        "site_area": "400",
+        "awards": true,
+        "client_name": "Inge Rieck"
+    },
+    {
+        "name": "dagas-residence",
+        "location": "Kodaikanal",
+        "client_name": "Ramesh Daga",
+        "built_area": "450",
+        "category": "residential",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/dagas-selection--hero.JPG?alt=media&token=b7760422-21df-4f34-8d77-2efc10c09374",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/dagas-selection--hero.JPG?alt=media&token=b7760422-21df-4f34-8d77-2efc10c09374",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/dagas-selection--1.JPG?alt=media&token=7266431f-382f-4ab2-b7e0-adb6ef1fc5f9",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/dagas-selection--2.JPG?alt=media&token=60fef4ad-9855-4fe7-9097-8bde9c80a75b",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/dagas-selection--3.JPG?alt=media&token=687a0dd1-460a-48ab-8920-a2e53038a9c6",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/dagas-selection--4.JPG?alt=media&token=5fc8ebe7-329c-467a-886c-e27a732bf06a",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/dagas-selection--5.JPG?alt=media&token=63a2fe22-b14c-4be4-bf68-d85215012d0f"
+            ]
+        },
+        "description": "",
+        "site_area": "8093",
+        "awards": false
+    },
+    {
+        "name": "malhotras-residence",
+        "location": "Kodaikanal",
+        "client_name": "Ravi Malhotra",
+        "built_area": "600",
+        "category": "residential",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/malhotras-residence--hero.jpg?alt=media&token=f018e12d-5612-48c4-b62b-d5f57e4e61a9",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/malhotras-residence--hero.jpg?alt=media&token=f018e12d-5612-48c4-b62b-d5f57e4e61a9",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/malhotras-residence--1.jpg?alt=media&token=1e8861c1-f51e-4dd1-94be-73b8a18b92a6",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/malhotras-residence--2.jpg?alt=media&token=f4b6fdf0-c757-4ed2-8cde-39470a19a94d",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/malhotras-residence--3.jpg?alt=media&token=763a19a2-f5f9-403a-a89a-cfc2eb5b7fae",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/malhotras-residence--4.jpg?alt=media&token=12d040ce-0d7b-410c-abae-735adb150b68",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/malhotras-residence--5.jpg?alt=media&token=3c3c3b2a-465c-4eed-8545-95f4411940e6"
+            ]
+        },
+        "description": "",
+        "site_area": "10117",
+        "awards": false
+    },
+    {
+        "name": "varadarajs-residence",
+        "location": "Coimbatore",
+        "client_name": "Sridhar Varadaraj",
+        "built_area": "400",
+        "category": "residential",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/varadrajs-residence--hero.jpg?alt=media&token=99dfbf74-c75c-47a2-870c-8ede8ed44e64",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/varadrajs-residence--hero.jpg?alt=media&token=99dfbf74-c75c-47a2-870c-8ede8ed44e64",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/varadrajs-residence--1.jpg?alt=media&token=47b0ef87-9c3f-4364-9a3b-cb9f7aa21548",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/varadrajs-residence--2.jpg?alt=media&token=631275d2-3593-4ffe-adef-51f62237015b",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/varadrajs-residence--3.jpg?alt=media&token=46960b5d-dfa3-4444-bdf9-16f178f8a3dd",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/varadrajs-residence--4.jpg?alt=media&token=43ee72b7-cc27-4b44-92a3-7505f83db7dc",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/varadrajs-residence--5.jpg?alt=media&token=c599012e-f0d3-4610-a6fd-4fc1d1d1bc50",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/varadrajs-residence--6.jpg?alt=media&token=297e5a38-7809-4646-9cc4-2f7317e04db1"
+            ]
+        },
+        "description": "",
+        "site_area": "4047",
+        "awards": false
+    },
+    {
+        "name": "srivaris-condos",
+        "location": "Coimbatore",
+        "client_name": "Madan Srivari",
+        "built_area": "200",
+        "category": "housing",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/srivaris-condos--hero.jpg?alt=media&token=a1781ba1-7318-4e81-8feb-0b74effd0c9c",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/srivaris-condos--hero.jpg?alt=media&token=a1781ba1-7318-4e81-8feb-0b74effd0c9c",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/srivaris-condos--1.jpg?alt=media&token=f2a68677-f961-4583-bada-69767d708776",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/srivaris-condos--2.jpg?alt=media&token=da811381-29f1-414c-87f5-da01a4422bab",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/srivaris-condos--3.jpg?alt=media&token=769f132f-b07d-4e40-acfb-81c692b39fa7",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/srivaris-condos--4.jpg?alt=media&token=4e497a52-93c3-45ac-abf6-4c37102f7556",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/srivaris-condos--5.jpg?alt=media&token=ad991144-6655-416c-b2b0-646005186543"
+            ]
+        },
+        "description": "",
+        "site_area": "450",
+        "awards": false
+    },
+    {
+        "name": "poddars-residence",
+        "location": "Bangalore",
+        "client_name": "Manish Poddar",
+        "built_area": "1200",
+        "category": "residential",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/poddars-residence--hero.jpg?alt=media&token=4a9f1990-c5fc-45bb-82fb-3f4b84cd9c5d",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/poddars-residence--hero.jpg?alt=media&token=4a9f1990-c5fc-45bb-82fb-3f4b84cd9c5d",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/poddars-residence--1.jpg?alt=media&token=fdc608bb-b0ba-44d8-8b4a-7425c5bc63ab",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/poddars-residence--2.jpg?alt=media&token=047b6613-9881-4db6-aebf-6aafb6fe3d19",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/poddars-residence--3.jpg?alt=media&token=85757adc-d8ac-4b05-915a-f0cfada988c3",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/poddars-residence--4.jpg?alt=media&token=7f3bd991-37b3-4674-a36f-ec0c12e68110",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/poddars-residence--5.jpg?alt=media&token=662eef7d-4205-4eed-8a0b-f16c1853acc8"
+            ]
+        },
+        "description": "WE HAVE DESIGNED THIS RESIDENCE FOR A YOUNG INDIAN FAMILY. TRAVELLERS FOR BUSINESS AND DISCOVERY, ART AND MUSIC LOVERS. IN THE FIRE OF MODERN LIFE BUT TRADITIONAL BY NATURE AND CONTEMPLATIVE.",
+        "site_area": "500",
+        "awards": true
+    },
+    {
+        "name": "ahujas-residence",
+        "location": "Bangalore",
+        "client_name": "Dilip Ahuja",
+        "built_area": "300",
+        "category": "residential",
+        "photos": {
+            "hero_img":                 "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/ahujas-residence--hero.jpg?alt=media&token=39856ac7-d9c5-4e96-91dc-dca7f5f9d00f",
+            "primary_img":                 "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/ahujas-residence--hero.jpg?alt=media&token=39856ac7-d9c5-4e96-91dc-dca7f5f9d00f",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/ahujas-residence--1.jpg?alt=media&token=558b6276-c41c-4516-b307-f200df637274",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/ahujas-residence--2.jpg?alt=media&token=e3854408-f44d-43f0-ac7d-6dfd99a77224",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/ahujas-residence--3.JPG?alt=media&token=e2d80163-de2d-49d4-8d2c-dc2f21cc517e",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/ahujas-residence--4.JPG?alt=media&token=c76fa42e-da1e-428a-aa79-ef451474014e"
+            ]
+        },
+        "description": "",
+        "site_area": "600",
+        "awards": true
+    },
+    {
+        "name": "assetz-particulier",
+        "location": "Bangalore",
+        "client_name": "Assetz Homes",
+        "built_area": "1300",
+        "category": "housing",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/assetz-particulier--hero.jpg?alt=media&token=82f5b57a-6c75-4220-9859-8b016d5a9c49",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/assetz-particulier--hero.jpg?alt=media&token=82f5b57a-6c75-4220-9859-8b016d5a9c49",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/assetz-particulier--1.jpg?alt=media&token=7ff95d23-e4c5-4385-bf61-89b838dd2663",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/assetz-particulier--2.jpg?alt=media&token=0705bc07-7b22-4d61-90a4-0589faed8f0c",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/assetz-particulier--3.jpg?alt=media&token=5b143741-5188-45fe-aff9-4d6b3e13e6eb",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/assetz-particulier--4.jpg?alt=media&token=97dcf755-e2a8-41ed-9871-a77e1afa36b0",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/assetz-particulier--5.jpg?alt=media&token=0b60fe52-2ae8-4d10-890a-56965bc1d964",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/assetz-particulier--6.jpg?alt=media&token=ea0990b5-1114-4ce8-9fed-4d074bdf46ad"
+            ]
+        },
+        "description": "Assetz particulier refers to the French nineteen century luxurious way of living in your own 'Hotel Particulier'. This is the Ultimate Lux of Assetz particulier A group of unique condominiums located in the very heart of Bangalore. Designed to match different and not easy sites these private hotels are an intelligent combination of structural 'tour de force' and open space life style. Simple and audacious concept totally context driven…",
+        "site_area": "500",
+        "awards": true
+    },
+    {
+        "name": "experience-center",
+        "location": "Bangalore",
+        "client_name": "Pierre",
+        "built_area": "2000",
+        "category": "commercial",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/experience-center--hero.jpg?alt=media&token=d5f730fc-2bfe-420f-8493-a10ee232b814",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/experience-center--hero.jpg?alt=media&token=d5f730fc-2bfe-420f-8493-a10ee232b814",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/experience-center--1.jpg?alt=media&token=7e8bcc6b-0066-4192-a1a9-ac2623955e4d",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/experience-center--2.jpg?alt=media&token=2488be50-f897-4527-bce4-c4225e3bb266",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/experience-center--3.jpg?alt=media&token=1e680974-cfda-4e16-b9c9-28dabc72e728",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/experience-center--4.jpg?alt=media&token=468f7fa3-a30c-4835-a868-81cb1c3513c3",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/experience-center--5.jpg?alt=media&token=7b50a061-16e3-49ba-9265-6523ec52ce93",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/experience-center--6.jpg?alt=media&token=7d9218f5-580d-482a-8618-77cb0060b8fd",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/experience-center--7.jpg?alt=media&token=821afd09-8c90-4060-aeb9-a7c2b8a432d1"
+            ]
+        },
+        "description": "THE VOID INSIDE THE OLD FACTORY AND ITS SCALE APPEARED TO BE THE FIRST DESIGN MOTIVATORS. THE QUALITY OF NATURAL LIGHT COMING FROM THE ROOF HAS INSPIRED US AS WELL AS THE STEEL TRUSSES, THE DOUBLE AND TRIPLE HEIGHT SPACES.",
+        "site_area": "250",
+        "awards": false
+    },
+    {
+        "name": "caperberry",
+        "location": "Bangalore",
+        "client_name": "Abhijit Saha",
+        "built_area": "500",
+        "category": "hospitality",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/capperberry--hero.jpg?alt=media&token=04bf84a5-7e51-4929-a7f0-121cd43251c8",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/capperberry--hero.jpg?alt=media&token=04bf84a5-7e51-4929-a7f0-121cd43251c8",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/capperberry--1.jpg?alt=media&token=0f868336-85aa-41c9-b8ec-df86e2a04957",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/capperberry--2.jpg?alt=media&token=c94d8d72-5b45-43da-a9fe-b148820c2fd5",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/capperberry--3.JPG?alt=media&token=82d14e9c-ffc0-4900-a38e-4efa3a68f20a",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/capperberry--4.JPG?alt=media&token=78544bc1-14a0-44eb-9061-32335051dbba",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/capperberry--5.JPG?alt=media&token=89e047f0-d536-4533-93b0-6230d6e4f5bd"
+            ]
+        },
+        "description": "THE SPACE IS A DOUBLE HEIGHT OF AN APPROXIMATE SQUARE SHAPE WITH LARGE WINDOW OPENINGS CREATING A POWERFUL NATURAL LIGHT EFFECT DURING THE DAY AND GREAT DRAMA IN THE EVENING. ABOVE ALL WE INSTALLED A GIGANTIC MOBILE MADE OF CHROME, SUSPENDED FROM THE CEILING.",
+        "site_area": "1000",
+        "awards": false
+    },
+    {
+        "name": "hint",
+        "location": "Bangalore",
+        "client_name": "Hint",
+        "built_area": "1000",
+        "category": "lesuire",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/hint--hero.jpg?alt=media&token=d59c792d-5b22-4e66-bd79-0e43ab5eb86d",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/hint--hero.jpg?alt=media&token=d59c792d-5b22-4e66-bd79-0e43ab5eb86d",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/hint--1.jpg?alt=media&token=cc596d74-4e7a-49a6-93ae-4b9a17c28827",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/hint--2.jpg?alt=media&token=443cd191-5e1f-433d-b82a-462021de83e4",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/hint--3.jpg?alt=media&token=00b039ea-ba19-40f2-9a55-3ecda0803efb",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/hint--4.jpg?alt=media&token=85f002d7-15eb-445e-a666-526b1ed070eb",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/hint--5.jpg?alt=media&token=dbb169a2-265c-41d1-95b6-9af261ea6329"
+            ]
+        },
+        "description": "",
+        "site_area": "1500",
+        "awards": false
+    },
+    {
+        "name": "jayashrees-residence",
+        "location": "Bangalore",
+        "client_name": "Jayashree Poddar",
+        "built_area": "750",
+        "category": "residential",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/jayashrees-residence--hero.JPG?alt=media&token=1578a20f-8c52-4653-b92b-4ae72e9a42cc",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/jayashrees-residence--hero.JPG?alt=media&token=1578a20f-8c52-4653-b92b-4ae72e9a42cc",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/jayashrees-residence--1.TIF?alt=media&token=3fc0549c-254a-40e1-b62f-6db13402d507",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/jayashrees-residence--2.JPG?alt=media&token=de994525-fdb2-4155-a9bb-4afed263cd5c",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/jayashrees-residence--3.JPG?alt=media&token=49c4898e-456c-49cb-8fa1-dfdc7d170fb9",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/jayashrees-residence--4.JPG?alt=media&token=59cfabc0-b639-493a-a2b3-2d4a1824e6e2"
+            ]
+        },
+        "description": "",
+        "site_area": "500",
+        "awards": false
+    },
+    {
+        "name": "adityas-residence",
+        "location": "Bangalore",
+        "client_name": "Aditya Poddar",
+        "built_area": "750",
+        "category": "residential",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/adityas-residence--hero.jpg?alt=media&token=61043dda-5d0f-4f77-a103-2dbda88dec24",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/adityas-residence--hero.jpg?alt=media&token=61043dda-5d0f-4f77-a103-2dbda88dec24",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/adityas-residence--1.jpg?alt=media&token=7d49e460-89d2-4732-8715-f8e24de6b00a",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/adityas-residence--2.jpg?alt=media&token=1ac43c8f-eb20-47fd-a1b6-16f7ecceb05d",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/adityas-residence--3.JPG?alt=media&token=3dd30d56-c97b-4e70-88e8-f77b32cafc7a"
+            ]
+        },
+        "description": "",
+        "site_area": "4046",
+        "awards": false
+    },
+    {
+        "name": "merchants-residence",
+        "location": "Khandala",
+        "client_name": "Shaila Merchant",
+        "built_area": "2000",
+        "category": "residential",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/merchants-residence--hero.jpg?alt=media&token=ba0450ed-e68f-4ed2-bdcb-699147ec6067",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/merchants-residence--hero.jpg?alt=media&token=ba0450ed-e68f-4ed2-bdcb-699147ec6067",
+            "secondary_images": [
+                            "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/merchants-residence--1.jpg?alt=media&token=ae8a2c3e-54de-4a22-98bf-3dd0530b18d0",
+                            "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/merchants-residence--2.jpg?alt=media&token=127960cc-110c-4634-8983-0efdd6546592",
+                            "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/merchants-residence--3.jpg?alt=media&token=a774019a-e257-46c6-b763-4a3ce0aaff98",
+                            "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/merchants-residence--4.JPG?alt=media&token=41e49cd9-4b4f-4d46-ba8c-fb45bfbae915",
+                            "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/merchants-residence--5.jpg?alt=media&token=3f068e70-4b19-4e24-ac9b-bde7a44bbc1b",
+                            "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/merchants-residence--6.jpg?alt=media&token=7fa59da5-9268-4199-9646-7191c506f63c"
+            ]
+        },
+        "description": "The monumental structure becomes ephemeral, diffused with natural light by the white palate. Most of the residence is on the South side of the land and on the North side is a landscaped platform reaching the garden at the very North of the land. Between the South and the North is the 'House of Wind', the place for contemplation, meditation, Yoga and Tai Chi…",
+        "site_area": "2",
+        "awards": false
+    },
+    {
+        "name": "lullas-residence",
+        "location": "Chennai",
+        "client_name": "Manoj Lulls",
+        "built_area": "400",
+        "category": "residential",
+        "photos": {
+            "hero_img": "https://ik.imagekit.io/uqyzij1mg/hero.jpg?updatedAt=1694617813309\n",
+            "primary_img": "https://ik.imagekit.io/uqyzij1mg/inge_primary.jpeg?updatedAt=1693933465630",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/lullas-residence--1.jpg?alt=media&token=7b153de9-b3d4-4831-b2dc-1d30410844b7",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/lullas-residence--2.jpg?alt=media&token=8d6a302f-4c59-4c49-bfb8-736c77041eab",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/lullas-residence--3.jpg?alt=media&token=0249e7ef-1379-438d-8ce2-c3f2c62306bb",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/lullas-residence--4.jpg?alt=media&token=b9bd8c89-1116-47df-b80c-8347173d0553",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/lullas-residence--5.jpg?alt=media&token=86fc6598-ba3d-4156-97bf-d98b42ff0cae"
+            ]
+        },
+        "description": "WHEN IT COMES TO CREATE A SPACE TO DISPLAY YOUR OBJECTS OF DESIRE YOUR DREAMS IT IS A VERY SERIOUS MATTER AND THE ARCHITECT CAN ONLY DISSAPEAR BEHIND ITS CREATION TO ENSURE THAT THE OBJECTS OF LUXURY ARE PLAYING THE MAIN ROLE.",
+        "site_area": "600",
+        "awards": false
+    },
+    {
+        "name": "raos-residence",
+        "location": "Hyderabad",
+        "client_name": "Arjun Rao",
+        "built_area": "1500",
+        "category": "residential",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-residence--hero.jpg?alt=media&token=2e8fea3f-2934-42df-9cef-ff02f3183998",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-residence--hero.jpg?alt=media&token=2e8fea3f-2934-42df-9cef-ff02f3183998",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-residence--1.jpg?alt=media&token=ae4fabf0-06b0-4415-af46-3e3e5a0cf519",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-residence--2.jpg?alt=media&token=9a957bb7-3279-4833-b36c-1ac8264c8a08",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-residence--3.jpg?alt=media&token=402c7773-19ce-4622-a7ce-bca0434fece7",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-residence--4.jpg?alt=media&token=526ba53c-57d7-4f33-8cc6-595a2cf47a24",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-residence--5.jpg?alt=media&token=c4949e4e-6666-4c13-9afe-5e8d46c8e8a2",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-residence--6.jpg?alt=media&token=e2a0bb0b-a8d0-4770-ba90-12b27d5e4590",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-residence--7.jpg?alt=media&token=cbc2c553-f07c-42e1-aa05-8feacf141b24",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-residence--8.jpg?alt=media&token=3a6fef9b-ba5d-436f-b6c9-eef921b28625",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-residence--9.jpg?alt=media&token=389c420d-079f-4379-add1-2d472a76b8ab"
+            ]
+        },
+        "description": "The lifestyle this residence make possible is one of simple elegance in a personal retreat, in touch with nature, light and oneself. We've created beautiful atmosphere for contemporary life.",
+        "site_area": "700",
+        "awards": true
+    },
+    {
+        "name": "raos-farmhouse",
+        "location": "Hyderabad",
+        "client_name": "Arjun Rao",
+        "built_area": "400",
+        "category": "farm house",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-farmhouse--hero.jpg?alt=media&token=2b4ab3af-e2de-49ae-a066-f08432728ad8",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-farmhouse--hero.jpg?alt=media&token=2b4ab3af-e2de-49ae-a066-f08432728ad8",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-farmhouse--1.jpg?alt=media&token=d8a5a8f0-4347-4f34-a690-86cca34c0c1f",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-farmhouse--2.jpg?alt=media&token=35382ebd-2ae3-4f1b-a098-b2d12e518473",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-farmhouse--3.jpg?alt=media&token=c441b75d-dc11-45b5-9212-96b4cd40d1fe",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-farmhouse--4.jpg?alt=media&token=f9c4fb5a-69b0-4047-8a0b-fcedc04d8fe7",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-farmhouse--5.jpg?alt=media&token=83ff5f32-56cb-4de7-8b83-2e618bfb5aed",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/raos-farmhouse--6.jpg?alt=media&token=de5fc725-f9d4-4d35-a16d-588be1dfdf78"
+            ]
+        },
+        "description": "We are proposing here a Pavilion designed as a dialogue among modern lifestyle and nature. A pavilion surrounded by urban forest, blending beautifully and comfortably into the tree canopy. The quality of space, rhythm of openings, generous invitation of light, seems to vanish the presence of the pavilion itself, only to see man and nature as one.",
+        "site_area": "4",
+        "awards": false
+    },
+    {
+        "name": "atmosphere",
+        "location": "India",
+        "client_name": "Himatsingka",
+        "built_area": "300 to 400",
+        "category": "retail",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/atmosphere--hero.jpg?alt=media&token=1f3948a4-f946-453a-a635-489de617743b",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/atmosphere--hero.jpg?alt=media&token=1f3948a4-f946-453a-a635-489de617743b",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/atmosphere--1.jpg?alt=media&token=92fa41b8-c042-4ccd-8c22-bf97b85b5883",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/atmosphere--2.jpg?alt=media&token=7fba5cae-3d81-45c3-b98f-a705bfcf9250",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/atmosphere--3.jpg?alt=media&token=65c7037f-bd7f-4167-8f5a-eb6a36450e5b",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/atmosphere--4.jpg?alt=media&token=c011d088-980c-4ed4-b8c8-d05230927ed2",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/atmosphere--5.jpg?alt=media&token=1d05cdca-0f35-43ba-a204-6a550771cd65"
+            ]
+        },
+        "description": "Atmosphere is a chain of showrooms spread across India - 12 boutiques in all - showcasing a unique line of high-end furnishings and fabrics. As the architect of Atmosphere, it was our job not just to build a few showrooms, but to design an entire brand",
+        "site_area": "12",
+        "awards": false
+    },
+    {
+        "name": "tech-37",
+        "location": "Bangalore",
+        "client_name": "Tappar Group",
+        "built_area": "13935",
+        "category": "corporate",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/tech-37--hero.jpg?alt=media&token=66c2d0ca-f518-452f-9931-38c2f78e142f",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/tech-37--hero.jpg?alt=media&token=66c2d0ca-f518-452f-9931-38c2f78e142f",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/tech-37--1.jpg?alt=media&token=0269b6df-8133-4fda-8738-119445a90f51",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/tech-37--2.jpg?alt=media&token=2d27a988-544d-4b35-9e97-e37e6f361547",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/tech-37--3.jpg?alt=media&token=04561709-7758-461a-93d6-2095178907da",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/tech-37--4.jpg?alt=media&token=ff4a775d-f5dd-4842-8e2a-6a8d2fb560c3",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/tech-37--5.jpg?alt=media&token=ba170bbf-8b11-4473-9378-ac2e41e29312",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/tech-37--6.jpg?alt=media&token=f799c67c-a1d3-4e0b-a4c3-34b671aeb8a5"
+            ]
+        },
+        "description": "",
+        "site_area": "8094",
+        "awards": false
+    },
+    {
+        "name": "reddys-residence",
+        "location": "Hyderabad",
+        "client_name": "Shashidar Reddy",
+        "built_area": "300",
+        "category": "residential",
+        "photos": {
+            "hero_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/reddys-residence--hero.jpg?alt=media&token=d0437c97-2087-48a5-b1ae-347716cc28f9",
+            "primary_img": "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/reddys-residence--hero.jpg?alt=media&token=d0437c97-2087-48a5-b1ae-347716cc28f9",
+            "secondary_images": [
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/reddys-residence--1.jpg?alt=media&token=5af7a3c2-f173-47d1-8836-be7faa95ac33",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/reddys-residence--2.jpg?alt=media&token=338b11b1-aacb-4bde-b608-98d6b5f741bf",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/reddys-residence--3.jpg?alt=media&token=61f44f86-a92b-4ca3-ae25-48541715c43e",
+                "https://firebasestorage.googleapis.com/v0/b/ddir-architecture.appspot.com/o/reddys-residence--4.jpg?alt=media&token=7c97d696-b278-44eb-a59c-c23863ca7ae1"
+            ]
+        },
+        "description": "We are proposing here a Pavilion designed as a dialogue among modern lifestyle and nature.\nA pavilion surrounded by urban forest, blending beautifully and comfortably into the tree canopy.\nThe quality of space, rhythm of openings, generous invitation of light, seems to vanish the presence of the pavilion itself, only to see man and nature as one.\n",
+        "site_area": "16187",
+        "awards": false
+    }
+]
