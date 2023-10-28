@@ -33,12 +33,8 @@
             z-index: 2;
         }
 
-        &__title {
-            font-size: $font-size-xxl;
-        }
-
         &__slang {
-            font-size: $font-size-base;
+            font-size: $font-size-xs;
             text-align: center;
             width: 95%;
         }
@@ -75,6 +71,14 @@
     }
 
     @media screen and (min-width: 769px){
+        &__hero {     
+            &__title {
+                font-size: $font-size-xxl;
+            }
+            &__slang {
+                font-size: $font-size-base;
+            }
+        }
         &__wrapper {
             margin: 0 $gutter4x;
         }
