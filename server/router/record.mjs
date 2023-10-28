@@ -41,6 +41,18 @@ router.get("/category/:name", async (req, res) => {
   else res.send(results).status(200);
 });
 
+router.get("/art/:name", async (req, res) => {
+  let art = await db.collection("art");
+  let query = {name: req.params.name};
+  let results = await art.findOne(query);
+
+  if(!results) {
+    res.status(404).send([]);
+  }
+  else {
+    res.status(200).send(results);
+  }
+});
 
 router.get("/search/:name", async (req, res) =>{
   const results = [];

@@ -2,6 +2,7 @@ export const ProjectState = {
     "id": "",
     "name": "",
     "location": "",
+    "client_name": "",
     "site_area": "",
     "built_area": "",
     "description": "",
