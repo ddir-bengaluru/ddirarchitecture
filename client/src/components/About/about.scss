@@ -9,6 +9,14 @@
         margin: 0 $gutter4x;
         background-color: $white;
         border-radius: $border-radius-normal;
+
+        @media screen and (max-width: 767px) {
+            margin: 0 0rem;
+        }
+    }
+    &__center {
+        text-align: center;
+        padding: $gutter 0;   
     }
     &__hero {
         @include flex(column, center, center);
@@ -17,6 +25,12 @@
         color: $white;
         background: url('../../assets/images/hero.jpeg') center center no-repeat;
         height: 50vh;
+
+        @media screen and (max-width: 767px) {
+            padding: $gutter1_4;
+            height: 57vh;
+            
+        }
 
         &:before {
             @include sudo-fill(absolute, 0, 0, 0, 0);
@@ -28,15 +42,22 @@
         &__slang {
             text-align: center;
             z-index: 2;
+            padding: $gutter1_2 $gutter4x;
+
+            @media screen and (max-width: 767px) {
+                text-align: center;
+                z-index: 3;
+                padding: 0px $gutter;
+              }
         }
 
         &__title {
             font-size: $font-size-xxl;
         }
 
-        &__slang {
-            font-size: $font-size-base;
-        }
+        // &__slang {
+        //     font-size: $font-size-base;
+        // }
     }
 
     &__content {
@@ -53,47 +74,24 @@
     &__address {
         display: grid;
         padding-bottom: $gutter2x;
-        grid-template-columns: 1fr 350px;
+        // grid-template-columns: 1fr 350px;
         margin-top: $gutter;
         gap: $gutter3x;
+        font-size: $font-size-base;
 
-        &__right {
-            position: relative;
-            @include flex(column, start, start);
-            box-shadow: $box-shadow-large;
-
-            input:not(.btn-submit), textarea {
-                width: 100%;
-                padding: $gutter;
-            }
-
-            input:not(.btn-submit) {
-                
-                &:not(:hover, :focus, :focus-visible) {
-                    border-bottom: 1px solid $stroke;
-                }
-            }
-
-            textarea {
-                resize: none;
-                height: 100%;
-            }
-
-            .btn-submit {
-                @include sudo-fill(absolute, unset, 1px, 1px, unset);
-                width: max-content;
-                background: $textColor;
-                color: $white;
-
-                &:hover {
-                    background: darken($color: $textColor, $amount: 5);
-                }
-            }
-        }
-
-        &__left {
-            @include flex(column, start, column);
+        &__center {
+            @include flex(column, center, center);
             gap: $gutter;
+
+            iframe {
+                width: 90%;
+                height: auto;
+                min-height: 500px;
+
+                @media screen and (max-width: 767px) {
+                    min-height: 400px;
+                }
+            }
 
             p {
                 text-align: justify;
@@ -102,11 +100,58 @@
             span svg {
                 margin-right: $gutter1_2;
             }
-            iframe {
-                width: 100%;
-                height: auto;
-                min-height: 400px;
-            }
         }
+
+        // &__right {
+        //     position: relative;
+        //     @include flex(column, start, start);
+        //     box-shadow: $box-shadow-large;
+
+        //     input:not(.btn-submit), textarea {
+        //         width: 100%;
+        //         padding: $gutter;
+        //     }
+
+        //     input:not(.btn-submit) {
+                
+        //         &:not(:hover, :focus, :focus-visible) {
+        //             border-bottom: 1px solid $stroke;
+        //         }
+        //     }
+
+        //     textarea {
+        //         resize: none;
+        //         height: 100%;
+        //     }
+
+        //     .btn-submit {
+        //         @include sudo-fill(absolute, unset, 1px, 1px, unset);
+        //         width: max-content;
+        //         background: $textColor;
+        //         color: $white;
+
+        //         &:hover {
+        //             background: darken($color: $textColor, $amount: 5);
+        //         }
+        //     }
+        // }
+
+        // &__left {
+        //     @include flex(column, start, column);
+        //     gap: $gutter;
+
+        //     p {
+        //         text-align: justify;
+        //     }
+
+        //     span svg {
+        //         margin-right: $gutter1_2;
+        //     }
+        //     iframe {
+        //         width: 100%;
+        //         height: auto;
+        //         min-height: 400px;
+        //     }
+        // }
     }
 }

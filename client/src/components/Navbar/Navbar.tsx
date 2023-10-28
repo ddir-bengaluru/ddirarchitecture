@@ -43,7 +43,7 @@ export default function Navbar() {
               <a href="/categories/housing">Housing</a>
               <a href="/categories/commercial">Commercial</a>
               <a href="/categories/hospitality">Hospitality</a>
-              <a href="/categories/lesuire_entertainment">Lesuire Entertainment</a>
+              <a href="/categories/leisure">Leisure</a>
               <a href="/categories/farmhouse">Farmhouse</a>
               <a href="/categories/retail">Retail</a>
               <a href="/categories/corporate">Corporate</a>
@@ -55,12 +55,12 @@ export default function Navbar() {
               <a href="/art/atelier">Atelier</a>
               <a href="/art/banglore">Banglore</a>
               <a href="/art/galerie-203">Galerie 203</a>
-              <a href="/art/goldeb-crab">Golden Crab</a>
+              <a href="/art/golden-crab">Golden Crab</a>
               <a href="/art/paris">Paris</a>
               <a href="/art/vendu">Vendu</a>
             </div>
           </li>
-          <li><a href="">News & Awards</a></li>
+          {/* <li><a href="">News & Awards</a></li> */}
           <li><a href="/about-us">About Us</a></li>
         </ul>
         <div className="navbar__right">
