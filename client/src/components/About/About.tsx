@@ -13,10 +13,12 @@ export default function About() {
             <div className="about__wrapper">
                 <h2 className='about__title'>We would love to hear from you, <br /> Get in Touch 👋</h2>
                 <div className="about__address">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.182240666993!2d77.59369547609705!3d12.96018761512636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15da75593349%3A0xf470157596b3d373!2sDDIR%20Architecture%20Studio!5e0!3m2!1sen!2sin!4v1695544634008!5m2!1sen!2sin" style={{ border: 0 }} allowFullScreen={false} loading="lazy" referrerPolicy={'no-referrer-when-downgrade'}></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d77.5812552!3d13.0096827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf52b4ef30be7e809!2s31%2C%20Ground%20floor%2C%208th%20A%20Main%20road%2C%20Raj%20Mahal%20Vilas%2C%20Extension%2C%20Armane%20Nagar%2C%20Bengaluru%2C%20560080!5e0!3m2!1sen!2sin!4v1695544634008!5m2!1sen!2sin" style={{ border: 0 }} allowFullScreen={false} loading="lazy" referrerPolicy={'no-referrer-when-downgrade'}></iframe>
                     <span className="address">
                         <FontAwesomeIcon icon={faMapMarkerAlt} />
-                        Address - 8, Andree Rd, Akkithimana Halli, Bheemanna Garden, Shanti Nagar, Bengaluru, Karnataka 560027
+                        {/* Address - 8, Andree Rd, Akkithimana Halli, Bheemanna Garden, Shanti Nagar, Bengaluru, Karnataka 560027 */}
+                        31, Ground floor, 8th A Main road, Raj Mahal Vilas, Extension, Armane Nagar, Bengaluru, 560080.
+                        Near to : Starbucks, Sadashivanagar
                     </span>
                     <span className="call">
                         <FontAwesomeIcon icon={faPhone} />
