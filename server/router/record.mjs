@@ -22,6 +22,19 @@ router.get("/allClients", async (req, res) => {
   res.send(results).status(200);
 });
 
+router.get("/team", async (req, res) => {
+  let collection = await db.collection("team");
+  let team = new Set();
+  let results = await collection.find({}).project({_id: 0, photos: 1}).toArray();
+  results.forEach(teamPic => {
+    if(teamPic?.photos) {
+      team.add(teamPic?.photos);
+    }
+  });
+  results = [...team]
+  res.send(results).status(200);
+});
+
 router.get("/:name", async (req, res) => {
   let collection = await db.collection("projects");
   let query = {name: req.params.name};
@@ -51,35 +64,6 @@ router.get("/art/:name", async (req, res) => {
   else {
     res.status(200).send(results);
   }
-});
-
-// router.get("/team", async (req, res) => {
-//   console.log("Team endpoint hit");
-//   let collection = await db.collection("team");
-//   let results = await collection.find({}).project({_id: 0, photos: 1}).toArray();
-
-//   if (results.length === 0) {
-//     res.status(404).send([]);
-//   } else {
-//     const teamData = results.map(team => ({
-//       photos: team.photos,
-//     }));
-
-//     res.send(teamData).status(200);
-//   }
-// });
-
-router.get("/team", async (req, res) => {
-  let collection = await db.collection("team");
-  let team = new Set();
-  let results = await collection.find({}).project({_id: 0, photos: 1}).toArray();
-  results.forEach(client => {
-    if(client?.photos) {
-      team.add(client?.photos);
-    }
-  });
-  results = [...photos]
-  res.send(results).status(200);
 });
 
 

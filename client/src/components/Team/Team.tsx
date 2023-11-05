@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import NotFound from '../NotFound/NotFound';
 import { endpoint } from '../../Utils/Utils';
-// import "./team.scss";  // Make sure to import your team-specific styling if any
+import "./team.scss";
 
 export default function Team() {
     const [photos, setPhotos] = useState([]);
@@ -12,24 +12,19 @@ export default function Team() {
     useEffect(() => {
         async function getTeamPhotos() {
             const response = await fetch(endpoint + 'team');
-
             if (!response.ok) {
                 // Handle error, e.g., redirect to a 404 page
                 console.error("Error fetching team photos");
                 return;
             }
-
             const data = await response.json();
-
             if (!data || data.length === 0) {
                 setEmpty(true);
             } else {
                 setPhotos(data);
             }
-
             setLoading(false);
         }
-
         getTeamPhotos();
     }, []);
 

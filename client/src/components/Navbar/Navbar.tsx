@@ -64,9 +64,9 @@ export default function Navbar() {
           <li className="dropdown">
             <div>About Us <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
             <div className="dropdown__content">
-              <a href="/about-us">About Us</a>
-              <a href="/clients">Client</a>
+              <a href="/about-us">Contact</a>
               <a href="/team">Team</a>
+              <a href="/clients">Client</a>
             </div>
           </li>
         </ul>
