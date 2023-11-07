@@ -71,6 +71,8 @@ export default function Navbar() {
           <li className="dropdown">
             <div>About Us <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
             <div className="dropdown__content">
+              <a href="/about-us">Contact</a>
+              <a href="/team">Team</a>
               <a href="/clients">Client</a>
               {/* <Link to="/about-us#team-section">Team</Link>
               <Link to="/about-us#contact-section">Contact</Link> */}
