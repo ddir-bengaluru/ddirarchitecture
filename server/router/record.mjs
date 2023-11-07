@@ -73,12 +73,12 @@ router.get("/team", async (req, res) => {
   let collection = await db.collection("team");
   let team = new Set();
   let results = await collection.find({}).project({_id: 0, photos: 1}).toArray();
-  results.forEach(client => {
-    if(client?.photos) {
-      team.add(client?.photos);
+  results.forEach(teamPic => {
+    if(teamPic?.photos) {
+      team.add(teamPic?.photos);
     }
   });
-  results = [...photos]
+  results = [...team]
   res.send(results).status(200);
 });
 

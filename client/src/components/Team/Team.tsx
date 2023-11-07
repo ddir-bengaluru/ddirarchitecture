@@ -2,12 +2,16 @@
 import React, { useEffect, useState } from 'react';
 import NotFound from '../NotFound/NotFound';
 import { endpoint } from '../../Utils/Utils';
-// import "./team.scss";  // Make sure to import your team-specific styling if any
+import imagePlaceholder from '../../assets/images/img-placeholder.png';
+
+import "./teams.scss";  
 
 export default function Team() {
     const [photos, setPhotos] = useState([]);
     const [isLoading, setLoading] = useState(true);
     const [isEmpty, setEmpty] = useState(false);
+
+    
 
     useEffect(() => {
         async function getTeamPhotos() {
@@ -34,12 +38,16 @@ export default function Team() {
     }, []);
 
     return (
-        <div className="team">
+        <div className="team" style={{marginBottom: '20px'}}>
+            <h1>Team</h1>
             {isLoading ? (
-                <h1>Loading...</h1>
+                <div className="team_image">
+                <img src={imagePlaceholder} alt="Team Image" />
+            </div>
+            // <NotFound statuscode={404} />
             ) : (
                 <>
-                    <h1>Team Gallery</h1>
+                    <h2>Team Gallery</h2>
                     {isEmpty ? (
                         <NotFound statuscode={404} />
                     ) : (

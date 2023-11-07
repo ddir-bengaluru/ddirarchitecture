@@ -6,6 +6,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import UseAnimation from "react-useanimations";
 import facebook from "react-useanimations/lib/facebook";
 import linkedin from "react-useanimations/lib/linkedin";
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [visibility, setVisibility] = useState(false);
@@ -25,6 +26,12 @@ export default function Navbar() {
     const searchParam = e.target.elements[0].value;
     navigate(`/search/${searchParam}`);
   }
+
+  function handleLinkClick(path: string) {
+    setVisibility(false);
+    navigate(path);
+  }
+  
 
   function toggleNav() {
     setVisibility(visibility => !visibility);
@@ -64,11 +71,18 @@ export default function Navbar() {
           <li className="dropdown">
             <div>About Us <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
             <div className="dropdown__content">
-              <a href="/about-us">About Us</a>
               <a href="/clients">Client</a>
-              <a href="/team">Team</a>
+              {/* <Link to="/about-us#team-section">Team</Link>
+              <Link to="/about-us#contact-section">Contact</Link> */}
+               <Link to="/about-us#team-section" onClick={() => handleLinkClick('/about-us#team-section')}>
+                Team
+              </Link>
+              <Link to="/about-us#contact-section" onClick={() => handleLinkClick('/about-us#contact-section')}>
+                Contact
+              </Link>
             </div>
           </li>
+
         </ul>
         <div className="navbar__right">
           <div className="social-icons">
