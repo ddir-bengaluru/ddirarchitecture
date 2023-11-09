@@ -165,9 +165,13 @@
     gap: $gutter;
 
     img {
+      min-height: 400px;
+      min-width: 100%;
       width: 100%;
       height: auto;
       margin: 0;
+      background: url('../../assets/images/img-placeholder.png') no-repeat center center;
+      background-size: cover;
     }
   }
 
