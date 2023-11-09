@@ -16,7 +16,7 @@
     border-radius: $border-radius-normal;
     background: url('../images/img-placeholder.png') no-repeat center center;
     background-size: cover;
-    min-width: 450px;
+    min-width: min(450px, 80vw);
     &:hover {
       .card__img {
         transform: scale(1.1);
