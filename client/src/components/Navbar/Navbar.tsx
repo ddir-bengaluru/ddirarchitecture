@@ -44,7 +44,10 @@ export default function Navbar() {
       <nav className={visibility ? 'navbar show' : 'navbar'}>
         <button className='btn-close' onClick={toggleNav}><FontAwesomeIcon icon={faClose} /></button>
         <ul className='navbar__left'>
+          <div>
           <a href='/'><h1>DDIR <span>Architecture</span></h1></a>
+          <h3>Dominic & Dipesh</h3>
+          </div>
           <li className='dropdown'>
             <div>Architecture <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
             <div className="dropdown__content">

@@ -9,6 +9,7 @@ import Art from '../components/Art/Art'
 import About from '../components/About/About'
 import Clients from '../components/Client/Client'
 import Team from '../components/Team/Team'
+import Carousel from '../components/Carousel/Carousel'
 
 export default function Router() {
   return (
@@ -23,7 +24,7 @@ export default function Router() {
           <Route path='/art/:art_name' element={<Art />} />
           <Route path='/about-us' element={<About />} />
           <Route path='/clients' element={<Clients />} />
-          <Route path='/team' element={<Team />} />
+           <Route path='/team' element={<Team />} />
           <Route path='/404-not-found' element={<NotFound statuscode={404} />} />
           <Route path='*' element={<NotFound statuscode={404} />} />
       </Routes>
