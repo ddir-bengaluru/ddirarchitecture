@@ -35,6 +35,37 @@ router.get("/team", async (req, res) => {
   res.send(results).status(200);
 });
 
+
+//   let collection = await db.collection("carousel");
+//   let carousel = new Set();
+//   let results = await collection.find({}).project({_id: 0, photos: 1}).toArray();
+//   results.forEach(carouselPic => {
+//     if(carouselPic?.photos) {
+//       carousel.add(carouselPic?.photos);
+//     }
+//   });
+//   results = [...carousel]
+//   res.send(results).status(200);
+// });
+
+
+router.get("/carousel", async (req, res) => {
+  try {
+    const collection = await db.collection("carousel");
+    const results = await collection.find({}).project({_id: 0, photos: 1}).toArray();
+
+    // Flatten the arrays of photos into a single array
+    const images = results.flatMap(carouselPic => carouselPic?.photos || []);
+
+    res.send(images).status(200);
+  } catch (error) {
+    console.error("Error fetching carousel photos:", error);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+
+
 router.get("/:name", async (req, res) => {
   let collection = await db.collection("projects");
   let query = {name: req.params.name};

@@ -1,0 +1,16 @@
+// .carousel__img {
+//     background: url('../../assets/images/img-placeholder.png') no-repeat center center;
+//     background-size: cover;
+//     height: 100vh;
+// }
+.carousel_img {
+    background: url('../../assets/images/img-placeholder.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+@media screen and (max-wdith: 769px){
+    .carousel_img {
+        height: 92vh;
+    }
+}
