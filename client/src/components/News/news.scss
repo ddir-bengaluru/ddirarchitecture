@@ -1,4 +1,5 @@
 @import "../../assets/styles/variables";
+@import "../../assets/styles/sudo";
 @import "../../assets/styles/flex";
 @import "../../assets/styles/text-functions";
 
@@ -6,8 +7,9 @@
     @include flex(column, center, flex-start);
     background-color: $white;
     padding: $gutter;
-    min-height: calc(100vh - 80px);
+    min-height: 100vh;
     padding-top: $gutter4x;
+    animation: fade-in 700ms ease-in-out;
 
     &__title {
         padding: 0 $gutter;
@@ -16,11 +18,8 @@
     &__card {
         cursor: pointer;
         position: relative;
-        display: grid;
-        grid-template-areas: "title title" "desc desc" "timeline timeline";
-        row-gap: $gutter1_2;
-        align-items: center;
-        column-gap: $gutter;
+        @include flex(column, flex-start, flex-start);
+        gap: $gutter;
         background-color: $white;
         width: 100%;
         overflow: hidden;
@@ -29,6 +28,10 @@
 
         &:hover {
             color: $textColor;
+
+            .news__card__icon {
+                opacity: 1;
+            }
         }
 
         &:not(:last-child) {
@@ -39,6 +42,11 @@
             grid-area: title;
             font-size: $font-size-s;
         }
+        &__icon {
+            opacity: 0;
+            @include element-position(absolute, 16px, 16px, unset, unset);
+            transition: $transition-in-out;
+        }
         p {
             @include line-clamp(2)
         }
@@ -48,6 +56,7 @@
     }
 
     @media screen and (min-width: 769px){
+        min-height: calc(100vh - 80px);
         padding-top: $gutter;
         row-gap: $gutter;
         &__wrapper {

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import "./news.scss";
-import imagePlaceholder from "../../assets/images/img-placeholder.png";
 import { endpoint } from '../../Utils/Utils';
 import { Link, useNavigate } from 'react-router-dom';
 import { NewsState } from '../../assets/app-state/news-state';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 export default function News() {
     const [news, setNews] = useState([]);
@@ -34,6 +35,9 @@ export default function News() {
                 <h2>{element?.title}</h2>
                 <p>{element?.description}</p>
                 <span>{new Date(parseInt(element?.timestamp?.$timestamp)).toDateString()}</span>
+                <i className='news__card__icon'>
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                </i>
             </Link>
         })
     }
