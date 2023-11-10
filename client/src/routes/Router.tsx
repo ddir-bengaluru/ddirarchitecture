@@ -7,6 +7,8 @@ import Categories from '../components/Categories/Categories'
 import NotFound from '../components/NotFound/NotFound'
 import Art from '../components/Art/Art'
 import About from '../components/About/About'
+import News from '../components/News/News'
+import NewsDetails from '../components/NewsDetails/NewsDetails'
 
 export default function Router() {
   return (
@@ -20,6 +22,8 @@ export default function Router() {
           <Route path='/search/:search_key' element={<Categories />} />
           <Route path='/art/:art_name' element={<Art />} />
           <Route path='/about-us' element={<About />} />
+          <Route path='/news' element={<News />} />
+          <Route path='/news/:news_id' element={<NewsDetails />} />
           <Route path='/404-not-found' element={<NotFound statuscode={404} />} />
           <Route path='*' element={<NotFound statuscode={404} />} />
       </Routes>

@@ -1,0 +1,62 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/flex";
+@import "../../assets/styles/text-functions";
+
+.news {
+    @include flex(column, center, flex-start);
+    background-color: $white;
+    padding: $gutter;
+    min-height: calc(100vh - 80px);
+    padding-top: $gutter4x;
+
+    &__title {
+        padding: 0 $gutter;
+    }
+    
+    &__card {
+        cursor: pointer;
+        position: relative;
+        display: grid;
+        grid-template-areas: "title title" "desc desc" "timeline timeline";
+        row-gap: $gutter1_2;
+        align-items: center;
+        column-gap: $gutter;
+        background-color: $white;
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: $gutter;
+
+        &:hover {
+            color: $textColor;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $stroke;
+        }
+
+        h2 {
+            grid-area: title;
+            font-size: $font-size-s;
+        }
+        p {
+            @include line-clamp(2)
+        }
+        span {
+            grid-area: timeline;
+        }
+    }
+
+    @media screen and (min-width: 769px){
+        padding-top: $gutter;
+        row-gap: $gutter;
+        &__wrapper {
+            width: 65%;
+        }
+        &__card {
+            h2 {
+                font-size: $font-size-sm;
+            }
+        }
+    }
+}

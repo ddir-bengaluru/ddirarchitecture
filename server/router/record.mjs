@@ -1,5 +1,6 @@
 import express from "express";
 import db from "../db/connection.mjs";
+import { BSON } from "mongodb";
 
 const router = express.Router();
 
@@ -21,6 +22,16 @@ router.get("/allClients", async (req, res) => {
   results = [...clients]
   res.send(results).status(200);
 });
+
+router.get('/news', async (req, res) => {
+  let collection = await db.collection("news");
+  try {
+    let result = await collection.find({}).toArray();
+    res.send(result).status(200)
+  } catch (e) {
+    res.send({error: e}).status(400);
+  }
+})
 
 router.get("/:name", async (req, res) => {
   let collection = await db.collection("projects");
@@ -53,11 +64,22 @@ router.get("/art/:name", async (req, res) => {
   }
 });
 
+router.get('/news/:_id', async (req, res) => {
+  let collection = await db.collection("news");
+  let newsId = new BSON.ObjectId(req.params._id);
+  let query = {_id: newsId};
+  let results = await collection.findOne(query);
+
+  if(!results) res.status(404).send([]);
+  else res.status(200).send(results);
+})
+
 router.get("/search/:name", async (req, res) =>{
   const results = [];
   let searchTerm = req.params.name;
   let projects = await db.collection("projects");
   let art = await db.collection("art");
+  let news = await db.collection("news");
   const projectResults = await projects.
   find({
     $or: [
@@ -67,10 +89,16 @@ router.get("/search/:name", async (req, res) =>{
     ]
   }).toArray();
   const artResults = await art.find({name: {$regex: searchTerm, $options: 'i'}}).toArray();
-  results.push(...projectResults, ...artResults);
+  const newsResults = await news.find({
+    $or: [
+      {title: {$regex: searchTerm, $options: 'i'}},
+      {description: {$regex: searchTerm, $options: 'i'}}
+    ]
+  }).toArray();
+  results.push(...projectResults, ...artResults, ...newsResults);
 
-  if (!results.length) res.send([]).status(404);
-  else res.send(results).status(200)
+  if (!results.length) res.status(404).send([]);
+  else res.status(200).send(results);
 });
 
 export default router;

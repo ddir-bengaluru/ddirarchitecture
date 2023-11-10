@@ -61,6 +61,7 @@ export default function Navbar() {
               <a href="/art/vendu">Vendu</a>
             </div>
           </li>
+          <li><a href="/news">News</a></li>
           <li><a href="/about-us">About Us</a></li>
         </ul>
         <div className="navbar__right">
