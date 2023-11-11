@@ -6,6 +6,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import UseAnimation from "react-useanimations";
 import facebook from "react-useanimations/lib/facebook";
 import linkedin from "react-useanimations/lib/linkedin";
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [visibility, setVisibility] = useState(false);
@@ -26,17 +27,27 @@ export default function Navbar() {
     navigate(`/search/${searchParam}`);
   }
 
+  function handleLinkClick(path: string) {
+    setVisibility(false);
+    navigate(path);
+  }
+
   function toggleNav() {
     setVisibility(visibility => !visibility);
   }
 
   return (
     <div className='nav'>
-      <button className={ (isLanding || isAboutPage) ? "btn-open text-white" : "btn-open" } onClick={toggleNav}><FontAwesomeIcon icon={faBars} /></button>
+      <button className={(isLanding || isAboutPage) ? "btn-open text-white" : "btn-open"} onClick={toggleNav}><FontAwesomeIcon icon={faBars} /></button>
       <nav className={visibility ? 'navbar show' : 'navbar'}>
         <button className='btn-close' onClick={toggleNav}><FontAwesomeIcon icon={faClose} /></button>
         <ul className='navbar__left'>
-          <a href='/'><h1>DDIR <span>Architecture</span></h1></a>
+          <div>
+            <a href='/'>
+              <h1>DDIR <span>Architecture</span></h1>
+              <h3>Dominic & Dipesh</h3>
+            </a>
+          </div>
           <li className='dropdown'>
             <div>Architecture <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
             <div className="dropdown__content">
@@ -61,7 +72,19 @@ export default function Navbar() {
               <a href="/art/vendu">Vendu</a>
             </div>
           </li>
-          <li><a href="/about-us">About Us</a></li>
+          <li className="dropdown">
+            <div>About Us <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
+            <div className="dropdown__content">
+              <a href="/clients">Client</a>
+              <Link to="/about-us#team-section" onClick={() => handleLinkClick('/about-us#team-section')}>
+                Team
+              </Link>
+              <Link to="/about-us#contact-section" onClick={() => handleLinkClick('/about-us#contact-section')}>
+                Contact
+              </Link>
+            </div>
+          </li>
+          <li><a href="/news">News</a></li>
         </ul>
         <div className="navbar__right">
           <div className="social-icons">
@@ -73,7 +96,7 @@ export default function Navbar() {
             </a>
           </div>
           <form className="search-bar" onSubmit={onSearch}>
-            <input className='search-bar__text' type="text" id="name" placeholder='Enter Project Name'  required/>
+            <input className='search-bar__text' type="text" id="name" placeholder='Enter Project Name' required />
             <input className='search-bar__btn' type='submit' value="Search" />
           </form>
         </div>

@@ -1,0 +1,49 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/flex";
+
+.clients {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gutter24;
+  padding-bottom: $gutter;
+  margin: 0 $gutter1_2;
+  margin-top: $gutter4x;
+
+  &__letter-box {
+    border: 1px solid $stroke;
+    border-radius: $border-radius-normal;
+    padding: $gutter20;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+    h3 {
+      margin-bottom: $gutter;
+    }
+
+    ul {
+      li {
+        margin: $gutter1_2 0;
+        padding: $gutter1_2;
+        background-color: $bgColorVariant;
+        border-radius: $border-radius-small;
+        font-size: $font-size-default;
+      }
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 50%;
+    margin: 0 auto;
+    padding-top: $gutter2x;
+    &__letter-box {
+      h3 {
+        font-size: $font-size-m;
+      }
+      ul {
+        li {
+          font-size: $font-size-s;
+        }
+      }
+    }
+  }
+}
