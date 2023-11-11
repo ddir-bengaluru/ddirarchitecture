@@ -46,7 +46,7 @@ export default function Navbar() {
         <ul className='navbar__left'>
           <div>
           <a href='/'><h1>DDIR <span>Architecture</span></h1></a>
-          <h3>Dominic & Dipesh</h3>
+          <h4>Dominic & Dipesh</h4>
           </div>
           <li className='dropdown'>
             <div>Architecture <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
