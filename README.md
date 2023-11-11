@@ -99,6 +99,6 @@
 * Deployement will be done on production every Saturday
 
 # Team
-* Nikhil (Product Manager)
+* Nikhil  (Product Manager)
 * Ishita (Developer)
 * Sumant (Developer)

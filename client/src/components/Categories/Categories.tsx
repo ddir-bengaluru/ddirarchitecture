@@ -38,7 +38,6 @@ export default function Categories() {
                 })
                 .catch((err) => {
                     console.log("error", err);
-
                 });
         }
     }, [search_key, category_name]);
