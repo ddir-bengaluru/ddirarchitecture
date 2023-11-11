@@ -4,4 +4,5 @@ export function strTransform(str: string) {
     return formattedName;
 }
 
-export const endpoint = 'http://localhost:9200/record/';
+// export const endpoint = 'http://localhost:9200/record/';
+export const endpoint = 'https://ddirarchitecture-backendd.vercel.app/record/';
