@@ -3,41 +3,6 @@
 @import "../../assets/styles/flex";
 
 .landing {
-    // .hero {
-    //     @include flex(column, center, center);
-    //     position: relative;
-    //     gap: $gutter;
-    //     color: $white;
-    //     height: 100vh;
-    //     background-image: url("../../assets/images/hero.jpeg");
-    //     background-repeat: no-repeat;
-    //     background-position: center center;
-    //     background-size: cover;
-    //     background-blend-mode: saturation;
-    //     animation: fade-in 1000ms;
-
-    //     &:before {
-    //         @include sudo-fill(absolute, 0, 0, 0, 0);
-    //         background: rgba($color: $blueSubtle, $alpha: 0.25);
-    //         filter: brightness(0.5);
-    //         z-index: 1;
-    //     }
-
-    //     &__title,
-    //     &__slang {
-    //         text-align: center;
-    //         z-index: 2;
-    //     }
-
-    //     &__title {
-    //         font-size: $font-size-l;
-    //     }
-
-    //     &__slang {
-    //         font-size: $font-size-base;
-    //     }
-    // }
-
     .text-box {
         text-align: justify;
         padding: $gutter;
@@ -62,39 +27,6 @@
         }
     }
 
-    .carousel__img {
-        background: url('../../assets/images/img-placeholder.png') no-repeat center center;
-        background-size: cover;
-        height: 100vh;
-    }
-    .slick-dots {
-        bottom: 32px;
-        li {
-            button:before {
-                font-size: $font-size-xxs;
-                color: $textColorVariant;
-            }
-            &.slick-active  {
-                button:before {
-                    color: $textColor;
-                }
-            }
-        }
-    }
-    .slick-next, .slick-prev {
-        z-index: 1;
-        &::before {
-            color: $orangeSubtle;
-            font-size: $font-size-l;
-        }
-    }
-    .slick-next {
-        right: 24px;
-    }
-    .slick-prev {
-        left: 16px;
-    }
-
     @media screen and (min-width: 769px) {
         .hero {
             height: calc(100vh - 80px);
@@ -117,9 +49,6 @@
         }
         .showcase .cards {
             grid-template-columns: repeat(2, 1fr);
-        }
-        .carousel__img {
-            height: 92vh;
         }
     }
 }

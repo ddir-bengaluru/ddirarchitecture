@@ -1,16 +1,43 @@
-// .carousel__img {
-//     background: url('../../assets/images/img-placeholder.png') no-repeat center center;
-//     background-size: cover;
-//     height: 100vh;
-// }
-.carousel_img {
-    background: url('../../assets/images/img-placeholder.png') no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-}
+@import "../../assets/styles/variables";
 
-@media screen and (max-wdith: 769px){
-    .carousel_img {
-        height: 92vh;
+.carousel {
+    &__img {
+        background: url('../../assets/images/img-placeholder.png') no-repeat center center;
+        background-size: cover;
+        height: 100vh;
+    }   
+
+    .slick-dots {
+        bottom: 32px;
+        li {
+            button:before {
+                font-size: $font-size-xxs;
+                color: $textColorVariant;
+            }
+            &.slick-active  {
+                button:before {
+                    color: $textColor;
+                }
+            }
+        }
+    }
+    .slick-next, .slick-prev {
+        z-index: 1;
+        &::before {
+            color: $orangeSubtle;
+            font-size: $font-size-l;
+        }
+    }
+    .slick-next {
+        right: 24px;
+    }
+    .slick-prev {
+        left: 16px;
+    }
+
+    @media screen and (min-width: 769px){
+        &__img {
+            height: calc(100vh - 80px);
+        }
     }
 }
