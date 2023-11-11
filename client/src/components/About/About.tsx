@@ -10,19 +10,6 @@ import Contact from '../Contact/Contact';
 
 export default function About() {
     const location = useLocation();
-
-    // useEffect(() => {
-    //     // Check if the URL includes the fragment identifier for "team-section"
-    //     const shouldScrollToTeam = location.hash === '#team-section';
-
-    //     if (shouldScrollToTeam) {
-    //         // Scroll to the "team-section" when the component mounts
-    //         scroller.scrollTo('team-section', {
-    //             smooth: true,
-    //             offset: -90, // Adjust the offset as needed
-    //         });
-    //     }
-    // }, [location]);
     useEffect(() => {
         const shouldScrollToTeam = location.hash === '#team-section';
         const shouldScrollToContact = location.hash === '#contact-section';

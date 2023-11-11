@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import "./projects.scss";
 import { useNavigate, useParams } from 'react-router-dom';
-import { ProjectState } from '../../assets/app-state/project-state';
+import { ProjectInitialState, ProjectState } from '../../assets/app-state/project-state';
 import { endpoint, strTransform } from '../../Utils/Utils';
 
 export default function Projects() {
   const { project_name } = useParams();
   const navigate = useNavigate();
-  const [projectData, setProjectData] = useState(ProjectState);
+  const [projectData, setProjectData] = useState<ProjectState>(ProjectInitialState);
   const [loader, setLoadingStatus] = useState(true);
   useEffect(() => {
     async function getProjectData() {

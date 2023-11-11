@@ -63,50 +63,23 @@ export default function Clients() {
 
   const flattenedClientNames = flattenClientNames(clients);
   const groupedClients = groupClientsByFirstLetter(flattenedClientNames);
-
-  useEffect(() => {
-    console.log('Grouped clients:', groupedClients);
-  }, [groupedClients]);
-
   const sortedLetters = Object.keys(groupedClients).sort();
 
-  // Divide letters into two columns
-  const midIndex = Math.ceil(sortedLetters.length / 2);
-  const firstColumn = sortedLetters.slice(0, midIndex);
-  const secondColumn = sortedLetters.slice(midIndex);
-
   return (
-    <div className="grouped-clients">
-      {loading ? (
-        <p>Loading clients...</p>
-      ) : (
-        <div className="columns">
-          <div className="column">
-            {firstColumn.map((letter) => (
-              <div key={letter} className="letter-box">
-                <h3>{letter}</h3>
-                <ul>
-                  {groupedClients[letter].map((client, index) => (
-                    <li key={index}>{client}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="column">
-            {secondColumn.map((letter) => (
-              <div key={letter} className="letter-box">
-                <h3>{letter}</h3>
-                <ul>
-                  {groupedClients[letter].map((client, index) => (
-                    <li key={index}>{client}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+    <div className="clients">
+      {loading ? <h1>Loading clients...</h1>
+        : (
+          sortedLetters.map((letter) => (
+            <div key={letter} className="clients__letter-box">
+              <h3>{letter}</h3>
+              <ul>
+                {groupedClients[letter].map((client, index) => (
+                  <li key={index}>{client}</li>
+                ))}
+              </ul>
+            </div>
+          ))
+        )}
     </div>
   );
 }

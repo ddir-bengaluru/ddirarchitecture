@@ -32,7 +32,6 @@ export default function Navbar() {
     setVisibility(false);
     navigate(path);
   }
-  
 
   function toggleNav() {
     setVisibility(visibility => !visibility);
@@ -76,9 +75,7 @@ export default function Navbar() {
             <div>About Us <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
             <div className="dropdown__content">
               <a href="/clients">Client</a>
-              {/* <Link to="/about-us#team-section">Team</Link>
-              <Link to="/about-us#contact-section">Contact</Link> */}
-               <Link to="/about-us#team-section" onClick={() => handleLinkClick('/about-us#team-section')}>
+              <Link to="/about-us#team-section" onClick={() => handleLinkClick('/about-us#team-section')}>
                 Team
               </Link>
               <Link to="/about-us#contact-section" onClick={() => handleLinkClick('/about-us#contact-section')}>
@@ -86,7 +83,7 @@ export default function Navbar() {
               </Link>
             </div>
           </li>
-
+          <li><a href="/news">News</a></li>
         </ul>
         <div className="navbar__right">
           <div className="social-icons">

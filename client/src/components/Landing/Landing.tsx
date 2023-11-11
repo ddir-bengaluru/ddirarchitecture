@@ -56,7 +56,7 @@ export default function Landing() {
     <div className="landing">
       <ScrollToTop />
       <div className="carousel-container">
-        <Carousel /> {/* Render the Carousel component here */}
+        <Carousel />
       </div>
       <div className="showcase">
         <h2>Our Award Winning Projects</h2>

@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import { endpoint, strTransform } from '../../Utils/Utils';
 import NotFound from '../NotFound/NotFound';
-import { ArtState } from '../../assets/app-state/art-state';
+import { ArtInitialState, ArtState } from '../../assets/app-state/art-state';
 import "./art.scss";
 
 var i = 0;
 
 export default function Art() {
-    const [artData, setArtData] = useState(ArtState);
+    const [artData, setArtData] = useState(ArtInitialState);
     const [isLoading, setLoading] = useState(true);
     const [isEmpty, setEmpty] = useState(false);
     const { art_name } = useParams();

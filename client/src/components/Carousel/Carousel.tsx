@@ -5,31 +5,33 @@ import { endpoint } from '../../Utils/Utils';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Carousel() {
   const [photos, setPhotos] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [isEmpty, setEmpty] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function getCarouselPhotos() {
-      const response = await fetch(endpoint + 'carousel');
-
-      if (!response.ok) {
-        console.error("Error fetching carousel photos");
+      try {
+        const response = await fetch(endpoint + 'carousel');
+        if (!response.ok) {
+          console.error("Error fetching carousel photos");
+          setLoading(false);
+          return;
+        }
+        const data = await response.json();
+        if (!data || data.length === 0) {
+          setEmpty(true);
+        } else {
+          setPhotos(data);
+        }
         setLoading(false);
-        return;
+      } catch {
+        navigate('/500-null-state');
       }
-
-      const data = await response.json();
-
-      if (!data || data.length === 0) {
-        setEmpty(true);
-      } else {
-        setPhotos(data); // Use the entire array of photos
-      }
-
-      setLoading(false);
     }
 
     getCarouselPhotos();
@@ -55,19 +57,13 @@ export default function Carousel() {
 
   return (
     <div className="carousel">
-      {isLoading ? (
-        <div className="carousel_image">
-          <img src={imagePlaceholder} alt="Carousel Image" />
-        </div>
-      ) : (
-        <Slider {...slickSettings}>
-          {photos.map((item, index) => (
-            <div key={index} className="carousel__wrapper">
-              <img className="carousel_img" src={item} alt={`Image ${index + 1}`} />
-            </div>
-          ))}
-        </Slider>
-      )}
+      <Slider {...slickSettings}>
+        {photos.map((item, index) => (
+          <div key={index} className="carousel__wrapper">
+            <img className="carousel__img" src={item} alt={`Image ${index + 1}`} />
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 }
