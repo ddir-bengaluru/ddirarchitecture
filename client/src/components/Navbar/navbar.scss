@@ -43,8 +43,15 @@
             height: 100%;
             object-fit: contain;
         }
-        h1 span{
-            color: $orange
+        a {
+            h1 span{
+                color: $orange
+            }
+            h3 {
+                &:hover {
+                    color: $textColor;
+                }
+            }
         }
 
         .dropdown {
@@ -191,7 +198,11 @@
                     border-bottom: 1px solid $stroke;
                 }
             }
-            
+            @media screen and (max-width: 768px){
+            .search-bar__btn{
+                margin-right: 14px;
+            }
+        }
         }
     }
 

@@ -25,6 +25,10 @@
             width: 100%;
             height: auto;
             margin: $gutter 0;
+            background: url('../../assets/images/img-placeholder.png') no-repeat center center;
+            background-size: cover;
+            min-height: 300px;
+            min-width: 200px;
         }
     }
 

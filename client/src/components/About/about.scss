@@ -19,7 +19,7 @@
         gap: $gutter;
         color: $white;
         background: url('../../assets/images/hero.jpeg') center center no-repeat;
-        height: 50vh;
+        height: 100vh;
 
         &:before {
             @include sudo-fill(absolute, 0, 0, 0, 0);
