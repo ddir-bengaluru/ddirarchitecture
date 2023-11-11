@@ -64,7 +64,7 @@ router.get('/news', async (req, res) => {
   } catch (e) {
     res.status(400).send({error: e});
   }
-})
+});
 
 router.get("/:name", async (req, res) => {
   let collection = await db.collection("projects");
