@@ -12,11 +12,11 @@
   }
 
   &__wrapper {
-    padding: $gutter;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: $gutter;
+    margin: 0;
 
     img {
       min-height: 400px;
@@ -32,7 +32,7 @@
   @media screen and (min-width: 769px) {
     margin-top: 0;
     &__wrapper {
-      padding: $gutter2x;
+      margin: 0 $gutter4x;
     }
   }
 
@@ -68,6 +68,7 @@
   h1 {
     text-align: center;
     padding-top: $gutter;
-    margin-top: 1rem;
+    margin: $gutter 0;
+    font-size: $font-size-xl;
   }
 }

@@ -34,7 +34,7 @@ export default function About() {
         <div className='about'>
             <div className="about__hero">
                 <h1 className='about__hero__title'>Who Are We?</h1>
-                <p className='about__hero__slang'>DDIR Architecture Studio was created in 2003 by the combined inspirations of French-Canadian architectural consultant Dominic Dube and Inge Rieck from Germany. Dominic's vision is one of integration of architecture and design with art (nature), technology (structure), life (light) and culture (spirit). The goal is to discover the inherent spirit in each project and this is accomplished through a hands-on approach and complete immersion into the design. Dominic's instinct as a painter is evident in his work. The projects are conceived as paintings on a three dimensional canvas.</p>
+                <p className='about__hero__slang'>DDIR Architecture Studio, founded in 2003 by the visionary Dominic Dube and Inge Rieck, is a harmonious blend of French-Canadian and German influences. Dominic's unique approach combines art (nature), technology (structure), life (light) and culture (spirit) to reveal the true spirit of each project. With a hands-on, immersive design process, DDIR Architecture Studio crafts three-dimensional masterpieces that resonate with Dominic's painterly instincts.</p>
             </div>
             <ScrollElement name="team-section" className="element">
                 <Team />

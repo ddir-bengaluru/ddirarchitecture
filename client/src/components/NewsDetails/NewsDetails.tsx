@@ -27,6 +27,23 @@ export default function NewsDetails() {
 
     fetchNews();
   });
+
+  const NewlineToBr = ({ text }: any) => {
+    const renderText = () => {
+      if (!text) return null;
+
+      const splitText = text.split('\n');
+      return splitText.map((line: any, index: number) => (
+        <React.Fragment key={index}>
+          {line}
+          {index !== splitText.length - 1 && <br />}
+        </React.Fragment>
+      ));
+    };
+  
+    return <p>{renderText()}</p>;
+};
+
   return (
     <div className='news-details'>
       {loader ?
@@ -34,7 +51,7 @@ export default function NewsDetails() {
         <>
           <h1>{newsData?.title}</h1>
           <span> 🗓️ {new Date(parseInt(newsData?.timestamp?.$timestamp)).toDateString()}</span>
-          <p>{newsData?.description}</p>
+          <NewlineToBr text={newsData?.description} />
         </>
       }
     </div>

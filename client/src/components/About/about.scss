@@ -40,7 +40,7 @@
         &__slang {
             font-size: $font-size-base;
             text-align: center;
-            width: 50%;
+            width: 90%;
         }
     }
 
@@ -77,6 +77,12 @@
     @media screen and (min-width: 769px){
         &__wrapper {
             margin: 0 $gutter4x;
+        }
+
+        &__hero {
+            &__slang {
+                width: 50%;
+            }
         }
 
         &__address {

@@ -44,10 +44,8 @@ export default function Team() {
                 <div className="team_image">
                 <img src={imagePlaceholder} alt="Team DDIR" />
             </div>
-            // <NotFound statuscode={404} />
             ) : (
                 <>
-                    <h2>Team Gallery</h2>
                     {isEmpty ? (
                         <NotFound statuscode={404} />
                     ) : (
