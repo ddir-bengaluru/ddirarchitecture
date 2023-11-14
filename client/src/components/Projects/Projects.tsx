@@ -24,13 +24,13 @@ export default function Projects() {
       setLoadingStatus(false);
       setProjectData(data);
     }
-    console.log("PROJECT DB HIT");
     getProjectData();
-  }, []);
+  });
+
   function Carousel() {
     return projectData?.photos?.secondary_images.map((img: any, index: number) => {
       return (
-        <img key={index} src={img} />
+        <img key={index} src={img} alt="" />
       )
     })
   }

@@ -3,19 +3,7 @@
 @import "../../assets/styles/flex";
 
 .landing {
-    .text-box {
-        text-align: justify;
-        padding: $gutter;
-        font-size: $font-size-xs;
-
-        .highlight {
-            color: $orange;
-            font-weight: $font-weight700;
-            font-size: $font-size-s m;
-        }
-    }
-
-    .showcase {
+    &__showcase {
         @include flex(column, center, center);
         padding: $gutter2x $gutter;
 
@@ -28,27 +16,10 @@
     }
 
     @media screen and (min-width: 769px) {
-        .hero {
-            height: calc(100vh - 80px);
-
-            &__title {
-                font-size: $font-size-xxl;
+        &__showcase {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
             }
-
-            &__desc {
-                font-size: $font-size-m;
-            }
-        }
-        .text-box {
-            margin: $gutter $gutter2x;
-            font-size: $font-size-s;
-            text-align: center;
-            .highlight {
-                font-size: $font-size-s;
-            }
-        }
-        .showcase .cards {
-            grid-template-columns: repeat(2, 1fr);
         }
     }
 }

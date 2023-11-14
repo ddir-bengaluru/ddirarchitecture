@@ -5,10 +5,8 @@ import NotFound from '../NotFound/NotFound';
 import { ArtInitialState, ArtState } from '../../assets/app-state/art-state';
 import "./art.scss";
 
-var i = 0;
-
 export default function Art() {
-    const [artData, setArtData] = useState(ArtInitialState);
+    const [artData, setArtData] = useState<ArtState>(ArtInitialState);
     const [isLoading, setLoading] = useState(true);
     const [isEmpty, setEmpty] = useState(false);
     const { art_name } = useParams();
@@ -16,7 +14,6 @@ export default function Art() {
     useEffect(() => {
         async function getArtData() {
             const response = await fetch(endpoint + 'art/' + art_name);
-            console.log("ART DB HIT " + i++);
             if (!response.ok) {
                 navigate('/404-not-found');
                 return
@@ -29,7 +26,7 @@ export default function Art() {
             setArtData(data);
         }
         getArtData();
-    }, []);
+    });
     function MapArtData() {
         return artData.photos.map((item: any, index: number) => {
             return <img key={index} src={item} alt={art_name} />

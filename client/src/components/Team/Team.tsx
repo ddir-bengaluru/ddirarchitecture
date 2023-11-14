@@ -38,11 +38,11 @@ export default function Team() {
     }, []);
 
     return (
-        <div className="team" style={{marginBottom: '20px'}}>
+        <div className="team">
             <h1>Team</h1>
             {isLoading ? (
                 <div className="team_image">
-                <img src={imagePlaceholder} alt="Team Image" />
+                <img src={imagePlaceholder} alt="Team DDIR" />
             </div>
             // <NotFound statuscode={404} />
             ) : (
@@ -53,7 +53,7 @@ export default function Team() {
                     ) : (
                         <div className="team__wrapper">
                             {photos.map((item, index) => (
-                                <img key={index} src={item} alt={`Image ${index + 1}`} />
+                                <img key={index} src={item} alt="" />
                             ))}
                         </div>
                     )}

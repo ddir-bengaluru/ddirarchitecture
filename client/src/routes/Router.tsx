@@ -9,7 +9,6 @@ import Art from '../components/Art/Art'
 import About from '../components/About/About'
 import Clients from '../components/Client/Client'
 import Team from '../components/Team/Team'
-import Carousel from '../components/Carousel/Carousel'
 import News from '../components/News/News'
 import NewsDetails from '../components/NewsDetails/NewsDetails'
 

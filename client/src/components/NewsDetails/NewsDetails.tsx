@@ -26,7 +26,7 @@ export default function NewsDetails() {
     }
 
     fetchNews();
-  }, [])
+  });
   return (
     <div className='news-details'>
       {loader ?

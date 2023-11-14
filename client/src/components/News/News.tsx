@@ -5,11 +5,13 @@ import { Link, useNavigate } from 'react-router-dom';
 import { NewsState } from '../../assets/app-state/news-state';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import NotFound from '../NotFound/NotFound';
 
 export default function News() {
     const [news, setNews] = useState([]);
     const navigate = useNavigate();
     const [isLoading, setLoadingStatus] = useState(true);
+    const [isEmpty, setEmptyStatus] = useState(true);
     useEffect(() => {
         async function fetchNews() {
             const response = await fetch(endpoint + 'news');
@@ -18,16 +20,15 @@ export default function News() {
                 return
             }
             const data = await response.json();
-            if (!data.length) {
-                navigate('/404-not-found');
-                return
+            if (data.length) {
+                setEmptyStatus(false);
             }
             setNews(data);
             setLoadingStatus(false);
         }
 
         fetchNews();
-    }, [news?.length])
+    }, [news?.length, navigate]);
 
     function MapNews() {
         return news.map((element: NewsState, index: number) => {
@@ -48,7 +49,7 @@ export default function News() {
                 <>
                     <div className="news__wrapper">
                         <h1 className='news__title'>News 📰</h1>
-                        {MapNews()}
+                        {!isEmpty ? MapNews() : <NotFound statuscode={500} />}
                     </div>
                 </>
             }

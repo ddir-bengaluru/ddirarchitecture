@@ -1,10 +1,8 @@
 import React from 'react'
 import "./about.scss";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Element as ScrollElement, scroller } from 'react-scroll';
 import Team from '../Team/Team';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Contact from '../Contact/Contact';
 
@@ -16,9 +14,10 @@ export default function About() {
 
         if (shouldScrollToTeam) {
             // Scroll to the "team-section" when the component mounts
+            let offSet = window.innerWidth > 768 ? -80 : 0;
             scroller.scrollTo('team-section', {
                 smooth: true,
-                offset: -450, // Adjust the offset as needed
+                offset: offSet, // Adjust the offset as needed
             });
         } else if (shouldScrollToContact) {
             // Scroll to the "contact-section" when the component mounts

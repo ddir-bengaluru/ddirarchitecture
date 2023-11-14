@@ -17,15 +17,15 @@
         @include flex(column, center, center);
         position: relative;
         gap: $gutter;
-        color: $white;
-        background: url('../../assets/images/hero.jpeg') center center no-repeat;
+        // color: $white;
+        // background: url('../../assets/images/hero.jpeg') center center no-repeat;
         height: 100vh;
 
-        &:before {
-            @include sudo-fill(absolute, 0, 0, 0, 0);
-            background: rgba($color: $black, $alpha: 0.85);
-            z-index: 1;
-        }
+        // &:before {
+        //     @include sudo-fill(absolute, 0, 0, 0, 0);
+        //     background: rgba($color: $black, $alpha: 0.85);
+        //     z-index: 1;
+        // }
 
         &__title,
         &__slang {
@@ -40,7 +40,7 @@
         &__slang {
             font-size: $font-size-base;
             text-align: center;
-            width: 95%;
+            width: 50%;
         }
     }
 

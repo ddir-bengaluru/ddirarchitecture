@@ -42,31 +42,30 @@ export default function Categories() {
         }
     }, [search_key, category_name]);
     function MapCategoryWiseData() {
-        if (projects) {
-            return projects.map((data: any, index: number) => {
-                if (data?.location) {
-                    return <Link className="card card--horizontal" to={'/' + data?.name} key={index}>
-                        <img src={data?.photos?.hero_img ? data?.photos?.hero_img : imagePlaceholder} alt={data?.name} />
-                        <h2>{strTransform(data?.name)}</h2>
-                        <p>{data?.description}</p>
-                    </Link>
-                }
-                if (data?.timestamp) {
-                    return <Link className="card card--horizontal" to={'/news/' + data?.name} key={index}>
-                        <img src={data?.photos?.hero_img ? data?.photos?.hero_img : imagePlaceholder} alt={data?.name} />
-                        <h2>{strTransform(data?.title)}</h2>
-                        <p>{data?.description}</p>
-                    </Link>
-                }
-                if (data?.photos) {
-                    return <Link className="card card--horizontal" to={'/art/' + data?.name} key={index}>
-                        <img src={data?.photos[0] ? data?.photos[0] : imagePlaceholder} alt={data?.name} />
-                        <h2>{strTransform(data?.name)}</h2>
-                        <p>{data?.description}</p>
-                    </Link>
-                }
-            })
-        }
+        // eslint-disable-next-line
+        return projects.map((data: any, index: number) => {
+            if (data?.location) {
+                return <Link className="card card--horizontal" to={'/' + data?.name} key={index}>
+                    <img src={data?.photos?.hero_img ? data?.photos?.hero_img : imagePlaceholder} alt={data?.name} />
+                    <h2>{strTransform(data?.name)}</h2>
+                    <p>{data?.description}</p>
+                </Link>
+            }
+            if (data?.timestamp) {
+                return <Link className="card card--horizontal" to={'/news/' + data?.name} key={index}>
+                    <img src={data?.photos?.hero_img ? data?.photos?.hero_img : imagePlaceholder} alt={data?.name} />
+                    <h2>{strTransform(data?.title)}</h2>
+                    <p>{data?.description}</p>
+                </Link>
+            }
+            if (data?.photos) {
+                return <Link className="card card--horizontal" to={'/art/' + data?.name} key={index}>
+                    <img src={data?.photos[0] ? data?.photos[0] : imagePlaceholder} alt={data?.name} />
+                    <h2>{strTransform(data?.name)}</h2>
+                    <p>{data?.description}</p>
+                </Link>
+            }
+        })
     }
     return (
         <div className='categories'>

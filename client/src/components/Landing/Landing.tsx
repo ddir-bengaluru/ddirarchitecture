@@ -1,20 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import './landing.scss';
-
 import imagePlaceholder from './../../assets/images/img-placeholder.png';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import { Link } from 'react-router-dom';
-import { strTransform,endpoint } from '../../Utils/Utils';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import { strTransform, endpoint } from '../../Utils/Utils';
 import Carousel from '../Carousel/Carousel';
 import '../Carousel/carousel.scss';
 export default function Landing() {
   const [projects, setProjects] = useState([]);
-
   useEffect(() => {
-    fetch(endpoint)
+    fetch(endpoint + 'allProjects')
       .then((res) => res.json())
       .then((res) => {
         setProjects(res);
@@ -32,7 +27,7 @@ export default function Landing() {
           <img
             className="card__img"
             src={data?.photos?.hero_img ? data?.photos?.hero_img : imagePlaceholder}
-            alt=""
+            alt={data?.name}
           />
           <div className="card__title">{strTransform(data?.name)}</div>
           <div className="card__subtitle">{data?.location}</div>
@@ -45,10 +40,10 @@ export default function Landing() {
   return (
     <div className="landing">
       <ScrollToTop />
-      <div className="carousel-container">
+      <div className="landing__carousel">
         <Carousel />
       </div>
-      <div className="showcase">
+      <div className="landing__showcase">
         <h2>Our Award Winning Projects</h2>
         <div className="cards">{MapProjectCards(projects)}</div>
       </div>

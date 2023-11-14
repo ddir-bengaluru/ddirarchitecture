@@ -16,9 +16,9 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setLandingStatus(location.pathname == '/' ? true : false);
-    setAboutPageStatus(location.pathname == '/about-us' ? true : false);
-  });
+    setLandingStatus(location.pathname === '/' ? true : false);
+    setAboutPageStatus(location.pathname === '/about-us' ? true : false);
+  }, [location?.pathname]);
 
   function onSearch(e: any) {
     setVisibility(false);
@@ -38,62 +38,68 @@ export default function Navbar() {
 
   return (
     <div className='nav'>
-      <button className={(isLanding || isAboutPage) ? "btn-open text-white" : "btn-open"} onClick={toggleNav}><FontAwesomeIcon icon={faBars} /></button>
+      <button className={(isLanding) ? "btn-open text-white" : "btn-open"} onClick={toggleNav}><FontAwesomeIcon icon={faBars} /></button>
       <nav className={visibility ? 'navbar show' : 'navbar'}>
         <button className='btn-close' onClick={toggleNav}><FontAwesomeIcon icon={faClose} /></button>
         <ul className='navbar__left'>
           <div>
-            <a href='/'>
+            <Link onClick={() => setVisibility(false)} to='/'>
               <h1>DDIR <span>Architecture</span></h1>
-              <h3>Dominic & Dipesh</h3>
-            </a>
+              <h4>Dominic & Dipesh</h4>
+            </Link>
           </div>
           <li className='dropdown'>
             <div>Architecture <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
             <div className="dropdown__content">
-              <a href="/categories/residential">Residential</a>
-              <a href="/categories/housing">Housing</a>
-              <a href="/categories/commercial">Commercial</a>
-              <a href="/categories/hospitality">Hospitality</a>
-              <a href="/categories/leisure">Leisure & Entertainment</a>
-              <a href="/categories/farmhouse">Farmhouse</a>
-              <a href="/categories/retail">Retail</a>
-              <a href="/categories/corporate">Corporate</a>
+              <Link onClick={() => setVisibility(false)} to="/categories/residential">Residential</Link>
+              <Link onClick={() => setVisibility(false)} to="/categories/housing">Housing</Link>
+              <Link onClick={() => setVisibility(false)} to="/categories/commercial">Commercial</Link>
+              <Link onClick={() => setVisibility(false)} to="/categories/hospitality">Hospitality</Link>
+              <Link onClick={() => setVisibility(false)} to="/categories/leisure">Leisure & Entertainment</Link>
+              <Link onClick={() => setVisibility(false)} to="/categories/farmhouse">Farmhouse</Link>
+              <Link onClick={() => setVisibility(false)} to="/categories/retail">Retail</Link>
+              <Link onClick={() => setVisibility(false)} to="/categories/corporate">Corporate</Link>
             </div>
           </li>
           <li className="dropdown">
             <div>Art <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
             <div className="dropdown__content">
-              <a href="/art/atelier">Atelier</a>
-              <a href="/art/banglore">Banglore</a>
-              <a href="/art/galerie-203">Galerie 203</a>
-              <a href="/art/golden-crab">Golden Crab</a>
-              <a href="/art/paris">Paris</a>
-              <a href="/art/vendu">Vendu</a>
+              <Link onClick={() => setVisibility(false)} to="/art/atelier">Atelier</Link>
+              <Link onClick={() => setVisibility(false)} to="/art/banglore">Banglore</Link>
+              <Link onClick={() => setVisibility(false)} to="/art/galerie-203">Galerie 203</Link>
+              <Link onClick={() => setVisibility(false)} to="/art/golden-crab">Golden Crab</Link>
+              <Link onClick={() => setVisibility(false)} to="/art/paris">Paris</Link>
+              <Link onClick={() => setVisibility(false)} to="/art/vendu">Vendu</Link>
             </div>
           </li>
           <li className="dropdown">
             <div>About Us <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
             <div className="dropdown__content">
-              <a href="/clients">Client</a>
-              <Link to="/about-us#team-section" onClick={() => handleLinkClick('/about-us#team-section')}>
+              <Link onClick={() => setVisibility(false)} to="/clients">Client</Link>
+              <Link to="/about-us#team-section" onClick={() => {
+                handleLinkClick('/about-us#team-section');
+                setVisibility(false);
+              }}>
                 Team
               </Link>
-              <Link to="/about-us#contact-section" onClick={() => handleLinkClick('/about-us#contact-section')}>
+              <Link to="/about-us#contact-section" onClick={() => {
+                handleLinkClick('/about-us#contact-section');
+                setVisibility(false);
+              }}>
                 Contact
               </Link>
             </div>
           </li>
-          <li><a href="/news">News</a></li>
+          <li><Link onClick={() => setVisibility(false)} to="/news">News</Link></li>
         </ul>
         <div className="navbar__right">
           <div className="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=100057256877863">
+            <Link onClick={() => setVisibility(false)} to="https://www.facebook.com/profile.php?id=100057256877863">
               <UseAnimation animation={facebook} strokeColor='#c86508' autoPlay={true} loop={true} />
-            </a>
-            <a href="https://www.linkedin.com/company/ddir-architecture-studio/about/">
+            </Link>
+            <Link onClick={() => setVisibility(false)} to="https://www.linkedin.com/company/ddir-architecture-studio/about/">
               <UseAnimation animation={linkedin} strokeColor='#c86508' />
-            </a>
+            </Link>
           </div>
           <form className="search-bar" onSubmit={onSearch}>
             <input className='search-bar__text' type="text" id="name" placeholder='Enter Project Name' required />

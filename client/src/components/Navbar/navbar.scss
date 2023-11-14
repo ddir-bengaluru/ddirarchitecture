@@ -31,7 +31,7 @@
     z-index: 5;
     
     &__left {
-        @include flex(column, center, start);
+        @include flex(column, center, flex-start);
         text-align: center;
         li{
             height: 100%;
@@ -47,7 +47,7 @@
             h1 span{
                 color: $orange
             }
-            h3 {
+            h4 {
                 &:hover {
                     color: $textColor;
                 }
@@ -151,7 +151,7 @@
                     display: none;
                     position: absolute;
                     padding-left: 0;
-                    top: 18px;
+                    top: 14px;
                     overflow: auto;
                     margin-top: 0;
                     background-color: $white;
@@ -173,6 +173,11 @@
                         display: block;
                         max-height: 30vh;
                     }
+                }
+
+                .dropdown__content:hover {
+                    display: block;
+                    max-height: 30vh;
                 }
             }
         }
