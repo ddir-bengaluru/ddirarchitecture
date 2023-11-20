@@ -21,7 +21,6 @@ export default function Router() {
           <Route path='/' element={<Landing />} />
           <Route path='/:project_name' element={<Projects />} />
           <Route path='/categories/:category_name' element={<Categories />} />
-          <Route path='/search/:search_key' element={<Categories />} />
           <Route path='/art/:art_name' element={<Art />} />
           <Route path='/about-us' element={<About />} />
           <Route path='/clients' element={<Clients />} />

@@ -14,17 +14,21 @@ export default function News() {
     const [isEmpty, setEmptyStatus] = useState(true);
     useEffect(() => {
         async function fetchNews() {
-            const response = await fetch(endpoint + 'news');
-            if (!response.ok) {
+            try {
+                const response = await fetch(endpoint + 'news');
+                if (!response.ok) {
+                    navigate('/404-not-found');
+                    return
+                }
+                const data = await response.json();
+                if (data.length) {
+                    setEmptyStatus(false);
+                }
+                setNews(data);
+                setLoadingStatus(false);
+            } catch {
                 navigate('/404-not-found');
-                return
             }
-            const data = await response.json();
-            if (data.length) {
-                setEmptyStatus(false);
-            }
-            setNews(data);
-            setLoadingStatus(false);
         }
 
         fetchNews();

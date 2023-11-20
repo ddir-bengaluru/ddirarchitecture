@@ -5,33 +5,32 @@ import { endpoint } from '../../Utils/Utils';
 import imagePlaceholder from '../../assets/images/img-placeholder.png';
 
 import "./teams.scss";  
+import { useNavigate } from 'react-router-dom';
 
 export default function Team() {
     const [photos, setPhotos] = useState([]);
     const [isLoading, setLoading] = useState(true);
     const [isEmpty, setEmpty] = useState(false);
-
-    
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function getTeamPhotos() {
-            const response = await fetch(endpoint + 'team');
-
-            if (!response.ok) {
-                // Handle error, e.g., redirect to a 404 page
-                console.error("Error fetching team photos");
-                return;
+            try {
+                const response = await fetch(endpoint + 'team');
+                if (!response.ok) {
+                    navigate('/404-not-found');
+                    return;
+                }
+                const data = await response.json();
+                if (!data || data.length === 0) {
+                    setEmpty(true);
+                } else {
+                    setPhotos(data);
+                }
+                setLoading(false);
+            } catch {
+                navigate('/404-not-found');
             }
-
-            const data = await response.json();
-
-            if (!data || data.length === 0) {
-                setEmpty(true);
-            } else {
-                setPhotos(data);
-            }
-
-            setLoading(false);
         }
 
         getTeamPhotos();

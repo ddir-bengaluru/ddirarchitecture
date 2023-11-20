@@ -11,18 +11,22 @@ export default function Projects() {
   const [loader, setLoadingStatus] = useState(true);
   useEffect(() => {
     async function getProjectData() {
-      const response = await fetch(endpoint + project_name);
-      if (!response.ok) {
+      try {
+        const response = await fetch(endpoint + project_name);
+        if (!response.ok) {
+          navigate('/404-not-found');
+          return
+        }
+        const data = await response.json();
+        if (!data.name) {
+          navigate('/404-not-found');
+          return
+        }
+        setLoadingStatus(false);
+        setProjectData(data);
+      } catch {
         navigate('/404-not-found');
-        return
       }
-      const data = await response.json();
-      if (!data.name) {
-        navigate('/404-not-found');
-        return
-      }
-      setLoadingStatus(false);
-      setProjectData(data);
     }
     getProjectData();
   });

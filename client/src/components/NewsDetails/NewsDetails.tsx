@@ -11,18 +11,22 @@ export default function NewsDetails() {
   const [loader, setLoadingStatus] = useState(true);
   useEffect(() => {
     async function fetchNews() {
-      const response = await fetch(endpoint + 'news/' + news_id);
-      if (!response.ok) {
+      try {
+        const response = await fetch(endpoint + 'news/' + news_id);
+        if (!response.ok) {
+          navigate('/404-not-found');
+          return
+        }
+        const data = await response.json();
+        if (!data?._id) {
+          navigate('/404-not-found');
+          return
+        }
+        setNewsData(data);
+        setLoadingStatus(false);
+      } catch {
         navigate('/404-not-found');
-        return
       }
-      const data = await response.json();
-      if (!data?._id) {
-        navigate('/404-not-found');
-        return
-      }
-      setNewsData(data);
-      setLoadingStatus(false);
     }
 
     fetchNews();

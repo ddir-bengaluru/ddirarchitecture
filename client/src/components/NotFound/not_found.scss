@@ -2,10 +2,10 @@
 
 .null-state {
     margin: 0 auto;
-    background: url('https://www.nicepng.com/png/detail/334-3348426_search-result-icons-error-404-girlfriend-not-found.png') center center no-repeat;
+    background: url('../../assets/images/not-found-state.jpeg') center center no-repeat;
     background-size: contain;
     min-height: 350px;
-    margin: $gutter;
+    margin-top: calc(80px + $gutter4x);
 }
 
 .empty-state {
@@ -13,5 +13,5 @@
     background: url('../../assets/images/null-state.png') no-repeat center center;
     background-size: contain;
     min-height: 350px;
-    margin: $gutter;
+    margin-top: calc(80px + $gutter4x);
 }

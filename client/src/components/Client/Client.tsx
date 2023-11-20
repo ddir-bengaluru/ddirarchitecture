@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { endpoint } from '../../Utils/Utils';
 import './clients.scss';
+import { useNavigate } from 'react-router-dom';
 
 interface Client {
   client_name: string[];
@@ -9,6 +10,7 @@ interface Client {
 export default function Clients() {
   const [clients, setClients] = useState<Client[]>([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchClients() {
@@ -32,9 +34,8 @@ export default function Clients() {
 
         setClients(filteredData.map((client_name: string[]) => ({ client_name })));
         setLoading(false);
-      } catch (error) {
-        console.error('Error fetching clients:', error);
-        // Handle error, e.g., show an error message
+      } catch {
+        navigate('/404-not-found');
       }
     }
 

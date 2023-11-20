@@ -20,13 +20,6 @@ export default function Navbar() {
     setAboutPageStatus(location.pathname === '/about-us' ? true : false);
   }, [location?.pathname]);
 
-  function onSearch(e: any) {
-    setVisibility(false);
-    e.preventDefault();
-    const searchParam = e.target.elements[0].value;
-    navigate(`/search/${searchParam}`);
-  }
-
   function handleLinkClick(path: string) {
     setVisibility(false);
     navigate(path);
@@ -36,20 +29,24 @@ export default function Navbar() {
     setVisibility(visibility => !visibility);
   }
 
+  function expandDropdown(e: any) {
+    e.currentTarget.parentElement.classList.toggle('show');
+  }
+
   return (
     <div className='nav'>
       <button className={(isLanding) ? "btn-open text-white" : "btn-open"} onClick={toggleNav}><FontAwesomeIcon icon={faBars} /></button>
       <nav className={visibility ? 'navbar show' : 'navbar'}>
         <button className='btn-close' onClick={toggleNav}><FontAwesomeIcon icon={faClose} /></button>
         <ul className='navbar__left'>
-          <div>
+          <div className='logo'>
             <Link onClick={() => setVisibility(false)} to='/'>
-              <h1>DDIR <span>Architecture</span></h1>
-              <h4>Dominic & Dipesh</h4>
+              <h1>DDIR <span>STUDIO</span></h1>
+              <h4>Dominic Dube & Dipesh</h4>
             </Link>
           </div>
           <li className='dropdown'>
-            <div>Architecture <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
+            <div onClick={expandDropdown}>Architecture <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
             <div className="dropdown__content">
               <Link onClick={() => setVisibility(false)} to="/categories/residential">Residential</Link>
               <Link onClick={() => setVisibility(false)} to="/categories/housing">Housing</Link>
@@ -62,7 +59,7 @@ export default function Navbar() {
             </div>
           </li>
           <li className="dropdown">
-            <div>Art <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
+            <div onClick={expandDropdown}>Art <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
             <div className="dropdown__content">
               <Link onClick={() => setVisibility(false)} to="/art/atelier">Atelier</Link>
               <Link onClick={() => setVisibility(false)} to="/art/banglore">Banglore</Link>
@@ -73,7 +70,7 @@ export default function Navbar() {
             </div>
           </li>
           <li className="dropdown">
-            <div>About Us <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
+            <div onClick={expandDropdown}>About Us <FontAwesomeIcon className='icon' icon={faChevronDown} /></div>
             <div className="dropdown__content">
               <Link onClick={() => setVisibility(false)} to="/clients">Client</Link>
               <Link to="/about-us#team-section" onClick={() => {
@@ -95,16 +92,12 @@ export default function Navbar() {
         <div className="navbar__right">
           <div className="social-icons">
             <Link onClick={() => setVisibility(false)} to="https://www.facebook.com/profile.php?id=100057256877863">
-              <UseAnimation animation={facebook} strokeColor='#c86508' autoPlay={true} loop={true} />
+              <UseAnimation animation={facebook} strokeColor={window.innerWidth > 768 ? '#c86508' : '#ffffff'} autoPlay={true} loop={true} />
             </Link>
             <Link onClick={() => setVisibility(false)} to="https://www.linkedin.com/company/ddir-architecture-studio/about/">
-              <UseAnimation animation={linkedin} strokeColor='#c86508' />
+              <UseAnimation animation={linkedin} strokeColor={window.innerWidth > 768 ? '#c86508' : '#ffffff'} />
             </Link>
           </div>
-          <form className="search-bar" onSubmit={onSearch}>
-            <input className='search-bar__text' type="text" id="name" placeholder='Enter Project Name' required />
-            <input className='search-bar__btn' type='submit' value="Search" />
-          </form>
         </div>
       </nav>
     </div>

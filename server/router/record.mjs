@@ -120,31 +120,4 @@ router.get('/news/:_id', async (req, res) => {
   else res.status(200).send(results);
 })
 
-router.get("/search/:name", async (req, res) =>{
-  const results = [];
-  let searchTerm = req.params.name;
-  let projects = await db.collection("projects");
-  let art = await db.collection("art");
-  let news = await db.collection("news");
-  const projectResults = await projects.
-  find({
-    $or: [
-      {name: {$regex: searchTerm, $options: 'i'}},
-      {location: {$regex: searchTerm, $options: 'i'}},
-      {client_name: {$regex: searchTerm, $options: 'i'}},
-    ]
-  }).toArray();
-  const artResults = await art.find({name: {$regex: searchTerm, $options: 'i'}}).toArray();
-  const newsResults = await news.find({
-    $or: [
-      {title: {$regex: searchTerm, $options: 'i'}},
-      {description: {$regex: searchTerm, $options: 'i'}}
-    ]
-  }).toArray();
-  results.push(...projectResults, ...artResults, ...newsResults);
-
-  if (!results.length) res.status(404).send([]);
-  else res.status(200).send(results);
-});
-
 export default router;

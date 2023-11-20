@@ -13,17 +13,21 @@ export default function Art() {
     const navigate = useNavigate();
     useEffect(() => {
         async function getArtData() {
-            const response = await fetch(endpoint + 'art/' + art_name);
-            if (!response.ok) {
+            try {
+                const response = await fetch(endpoint + 'art/' + art_name);
+                if (!response.ok) {
+                    navigate('/404-not-found');
+                    return
+                }
+                const data = await response.json();
+                if (!data || !data?.photos?.length) {
+                    setEmpty(true);
+                }
+                setLoading(false);
+                setArtData(data);
+            } catch {
                 navigate('/404-not-found');
-                return
             }
-            const data = await response.json();
-            if (!data || !data?.photos?.length) {
-                setEmpty(true);
-            }
-            setLoading(false);
-            setArtData(data);
         }
         getArtData();
     });

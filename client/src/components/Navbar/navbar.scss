@@ -14,6 +14,10 @@
     }
 }
 
+.btn-close {
+    color: $white;
+}
+
 .text-white {
     color: $white
 }
@@ -22,12 +26,12 @@
     @include element-position(fixed, 0, 0, 0, 0);
     @include flex(column, center, flex-start);
     gap: $gutter3x;
-    background-color: $white;
-    padding: $gutter;
+    background-color: $orange;
     padding-top: 80px;
     box-shadow: $box-shadow-large;
     transform: translateY(-100%);
     transition: $transition-in-out;
+    font-family: Roboto, sans-serif;
     z-index: 5;
     
     &__left {
@@ -35,58 +39,18 @@
         text-align: center;
         li{
             height: 100%;
-            &:not(:first-child) {
-                margin: $gutter2x 0 0 0;
-            }
         }
         img {
             height: 100%;
             object-fit: contain;
         }
-        a {
-            h1 span{
-                color: $orange
-            }
-            h4 {
-                &:hover {
-                    color: $textColor;
-                }
-            }
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;    
-            .icon {
-                font-size: $font-size-xxs;
-                transition: $transition-in-out;
-            }
-            &__content {
-                @include flex(column, center, center);
-                box-shadow: none;
-                margin-top: $gutter1_2;
-                padding-left: $gutter4x;
-                width: 100%;
-                max-height: 0;
-                overflow: hidden;
-                pointer-events: none;
-                transition: $transition-in-out;
-
-                a {
-                    text-align: start;
-                    padding: $gutter1_2;
-                    display: block;
-                    width: 100%;
-                }
-            }
-
-            &:hover {
-                .dropdown__content {
-                    max-height: 100%;
-                    pointer-events: all;
-                }
-                .icon {
-                    transform: rotate(180deg);
+        .logo {
+            a {
+                h1 {
+                    letter-spacing: 2px;
+                    span{
+                        color: $orange
+                    }
                 }
             }
         }
@@ -126,8 +90,10 @@
     }
 
     @media screen and (min-width: 769px){
-        padding-top: $gutter;
+        padding: 0 $gutter3x;
+        padding-top: 0;
         flex-direction: row;
+        background-color: $white;
         justify-content: space-between;
         bottom: unset;
         height: 80px;
@@ -135,49 +101,82 @@
 
         &__left {
             flex-direction: row;
+            height: 100%;
+
+            .logo {
+                margin-right: $gutter3x;
+            }
+
             li {
                 display: inline-block;
-                &:not(:first-child) {
-                    margin: 0 0 0 $gutter2x;
+                min-width: 160px;
+                height: 100%;
+
+                & > div, & > a {
+                    @include flex(row, center, center);
+                    height: 100%;
+                    width: 100%;
+                }
+
+                &:hover {
+                    color: $white;
+                    background-color: $orange;
+
+                    & > a {
+                        color: $white;
+                    }
                 }
             }
             img {
                 border-right: 1px solid $textColor; 
                 padding-right: $gutter;
             }
+
             .dropdown {
-                cursor: pointer;
+                position: relative;
+                display: inline-block;    
+                .icon {
+                    font-size: $font-size-xxs;
+                    margin-left: $gutter1_2;
+                    transition: $transition-in-out;
+                }
+    
                 &__content {
-                    display: none;
-                    position: absolute;
-                    padding-left: 0;
-                    top: 14px;
-                    overflow: auto;
-                    margin-top: 0;
-                    background-color: $white;
-                    min-width: 160px;
-                    box-shadow: $box-shadow-large;
-                    z-index: 1;
-        
+                    position: relative;
+                    display: block;
+                    opacity: 0;
+                    background-color: $orange;
+                    min-width: 200px;
+                    max-width: 250px;
+                    min-height: 0;
+                    pointer-events: none;
+                    transition: $transition-in-out;
+    
                     a {
-                        padding: $gutter12 $gutter;
+                        display: block;
+                        color: $white;
+                        width: 100%;
+                        text-align: start;
+                        padding: $gutter;
+                        transition: $transition-in-out;
+                        
                         &:hover {
-                            background-color: $body-bg;
+                            color: $orange;
+                            background-color: $white;
                         }
                     }
-                    
                 }
-
+    
                 &:hover {
                     .dropdown__content {
-                        display: block;
-                        max-height: 30vh;
+                        pointer-events: all;
+                        min-height: max-content;
+                        height: max-content;
+                        opacity: 1;
                     }
-                }
-
-                .dropdown__content:hover {
-                    display: block;
-                    max-height: 30vh;
+                    .icon {
+                        transform: rotate(180deg);
+                    }
                 }
             }
         }
@@ -191,24 +190,75 @@
     }
 
     @media screen and (max-width: 768px) {
-        .dropdown__content {
-            transition: $transition-in-out;
-            a {
-                position: relative;
-                &:before {
-                    @include sudo-fill(absolute, -16px, unset, unset, -16px);
-                    border-left: 1px solid $stroke;
-                    height: 100%;
-                    width: 16px;
-                    border-bottom: 1px solid $stroke;
+        &__left {
+            width: 100%;
+            overflow-y: auto;
+            li {
+                width: 100%;
+
+                & > div:not(.dropdown__content), & > a{
+                    display: block;
+                    padding: $gutter;
+                    text-align: start;
+                    font-size: $font-size-base;
+                    color: $white;
+                    width: 100%;
+
+                    svg {
+                        float: right;
+                    }
+                } 
+            } 
+
+            .logo {
+                margin-bottom: $gutter2x;
+                color: $white;
+                a {
+                    h1 {
+                        span {
+                            color: $white;
+                        }
+                    }
                 }
             }
-            @media screen and (max-width: 768px){
-            .search-bar__btn{
-                margin-right: 14px;
+
+            .dropdown {
+                .icon {
+                    transform: rotate(180deg);
+                    transition: $transition-in-out
+                }
+
+                &__content {
+                    @include flex(column, flex-start, center);
+                    max-height: 500px;
+                    opacity: 1;
+                    transition: $transition-in-out;
+
+                    a {
+                        color: $white;
+                        width: 100%;
+                        text-align: start;
+                        padding: $gutter;
+                        padding-left: $gutter2x;
+                    }
+                }
+
+                &:not(.show) {
+                    .icon {
+                        transform: rotate(0);
+                    }
+                    .dropdown__content {
+                        max-height: 0;
+                        overflow: hidden;
+                        opacity: 0;
+                    }
+                } 
             }
         }
+        &__right {
+            a {
+                color: $white;
+            }
         }
     }
-
 }
