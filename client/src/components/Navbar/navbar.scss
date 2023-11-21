@@ -111,6 +111,11 @@
                 display: inline-block;
                 min-width: 160px;
                 height: 100%;
+                border-left: 1px solid $stroke;
+
+                &:last-of-type {
+                    border-right: 1px solid $stroke
+                }
 
                 & > div, & > a {
                     @include flex(row, center, center);

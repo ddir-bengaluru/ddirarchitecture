@@ -29,7 +29,8 @@ export default function Projects() {
       }
     }
     getProjectData();
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [projectData?._id]);
 
   function Carousel() {
     return projectData?.photos?.secondary_images.map((img: any, index: number) => {

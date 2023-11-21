@@ -40,7 +40,8 @@ export default function Clients() {
     }
 
     fetchClients();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [clients?.length]);
 
   const flattenClientNames = (clients: Client[]) => {
     return clients.reduce((flattenedClients: string[], client: Client) => {

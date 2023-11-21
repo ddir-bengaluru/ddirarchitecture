@@ -30,7 +30,8 @@ export default function Art() {
             }
         }
         getArtData();
-    });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [artData?.photos?.length]);
     function MapArtData() {
         return artData.photos.map((item: any, index: number) => {
             return <img key={index} src={item} alt={art_name} />

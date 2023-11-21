@@ -34,7 +34,8 @@ export default function Team() {
         }
 
         getTeamPhotos();
-    }, []);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [photos?.length]);
 
     return (
         <div className="team">

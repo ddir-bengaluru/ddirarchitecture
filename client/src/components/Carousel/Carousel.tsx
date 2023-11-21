@@ -38,9 +38,9 @@ export default function Carousel() {
         navigate('/404-not-found');
       }
     }
-
     getCarouselPhotos();
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [photos?.length]);
 
   return (
     <div className="carousel">

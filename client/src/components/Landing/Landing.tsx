@@ -17,7 +17,7 @@ export default function Landing() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [projects?.length]);
 
 
   function MapProjectCards(props: any) {

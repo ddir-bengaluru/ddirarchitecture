@@ -30,7 +30,8 @@ export default function NewsDetails() {
     }
 
     fetchNews();
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [newsData?._id]);
 
   const NewlineToBr = ({ text }: any) => {
     const renderText = () => {

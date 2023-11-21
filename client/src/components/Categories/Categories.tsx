@@ -7,40 +7,23 @@ import imagePlaceholder from '../../assets/images/img-placeholder.png';
 
 export default function Categories() {
     const { category_name } = useParams();
-    const { search_key } = useParams();
     const [projects, setProjects] = useState([]);
     const [nullData, setNullData] = useState(false);
     useEffect(() => {
-        if (category_name) {
-            fetch(endpoint + "category/" + category_name)
-                .then((res) => res.json())
-                .then((res) => {
-                    setProjects(res);
-                    if (!res.length) {
-                        setNullData(true);
-                    } else {
-                        setNullData(false);
-                    }
-                })
-                .catch((err) => {
-                    console.log("error", err);
-                });
-        } else if (search_key) {
-            fetch(endpoint + "search/" + search_key)
-                .then((res) => res.json())
-                .then((res) => {
-                    setProjects(res);
-                    if (!res.length) {
-                        setNullData(true);
-                    } else {
-                        setNullData(false);
-                    }
-                })
-                .catch((err) => {
-                    console.log("error", err);
-                });
-        }
-    }, [search_key, category_name]);
+        fetch(endpoint + "category/" + category_name)
+            .then((res) => res.json())
+            .then((res) => {
+                setProjects(res);
+                if (!res.length) {
+                    setNullData(true);
+                } else {
+                    setNullData(false);
+                }
+            })
+            .catch((err) => {
+                console.log("error", err);
+            });
+    }, [category_name]);
     function MapCategoryWiseData() {
         // eslint-disable-next-line
         return projects.map((data: any, index: number) => {
@@ -69,7 +52,7 @@ export default function Categories() {
     }
     return (
         <div className='categories'>
-            {search_key ? <h1>Showing Category - {strTransform(search_key!)}</h1> : <h1>You Searched - {strTransform(search_key!)}</h1>}
+            <h1>Showing Category - {strTransform(category_name!)}</h1>
             {
                 !nullData ?
                     MapCategoryWiseData() :
