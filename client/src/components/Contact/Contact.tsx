@@ -14,10 +14,10 @@ const Contact = () => {
                     31, Ground floor, 8th A Main road, Raj Mahal Vilas, Extension, Armane Nagar, Bengaluru, 560080.
                     Near to: Starbucks, Sadashivanagar
                 </span>
-                <span className="call">
+                <a href="tel:9845688501" className="call">
                     <FontAwesomeIcon icon={faPhone} />
-                    098229 84382
-                </span>
+                    9845688501
+                </a>
             </div>
         </div>
     );
