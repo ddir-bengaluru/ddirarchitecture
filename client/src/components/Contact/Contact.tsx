@@ -16,7 +16,7 @@ const Contact = () => {
                 </span>
                 <a href="tel:9845688501" className="call">
                     <FontAwesomeIcon icon={faPhone} />
-                    9845688501
+                    +91 98456 88501
                 </a>
             </div>
         </div>
